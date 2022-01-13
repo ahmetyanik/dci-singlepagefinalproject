@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "../login.css";
 
-function Logintemplate() {
+function Logintemplate({allUsers,setCurrentUser }) {
+
+
+    const [activeUser,setActiveUser] = useState({})
+
+    function loginControl() {
+  
+      const inputEmail = document.querySelector("#email");
+      const inputPassword = document.querySelector("#password");
+  
+      const email = inputEmail.value;
+      const password = inputPassword.value;
+  
+      const gettingUser = allUsers.filter((user) => {
+        return user.email === email && parseInt(password) === user.password;
+      });
+  
+      setActiveUser(gettingUser[0] ? { ...gettingUser[0], active: true } : {});
+  
+      setCurrentUser({ ...gettingUser[0], active: true });
+    }
+  
+    console.log(allUsers);
+
+
   return (
     <div>
       <div class="login-wrap">
@@ -17,13 +41,13 @@ function Logintemplate() {
           <div class="login-form">
             <div class="sign-in-htm">
               <div class="group">
-                <label for="user" class="label">
+                <label id="email" for="user" class="label">
                   Username
                 </label>
                 <input id="user" type="text" class="input" />
               </div>
               <div class="group">
-                <label for="pass" class="label">
+                <label id="password" for="pass" class="label">
                   Password
                 </label>
                 <input
