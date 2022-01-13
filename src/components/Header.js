@@ -3,8 +3,24 @@ import React from "react";
 function Header() {
   return (
     <div>
-      <div style={{display:"flex",justifyContent:"center", alignItems:"center" ,height: "50px", backgroundColor: "cccccc" }}>
-        <span>3G im KulturKaufhaus</span>
+       {/*  Grey Area of Header */}
+      <div style={{display:"flex",justifyContent:"center", alignItems:"center" ,height: "50px", backgroundColor: "#cccccc" }}>
+        <span style={{color:"#c42b32", fontWeight:"bold"}}>3G im KulturKaufhaus</span>
+      </div>
+
+        {/* Red Area of Header */}
+
+      <div className="d-flex justify-content-around" style={{display:"flex",justifyContent:"center", alignItems:"center" ,height: "40px", backgroundColor: "#de030e" }}>
+
+      <div>
+          <span>KulturKaufhaus</span>
+          <span>|</span>
+          <span>Veranstellungen</span>
+          <span>|</span>
+          <span>Magazin</span>
+      </div>
+      <div></div>
+        
       </div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
