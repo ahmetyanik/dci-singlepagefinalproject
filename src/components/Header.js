@@ -12,12 +12,17 @@ function Header() {
 
       <div className="d-flex justify-content-around" style={{display:"flex",justifyContent:"center", alignItems:"center" ,height: "40px", backgroundColor: "#de030e" }}>
 
-      <div>
+      <div className="text-light">
           <span>KulturKaufhaus</span>
           <span>|</span>
           <span>Veranstellungen</span>
           <span>|</span>
           <span>Magazin</span>
+      </div>
+      <div className="text-light">
+          <span>030 20 25 11 11</span>
+          <span>|</span>
+          <span>Service</span>
       </div>
       <div></div>
         
