@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -47,9 +48,9 @@ function Header() {
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
-            <a className="navbar-brand" href="#">
+          <Link to="/"> <a className="navbar-brand" href="#">
               <img src="https://www.kulturkaufhaus.de/htdyn/3HKDZ4XW26S9/kuka-logo.svg" />
-            </a>
+            </a></Link> 
             <button
               className="navbar-toggler"
               type="button"
@@ -82,7 +83,11 @@ function Header() {
                 </li>
               </ul>
               <div className="d-flex flex-column align-items-lg-end">
-                <span style={{color:"#de030e"}} className="py-3 " ><i className="far fa-user text-danger px-2"></i>Mein Konto</span>
+                <Link className="py-3 " style={{textDecoration:"none"}} to="/login">
+                  <span style={{ color: "#de030e" }} >
+                    <i className="far fa-user text-danger px-2"></i>Mein Konto
+                  </span>
+                </Link>
                 <form className="d-flex">
                   <input
                     className="form-control me-2"
