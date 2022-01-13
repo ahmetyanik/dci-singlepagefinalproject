@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    color: #6a6f8c;
+    color: #fff;
     background: #c8c8c8;
     font: 600 16px/18px 'Open Sans', sans-serif;
 }
@@ -23,7 +23,7 @@ body {
 }
 
 a {
-    color: inherit;
+    color: #fff;
     text-decoration: none
 }
 
@@ -42,7 +42,7 @@ a {
     height: 100%;
     position: absolute;
     padding: 90px 70px 50px 70px;
-    background: rgba(40, 57, 101, .9);
+    background: rgba(222, 3, 14, .5);
 }
 
 .login-html .sign-in-htm,
@@ -108,7 +108,7 @@ a {
     border: none;
     padding: 15px 20px;
     border-radius: 25px;
-    background: rgba(255, 255, 255, .1);
+    background: rgba(255, 255, 255, .5);
 }
 
 .login-form .group input[data-type="password"] {
@@ -117,12 +117,12 @@ a {
 }
 
 .login-form .group .label {
-    color: #aaa;
+    color: #fff;
     font-size: 12px;
 }
 
 .login-form .group .button {
-    background: #1161ee;
+    background: black;
 }
 
 .login-form .group label .icon {
