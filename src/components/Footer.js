@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
     return (
        /*  <!-- Remove the container if you want to extend the Footer to full width. --> */
-        <div className="container-fluid p-0 position-absolute bottom-0">
+        <div className="container-fluid p-0 ">
          {/*  <!-- Footer --> */}
           <footer
                   className="text-center text-lg-start text-dark"

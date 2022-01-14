@@ -3,6 +3,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import books from './datenbank/books';
 import Carousel from './components/Carousel';
+import BookCard from './components/BookCard';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
     
     <Carousel />
 
-
+    <BookCard/>
     <Footer/>
 
     </div>
