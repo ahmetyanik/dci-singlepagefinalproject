@@ -1,17 +1,13 @@
-import React, { useState } from "react";
 import Footer from "../Footer";
 import Header from "../Header";
 import Logintemplate from "../Logintemplate";
 
-function Loginpage({ allUsers,setCurrentUser }) {
-
-
-
+function Loginpage() {
   return (
     <div>
       <Header />
-      <div className="my-5">
-        <Logintemplate allUsers={allUsers} setCurrentUser={setCurrentUser} />
+      <div className="my-4">
+        <Logintemplate />
       </div>
       <Footer />
     </div>

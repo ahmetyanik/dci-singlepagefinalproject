@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import DataStore from "./DataStore";
 
 function Header() {
+
+  const { currentUser, setCurrentUser } = useContext(DataStore);
+
+
+  
   return (
     <div>
+
+
       {/*  Grey Area of Header */}
       <div
         style={{
@@ -44,13 +52,17 @@ function Header() {
         </div>
       </div>
 
+
       {/* Navbar Area of Header */}
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
-          <Link to="/"> <a className="navbar-brand" href="#">
-              <img src="https://www.kulturkaufhaus.de/htdyn/3HKDZ4XW26S9/kuka-logo.svg" />
-            </a></Link> 
+            <Link to="/">
+              {" "}
+              <a className="navbar-brand" href="#">
+                <img src="https://www.kulturkaufhaus.de/htdyn/3HKDZ4XW26S9/kuka-logo.svg" />
+              </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -72,20 +84,52 @@ function Header() {
                     Home
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Link
-                  </a>
-                </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      Link
+                    </a>
+                  </li>
 
                 <li className="nav-item">
                   <a className="nav-link disabled">Disabled</a>
                 </li>
               </ul>
               <div className="d-flex flex-column align-items-lg-end">
-                <Link className="py-3 " style={{textDecoration:"none"}} to="/login">
-                  <span style={{ color: "#de030e" }} >
-                    <i className="far fa-user text-danger px-2"></i>Mein Konto
+                <Link
+                  className="py-3 "
+                  style={{ textDecoration: "none" }}
+                  to={"/login"}
+                >
+                  <span
+                    className="d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center flex-lg-row"
+                    style={{ color: "#de030e" }}
+                  >
+                    {currentUser.name ? (
+                   <Link to={`/user/${currentUser.id}/${currentUser.name}`}>  <img
+                        style={{
+                          width: "40px",
+                          height: "40px",
+                          borderRadius: "50%",
+                        }}
+                        src={currentUser.image}
+                        alt=""
+                      /> </Link> 
+                    ) : (
+                      <i className="far fa-user text-danger px-2"></i>
+                    )}
+
+                    <span className="mx-2">
+                      {" "}
+                      {currentUser.name ? <Link to={`/user/${currentUser.id}/${currentUser.name}`}> <span style={{color:"#de030e"}}> { currentUser.name} </span></Link> : "Mein Konto"}
+                    </span>
+                    <span className="mx-2">
+                      {" "}
+                      {currentUser.name ? "|" : null}{" "}
+                    </span>
+                    <span onClick={() => setCurrentUser({})} className="mx-2">
+                      {" "}
+                      {currentUser.name ? "Log Out" : null}{" "}
+                    </span>
                   </span>
                 </Link>
                 <form className="d-flex">
