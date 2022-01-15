@@ -1,13 +1,13 @@
 const books = [
   {
-    title: "The Promise",
-    author: "Damon Galgut",
+    titel: "The Promise",
+    autor: "Damon Galgut",
     image:
       "https://www.kulturkaufhaus.de/annotstream/9781784744076/COPL/Galgut-Damon/The-Promise.jpg?sq=5",
-    price: "15.50",
-    language: "Englisch",
-    pages: "304",
-    description: `WINNER OF THE BOOKER PRIZE 2021
+    preis: "15.50",
+    sprache: "Englisch",
+    seite: "304",
+    beschreibung: `WINNER OF THE BOOKER PRIZE 2021
         Discover the powerful prizewinning story of a family in crisis.
         'Astonishing' Colm Tóibín
         The Promise charts the crash and burn of a white South African family, living on a farm outside Pretoria. The Swarts are gathering for Ma's funeral. The younger generation, Anton and Amor, detest everything the family stand for - not least the failed promise to the Black woman who has worked for them her whole life. After years of service, Salome was promised her own house, her own land... yet somehow, as each decade passes, that promise remains unfulfilled.
@@ -1268,45 +1268,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     preis: "14,99",
     sprache: "Deutsch",
     seiten: "224 ",
-    beschreibung: `Greg Heffley und Sport? Das passt einfach nicht zusammen. Nach einem fürchterlichen Trainingstag in der Schule erklärt Greg seine Sportkarriere für offiziell beendet. Doch l{  titel: "",
-    autor : "",
-    image: "",
-    preis :"",
-    sprache : "",
-    seiten : "",
-    beschreibung : ``,
-    kategorie:"",
-    "ISBN/GTIN": "",
-    Produktart: "" , 
-    Einbandart:" ",
-    Verlag:"",
-    Erscheinungsjahr:"",
-    Erstverkaufstag:"",
-    Gewicht:"",
-    ArtikelNr:"",
-    Genre:""
-
-
-    },{  titel: "",
-    autor : "",
-    image: "",
-    preis :"",
-    sprache : "",
-    seiten : "",
-    beschreibung : ``,
-    kategorie:"",
-    "ISBN/GTIN": "",
-    Produktart: "" , 
-    Einbandart:" ",
-    Verlag:"",
-    Erscheinungsjahr:"",
-    Erstverkaufstag:"",
-    Gewicht:"",
-    ArtikelNr:"",
-    Genre:""
-
-
-    },eider hat Greg die Rechnung ohne seine Mom gemacht. Sie überredet ihn, der Sache eine letzte Chance zu geben und sich für eins der Basketballteams zu bewerben.
+    beschreibung: `Greg Heffley und Sport? Das passt einfach nicht zusammen. Nach einem fürchterlichen Trainingstag in der Schule erklärt Greg seine Sportkarriere für offiziell beendet. Doch leider hat Greg die Rechnung ohne seine Mom gemacht. Sie überredet ihn, der Sache eine letzte Chance zu geben und sich für eins der Basketballteams zu bewerben.
     Wie zu erwarten, sind die Auswahlspiele ein Reinfall, und Greg ist sich sicher, dass er es mal wieder versemmelt hat. Doch dann schafft er es tatsächlich ins Team, wenn auch nur in das schlechteste der ganzen Schule. Die Saison beginnt, und die Chancen, auch nur ein Spiel zu gewinnen, sind gleich null. Aber im Sport ist alles möglich, oder? Und so bekommt Greg im entscheidenden Moment im Spiel den Ball ... Wird er über sich hinauswachsen und einen Treffer landen? Oder wird er es mal wieder vermasseln?
     Gregs Tagebuch von Jeff Kinney ist eine der erfolgreichsten Kinderbuchserien der Welt. Die humorvollen Comics um Greg Heffley besitzen mittlerweile Kultstatus.`,
     kategorie: "Jugendbücher",

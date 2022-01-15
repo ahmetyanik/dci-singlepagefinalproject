@@ -7,20 +7,25 @@ import users from "./datenbank/users";
 import DataStore from "./components/DataStore";
 import RegisterPage from "./components/Pages/Registerpage";
 import Userpage from "./components/Pages/Userpage";
+import books from "./datenbank/books";
 
 function App() {
   const [allUsers, setAllUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState({});
+  const [allBooks, setAllBooks] = useState([])
 
   useEffect(() => {
     setAllUsers(users);
+    setAllBooks(books);
   }, []);
+
+  console.log(allBooks);
 
   return (
     <div className="App">
       <BrowserRouter>
         <DataStore.Provider
-          value={{ allUsers, setAllUsers, currentUser, setCurrentUser }}
+          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks }}
         >
           <Routes>
             <Route exact path="/" element={<Homepage />} />
