@@ -5,12 +5,12 @@ function Singinsignupbuttons() {
   return (
     <div>
       <Link to="/login">
-        <label for="tab-1" class="tab">
+        <label for="tab-1" className="tab">
           Sign In
         </label>
       </Link>
       <Link to="/register">
-        <label for="tab-2" class="tab">
+        <label for="tab-2" className="tab">
           Sign Up
         </label>
       </Link>

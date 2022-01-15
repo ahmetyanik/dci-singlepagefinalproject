@@ -38,44 +38,44 @@ function Logintemplate() {
       >
         Please type the same password!!!
       </span>
-      <div class="login-wrap">
-        <div class="login-html">
+      <div className="login-wrap">
+        <div className="login-html">
           <Singinsignupbuttons />
-          <div class="login-form">
-            <div class="sign-in-htm">
-              <div class="group">
-                <label id="email" for="user" class="label">
+          <div className="login-form">
+            <div className="sign-in-htm">
+              <div className="group">
+                <label id="email" for="user" className="label">
                   Username
                 </label>
-                <input id="user" type="text" class="input" />
+                <input id="user" type="text" className="input" />
               </div>
-              <div class="group">
-                <label id="password" for="pass" class="label">
+              <div className="group">
+                <label id="password" for="pass" className="label">
                   Password
                 </label>
                 <input
                   id="pass"
                   type="password"
-                  class="input"
+                  className="input"
                   data-type="password"
                 />
               </div>
-              <div class="group">
-                <input id="check" type="checkbox" class="check" checked />
+              <div className="group">
+                <input id="check" type="checkbox" className="check"  />
                 <label for="check">
-                  <span class="icon"></span> Keep me Signed in
+                  <span className="icon"></span> Keep me Signed in
                 </label>
               </div>
-              <div class="group">
+              <div className="group">
                 <input
                   onClick={loginControl}
                   type="submit"
-                  class="button"
+                  className="button"
                   value="Sign In"
                 />
               </div>
-              <div class="hr"></div>
-              <div class="foot-lnk">
+              <div className="hr"></div>
+              <div className="foot-lnk">
                 <a href="#forgot">Forgot Password?</a>
               </div>
             </div>

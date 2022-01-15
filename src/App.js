@@ -5,7 +5,8 @@ import Loginpage from "./components/Pages/Loginpage";
 import { useEffect, useState } from "react";
 import users from "./datenbank/users";
 import DataStore from "./components/DataStore";
-import RegisterPage from "./components/Pages/Registerpage"
+import RegisterPage from "./components/Pages/Registerpage";
+import Userpage from "./components/Pages/Userpage";
 
 function App() {
   const [allUsers, setAllUsers] = useState([]);
@@ -15,21 +16,20 @@ function App() {
     setAllUsers(users);
   }, []);
 
-  console.log(currentUser);
-
   return (
     <div className="App">
-      <DataStore.Provider
-        value={{ allUsers, setAllUsers, currentUser, setCurrentUser }}
-      >
-        <BrowserRouter>
+      <BrowserRouter>
+        <DataStore.Provider
+          value={{ allUsers, setAllUsers, currentUser, setCurrentUser }}
+        >
           <Routes>
             <Route exact path="/" element={<Homepage />} />
             <Route path="/login" element={<Loginpage />} />
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/user/:name" element={<Userpage/>} />
           </Routes>
-        </BrowserRouter>
-      </DataStore.Provider>
+        </DataStore.Provider>
+      </BrowserRouter>
     </div>
   );
 }

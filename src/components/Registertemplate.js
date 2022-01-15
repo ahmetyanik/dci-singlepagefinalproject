@@ -42,15 +42,15 @@ function RegisterTemplate() {
 
   return (
     <div>
-      <div class="login-wrap">
-        <div class="login-html">
+      <div className="login-wrap">
+        <div className="login-html">
           <Singinsignupbuttons />
-          <div class="login-form">
-            <div class="sign-in-htm">
+          <div className="login-form">
+            <div className="sign-in-htm">
               <form onSubmit={addNewPerson}>
-                <div class="sign-up-htm">
-                  <div class="group">
-                    <label for="user" class="label">
+                <div className="sign-up-htm">
+                  <div className="group">
+                    <label for="user" className="label">
                       Username
                     </label>
                     <input
@@ -58,12 +58,12 @@ function RegisterTemplate() {
                       name="name"
                       id="name2"
                       type="text"
-                      class="input"
+                      className="input"
                       required
                     />
                   </div>
-                  <div class="group">
-                    <label for="pass" class="label">
+                  <div className="group">
+                    <label for="pass" className="label">
                       Password
                     </label>
                     <input
@@ -71,25 +71,25 @@ function RegisterTemplate() {
                       onChange={inputChange}
                       id="pass2"
                       type="password"
-                      class="input"
+                      className="input"
                       data-type="password"
                       required
                     />
                   </div>
-                  <div class="group">
-                    <label for="pass" class="label">
+                  <div className="group">
+                    <label for="pass" className="label">
                       Repeat Password
                     </label>
                     <input
                       id="repeatpass2"
                       type="password"
-                      class="input"
+                      className="input"
                       data-type="password"
                       required
                     />
                   </div>
-                  <div class="group">
-                    <label for="pass" class="label">
+                  <div className="group">
+                    <label for="pass" className="label">
                       Email Address
                     </label>
                     <input
@@ -97,15 +97,15 @@ function RegisterTemplate() {
                       name="email"
                       id="email"
                       type="text"
-                      class="input"
+                      className="input"
                       required
                     />
                   </div>
-                  <div class="group">
-                    <input type="submit" class="button" value="Sign Up" />
+                  <div className="group">
+                    <input type="submit" className="button" value="Sign Up" />
                   </div>
-                  <div class="hr"></div>
-                  <div class="foot-lnk">
+                  <div className="hr"></div>
+                  <div className="foot-lnk">
                     <label for="tab-1">Already Member?</label>
                   </div>
                 </div>

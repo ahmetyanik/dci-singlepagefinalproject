@@ -1,14 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import DataStore from "./DataStore";
 
 function Header() {
+
   const { currentUser, setCurrentUser } = useContext(DataStore);
 
-  console.log(currentUser);
-
+  const isim = "ahmet";
+  
   return (
     <div>
+
+   <Link to={`/user/${isim}`} > <span>HELLO</span> </Link>
+
       {/*  Grey Area of Header */}
       <div
         style={{
@@ -49,6 +53,7 @@ function Header() {
         </div>
       </div>
 
+
       {/* Navbar Area of Header */}
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -80,11 +85,11 @@ function Header() {
                     Home
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Link
-                  </a>
-                </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      Link
+                    </a>
+                  </li>
 
                 <li className="nav-item">
                   <a className="nav-link disabled">Disabled</a>
@@ -94,7 +99,7 @@ function Header() {
                 <Link
                   className="py-3 "
                   style={{ textDecoration: "none" }}
-                  to="/login"
+                  to={"/login"}
                 >
                   <span
                     className="d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center flex-lg-row"
