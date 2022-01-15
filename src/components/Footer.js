@@ -75,16 +75,16 @@ function Footer() {
                         style={{width: "60px", backgroundColor: "#7c4dff", height: "2px"}}
                         />
                     <p>
-                      <a href="#!" className="text-dark" style={{textDecoration:'none'}}>MDBootstrap</a>
+                      <a href="#!" className="text-dark text-decoration-none">MDBootstrap</a>
                     </p>
                     <p>
-                      <a href="#!" className="text-dark">MDWordPress</a>
+                      <a href="#!" className="text-dark text-decoration-none">MDWordPress</a>
                     </p>
                     <p>
-                      <a href="#!" className="text-dark">BrandFlow</a>
+                      <a href="#!" className="text-dark text-decoration-none">BrandFlow</a>
                     </p>
                     <p>
-                      <a href="#!" className="text-dark">Bootstrap Angular</a>
+                      <a href="#!" className="text-dark text-decoration-none">Bootstrap Angular</a>
                     </p>
                   </div>
                  {/*  <!-- Grid column --> */}
@@ -98,16 +98,16 @@ function Footer() {
                         style={{width: "60px", backgroundColor: "#7c4dff", height:"2px"}}
                         />
                     <p>
-                      <a href="#!" className="text-dark">Your Account</a>
+                      <a href="#!" className="text-dark text-decoration-none">Your Account</a>
                     </p>
                     <p>
-                      <a href="#!" className="text-dark">Become an Affiliate</a>
+                      <a href="#!" className="text-dark text-decoration-none">Become an Affiliate</a>
                     </p>
                     <p>
-                      <a href="#!" className="text-dark">Shipping Rates</a>
+                      <a href="#!" className="text-dark text-decoration-none">Shipping Rates</a>
                     </p>
                     <p>
-                      <a href="#!" className="text-dark">Help</a>
+                      <a href="#!" className="text-dark text-decoration-none">Help</a>
                     </p>
                   </div>
                  {/*  <!-- Grid column --> */}
@@ -138,7 +138,7 @@ function Footer() {
                  style={{backgroundColor: "#de030e"}}
                  >
               © 2020 Copyright:
-              <a className='text-white' href="https://mdbootstrap.com/"
+              <a className='text-white text-decoration-none' href="https://mdbootstrap.com/"
                  >MDBootstrap.com</a
                 >
             </div>
