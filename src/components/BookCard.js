@@ -32,7 +32,7 @@ function BookCard() {
                   </a>
                 </div>
                 <div>
-                  {" "}
+                  
                   <button href="#" class="btn btn-danger mt-3 ">
                     <i className="fas fa-shopping-cart me-3"></i>
                     WARENKORB
