@@ -6,12 +6,11 @@ function Header() {
 
   const { currentUser, setCurrentUser } = useContext(DataStore);
 
-  const isim = "ahmet";
+
   
   return (
     <div>
 
-   <Link to={`/user/${isim}`} > <span>HELLO</span> </Link>
 
       {/*  Grey Area of Header */}
       <div
@@ -106,7 +105,7 @@ function Header() {
                     style={{ color: "#de030e" }}
                   >
                     {currentUser.name ? (
-                      <img
+                   <Link to={`/user/${currentUser.id}/${currentUser.name}`}>  <img
                         style={{
                           width: "40px",
                           height: "40px",
@@ -114,14 +113,14 @@ function Header() {
                         }}
                         src={currentUser.image}
                         alt=""
-                      />
+                      /> </Link> 
                     ) : (
                       <i className="far fa-user text-danger px-2"></i>
                     )}
 
                     <span className="mx-2">
                       {" "}
-                      {currentUser.name ? currentUser.name : "Mein Konto"}{" "}
+                      {currentUser.name ? <Link to={`/user/${currentUser.id}/${currentUser.name}`}> <span style={{color:"#de030e"}}> { currentUser.name} </span></Link> : "Mein Konto"}
                     </span>
                     <span className="mx-2">
                       {" "}

@@ -1,11 +1,13 @@
 import React, { useContext } from 'react'
+import DataStore from './DataStore';
 
 function Userpagearea() {
 
+    const { currentUser, setCurrentUser } = useContext(DataStore);
 
     return (
         <div>
-            <h1>Burasi Userpage</h1>
+            <h1>{currentUser.name}</h1>
         </div>
     )
 }

@@ -26,7 +26,7 @@ function App() {
             <Route exact path="/" element={<Homepage />} />
             <Route path="/login" element={<Loginpage />} />
             <Route path="/register" element={<RegisterPage />} />
-            <Route path="/user/:name" element={<Userpage/>} />
+            <Route path="/user/:id/:name" element={<Userpage/>} />
           </Routes>
         </DataStore.Provider>
       </BrowserRouter>
