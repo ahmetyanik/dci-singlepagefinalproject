@@ -1,15 +1,38 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import DataStore from "./DataStore";
 
-function BookPage() {
+function Bookarea() {
+
+const params = useParams();
+const { allBooks, setAllBooks } = useContext(DataStore);
+
+const [singleBook, setSingleBook] = useState({});
+
+console.log(params);
+
+const filteredBook = allBooks.filter(book=>{
+
+    return params.ISBN === book["ISBN/GTIN"] && params.bookName === book.titel;
+})
+
+
+useEffect(()=>{
+    setSingleBook(filteredBook[0]);
+},[]);
+
+
+
+
   return (
     <div className="container bg-white mt-5">
       <div className="row">
         <div className="col-3">
-          <img src="" alt="" />
+          <img src={singleBook.image} alt="" />
         </div>
         <div className="col-6">
-          <h1>Here's To Us</h1>
-          <h4>Adam Silvera</h4>
+          <h1>{singleBook.titel}</h1>
+          <h4>{singleBook.autor}</h4>
         </div>
         <div className="col-3 text-start">
           <h1>EUR 10,50</h1>
@@ -109,4 +132,4 @@ function BookPage() {
   );
 }
 
-export default BookPage;
+export default Bookarea;
