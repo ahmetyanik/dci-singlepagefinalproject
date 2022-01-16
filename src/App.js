@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import users from "./datenbank/users";
 import DataStore from "./components/DataStore";
 import RegisterPage from "./components/Pages/Registerpage";
+import Singlebuchpage from "./components/Pages/Singlebuchpage";
 import Userpage from "./components/Pages/Userpage";
 import books from "./datenbank/books";
 
@@ -31,6 +32,7 @@ function App() {
             <Route exact path="/" element={<Homepage />} />
             <Route path="/login" element={<Loginpage />} />
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/book/:ISBN/:bookName" element={<Singlebuchpage/>} />
             <Route path="/user/:id/:name" element={<Userpage/>} />
           </Routes>
         </DataStore.Provider>
