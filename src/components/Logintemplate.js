@@ -60,10 +60,10 @@ function Logintemplate() {
                   data-type="password"
                 />
               </div>
-              <div className="group">
-                <input id="check" type="checkbox" className="check"  />
+              <div className="group text-light">
+                <input id="check" type="checkbox" className="check border shadow"  />
                 <label for="check">
-                  <span className="icon"></span> Keep me Signed in
+                  <span className="icon bg-dark"></span> Keep me Signed in
                 </label>
               </div>
               <div className="group">
