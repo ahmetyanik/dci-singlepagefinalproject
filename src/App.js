@@ -1,19 +1,45 @@
-import './App.css';
-import Header from './components/Header';
-import books from './datenbank/books';
-import Carousel from './components/Carousel';
+import "./App.css";
+import Homepage from "./components/Pages/Homepage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Loginpage from "./components/Pages/Loginpage";
+import { useEffect, useState } from "react";
+import users from "./datenbank/users";
+import DataStore from "./components/DataStore";
+import RegisterPage from "./components/Pages/Registerpage";
+import Singlebuchpage from "./components/Pages/Singlebuchpage";
+import Userpage from "./components/Pages/Userpage";
+import books from "./datenbank/books";
 
 function App() {
-  return (
-    <div className="App">  
-      
-  
-    <Header/>
-    
-    <Carousel />
+  const [allUsers, setAllUsers] = useState([]);
+  const [currentUser, setCurrentUser] = useState({});
+  const [allBooks, setAllBooks] = useState([])
 
+  useEffect(() => {
+    setAllUsers(users);
+    setAllBooks(books);
+  }, []);
+
+  console.log(allBooks);
+
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <DataStore.Provider
+          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks }}
+        >
+          <Routes>
+            <Route exact path="/" element={<Homepage />} />
+            <Route path="/login" element={<Loginpage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/book/:ISBN/:bookName" element={<Singlebuchpage/>} />
+            <Route path="/user/:id/:name" element={<Userpage/>} />
+          </Routes>
+        </DataStore.Provider>
+      </BrowserRouter>
     </div>
   );
 }
 
 export default App;
+
