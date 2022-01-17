@@ -1181,7 +1181,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     image:
       "https://www.kulturkaufhaus.de/annotstream/9783737358842/COPL/Shusterman-Neal/Game-Changer---Es-gibt-unendlich-viele-M%C3%B6glichkeiten-alles-falsch-zu-machen.jpg?sq=7",
     preis:
-      "https://www.kulturkaufhaus.de/annotstream/9783737358842/COPL/Shusterman-Neal/Game-Changer---Es-gibt-unendlich-viele-M%C3%B6glichkeiten-alles-falsch-zu-machen.jpg?sq=7",
+      "16,90",
     sprache: "Deutsch",
     seiten: "416",
     beschreibung: `Stell Dir vor, du könntest die Welt verändern ... Welche Entscheidung triffst Du?

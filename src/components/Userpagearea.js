@@ -2,7 +2,33 @@ import React, { useContext } from "react";
 import DataStore from "./DataStore";
 
 function Userpagearea() {
-  const { currentUser, setCurrentUser } = useContext(DataStore);
+  const { allUsers, setAllUsers, currentUser, setCurrentUser } =
+    useContext(DataStore);
+
+    console.log(allUsers);
+
+  function changeFoto(e) {
+    e.preventDefault();
+    const imageInput = document.querySelector("#input-image");
+    const imageURL = imageInput.value;
+    const newArray = [...allUsers];
+
+    console.log(newArray);
+    console.log(currentUser);
+
+    newArray[currentUser.image] = imageURL;
+
+    setAllUsers(newArray);
+    setCurrentUser({
+      ...currentUser,
+      image: imageURL,
+    });
+
+  }
+
+  console.log(allUsers);
+
+  
 
   return (
     <div>
@@ -17,12 +43,27 @@ function Userpagearea() {
               alt=""
             />
           </div>
-          <div className="d-flex flex-column align-items-start p-sm-2 ">
-            <div>Name: {currentUser.name}</div>
-            <div>User Id: {currentUser.id}</div>
-            <div>E-Mail: {currentUser.email}</div>
-            <div>Credit Card: {currentUser.creditCard}</div>
-            <div>Address: {currentUser.address}</div>
+          <div>
+            <div className="d-flex flex-column align-items-start p-sm-2 ">
+              <div>Name: {currentUser.name}</div>
+              <div>User Id: {currentUser.id}</div>
+              <div>E-Mail: {currentUser.email}</div>
+              <div>Credit Card: {currentUser.creditCard}</div>
+              <div>Address: {currentUser.address}</div>
+            </div>
+            <button className="btn btn-danger">Change My Information</button>
+            <div>
+              <form onSubmit={changeFoto}>                
+                <input
+                  id="input-image"
+                  name="name"
+                  className="p-[10px] bg-white border rounded-[10px] focus:outline-none"
+                  type="text"
+                  placeholder="Image URL"
+                />
+                <button>CHANGE IMAGE</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
