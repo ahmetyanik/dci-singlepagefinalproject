@@ -9,11 +9,14 @@ import RegisterPage from "./components/Pages/Registerpage";
 import Singlebuchpage from "./components/Pages/Singlebuchpage";
 import Userpage from "./components/Pages/Userpage";
 import books from "./datenbank/books";
+import Adminpage from "./components/Pages/Adminpage";
+import Adminloginpage from "./components/Pages/Adminloginpage";
 
 function App() {
   const [allUsers, setAllUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState({});
   const [allBooks, setAllBooks] = useState([])
+  const [adminlogin, setAdminLogin] = useState(true);
 
   useEffect(() => {
     setAllUsers(users);
@@ -34,6 +37,7 @@ function App() {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/book/:ISBN/:bookName" element={<Singlebuchpage/>} />
             <Route path="/user/:id/:name" element={<Userpage/>} />
+            <Route path="/admin" element={adminlogin ? <Adminpage/> : <Adminloginpage/>} />
           </Routes>
         </DataStore.Provider>
       </BrowserRouter>
