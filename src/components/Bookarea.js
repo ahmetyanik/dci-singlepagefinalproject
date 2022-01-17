@@ -22,7 +22,7 @@ function Bookarea() {
     <div className="container bg-white mt-5 mb-5">
       <div className="row">
         <div
-          className="card p-0 col-3 shadow ms-3"
+          className="col-lg-3 shadow p-0 m-auto"
           style={{ height: "325px", width: "275px" }}
         >
           <img
@@ -31,13 +31,13 @@ function Bookarea() {
             style={{ height: "325px", width: "275px" }}
           />
         </div>
-        <div className="col-6">
+        <div className="col-lg-5 p-4">
           <h1>{singleBook.titel}</h1>
           <h4>{singleBook.autor}</h4>
         </div>
-        <div className="col-3 text-start">
+        <div className="col-lg-4 text-start text-lg-end">
           <h1>EUR 10,50</h1>
-          <div className="d-flex align-items-end justify-content-start">
+          <div className="d-flex align-items-end justify-content-lg-end">
             <div>
               <a href="like">
                 <i className="far fa-heart fs-3 pb-1 me-4 text-dark"></i>
@@ -54,7 +54,7 @@ function Bookarea() {
             </div>
           </div>
 
-          <div className="text-start mt-4 ">
+          <div className="text-start text-lg-end mt-4 ">
             <p className="m-1">Sofort versandbereit 🟢</p>
             <p className="m-1">Abholbereit: in wenigen Stunden 🟢</p>
             <p className="m-1">
@@ -66,10 +66,10 @@ function Bookarea() {
       <hr />
       <div className="row">
         <h2 className="text-start my-4"> Produktbeschreibung</h2>
-        <div className="col-9 text-start">
-          <p className="fw-lighter pe-5 lh-base">{singleBook.beschreibung}</p>
+        <div className="col-lg-9 text-start">
+          <p className="fw-lighter pe-lg-5 lh-base text-justify">{singleBook.beschreibung}</p>
         </div>
-        <div className=" col-3 text-start">
+        <div className="col-lg-3 text-start">
           <h4>Details</h4>
           <hr />
           <p className="d-flex justify-content-between">

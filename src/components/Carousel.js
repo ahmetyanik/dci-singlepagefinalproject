@@ -12,10 +12,10 @@ function Carousel() {
         <div className="carousel-item active">
           <img src={Img1} className="d-block w-100" alt="..."></img>
         </div>
-        <div className="carousel-item banner">
+        <div className="carousel-item">
           <img src={Img2}  className="d-block w-100" alt="..."></img>
         </div>
-        <div className="carousel-item banner">
+        <div className="carousel-item carol">
           <img src={Img3}  className="d-block w-100" alt="..."></img>
         </div>
         
