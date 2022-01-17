@@ -9,9 +9,6 @@ function BookCard() {
       
         <div className="container d-flex flex-row flex-wrap justify-content-around">
           {allBooks.map((book, index) => {
-
-            console.log(book)
-
             return (
               <Link to={`/book/${book["ISBN/GTIN"]}/${book.titel}`}>
               <div
@@ -23,7 +20,7 @@ function BookCard() {
                   className="card-img-top p-1"
                   style={{ height: "20rem" }}
                   src={book.image}
-                  alt="Card image cap"
+                  alt="Card cap"
                 />
                 <div className="card-body ">
                   <h5 className="card-title">{book.titel}</h5>
