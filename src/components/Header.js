@@ -6,7 +6,7 @@ function Header() {
 
   const { currentUser, setCurrentUser } = useContext(DataStore);
 
-
+console.log(currentUser);
   
   return (
     <div>
@@ -120,7 +120,7 @@ function Header() {
 
                     <span className="mx-2">
                       {" "}
-                      {currentUser.name ? <Link to={`/user/${currentUser.id}/${currentUser.name}`}> <span style={{color:"#de030e"}}> { currentUser.name} </span></Link> : "Mein Konto"}
+                      {currentUser.name ? <Link to={`/user/${currentUser.id}/${currentUser.name}`}> <span style={{color:"#de030e"}}> { currentUser.name} <span class="badge rounded-pill bg-success">{currentUser.selectedBooks.length > 0 ? currentUser.selectedBooks.length : null}</span> </span></Link> : "Mein Konto"}
                     </span>
                     <span className="mx-2">
                       {" "}

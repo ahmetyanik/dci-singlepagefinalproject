@@ -1,63 +1,46 @@
-import React, { useContext } from "react";
-import {Link} from "react-router-dom"
-import DataStore from "./DataStore";
+import React from "react";
+import { Link } from "react-router-dom";
 
-function BookCard() {
-  const { allBooks, setAllBooks } = useContext(DataStore);
-
-  
-
-
+function BookCard({ book, index }) {
   return (
-    <div>
-      
-        <div className="container d-flex flex-row flex-wrap justify-content-around">
-          {allBooks.map((book, index) => {
-            return (
-              <Link to={`/book/${book["ISBN/GTIN"]}/${book.titel}`}>
-              <div
-                className="card m-3 shadow"
-                key={index}
-                style={{ width: "18rem" }}
-              >
-                <img
-                  className="card-img-top p-1"
-                  style={{ height: "20rem" }}
-                  src={book.image}
-                  alt="Card cap"
-                />
-                <div className="card-body ">
-                  <h5 className="card-title">{book.titel}</h5>
-                  <p className="card-text">
-                    <span>{book.autor}</span> <span></span>
-                  </p>
-                  <div className="d-flex justify-content-between">
-                    <span>
-                      <i className="fas fa-book"></i>
-                    </span>
-                    <span className="font-weight-bold">EUR {book.preis}</span>
-                  </div>
-                  <div className="d-flex align-items-end justify-content-center">
-                    <div>
-                      <a href="like">
-                        <i class="far fa-heart fs-3 pb-1 me-4 text-dark"></i>
-                      </a>
-                    </div>
-                    <div>
-                      {" "}
-                      <button href="#" class="btn btn-danger mt-3 warenkorb">
-                        <i className="fas fa-shopping-cart me-3"></i>
-                        WARENKORB
-                      </button>
-                    </div>
-                  </div>
-
-                </div>
+    <div className="card m-3 shadow">
+      <Link to={`/book/${book["ISBN/GTIN"]}/${book.titel}`}>
+        <div>
+          <div            
+            key={index}
+            style={{ width: "18rem" }}
+          >
+            <img
+              className="card-img-top p-1"
+              style={{ height: "20rem" }}
+              src={book.image}
+              alt="Card cap"
+            />
+            <div className="card-body ">
+              <h5 className="card-title">{book.titel}</h5>
+              <p className="card-text">
+                <span>{book.autor}</span> <span></span>
+              </p>
+              <div className="d-flex justify-content-between">
+                <span>
+                  <i className="fas fa-book"></i>
+                </span>
+                <span className="font-weight-bold">EUR {book.preis}</span>
               </div>
-      </Link>
-            );
-          })}
+              <div className="d-flex align-items-end justify-content-center"></div>
+            </div>
+          </div>
         </div>
+      </Link>
+          <div className="d-flex justify-content-center align-items-center">
+            <div>
+                <i class="far fa-heart fs-3 pb-1 me-4 text-dark"></i>
+            </div>
+              <button href="#" class="btn btn-danger m-3 d-flex justify-content-center align-items-center">
+                <i className="fas fa-shopping-cart me-3"></i>
+                WARENKORB
+              </button>
+          </div>
     </div>
   );
 }
