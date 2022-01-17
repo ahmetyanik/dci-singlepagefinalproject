@@ -21,6 +21,7 @@ function reducer(state,action){
 
 
     alertify.success(action.payload.singleBook.titel + " added.",1);
+    
     return [...state,action.payload.singleBook]
   }
   
@@ -75,14 +76,16 @@ function App() {
   const initialState = [currentUser.selectedBooks];
   const [state, dispatch] = useReducer(reducer, initialState)
   
+
   
-  console.log(initialState);
+  console.log(state);
 
 
   useEffect(() => {
     setAllUsers(users);
     setAllBooks(books);
   }, []);
+
 
   console.log(allBooks);
 
