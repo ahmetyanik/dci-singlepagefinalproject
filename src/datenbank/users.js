@@ -9,6 +9,8 @@ const users = [
         purchasedBooks : [],
         address : "Freeway GmbH Industriestrasse 36 65439 Floersheim",
         creditCard : "1234567890",
+        expirationDateOfCard : "12.12.2022"
+        
       }
 ]
 
