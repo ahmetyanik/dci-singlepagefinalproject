@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import DataStore from "./DataStore";
 
-function Bookarea() {
+function Bookarea({ reducerState, dispatch }) {
   const params = useParams();
-  const { allBooks, setAllBooks } = useContext(DataStore);
+  const { allBooks, setAllBooks, currentUser, setCurrentUser } =
+    useContext(DataStore);
 
   const [singleBook, setSingleBook] = useState({});
 
@@ -47,7 +48,17 @@ function Bookarea() {
               </a>
             </div>
             <div>
-              <button href="#" className="btn btn-danger mt-3 ">
+              <button
+                onClick={() => {
+                  console.log(singleBook)
+                  dispatch({
+                    type: "add",
+                    payload: { singleBook: singleBook },
+                  });
+                }}
+                href="#"
+                className="btn btn-danger mt-3 "
+              >
                 <i className="fas fa-shopping-cart me-3"></i>
                 WARENKORB
               </button>
@@ -67,7 +78,9 @@ function Bookarea() {
       <div className="row">
         <h2 className="text-start my-4"> Produktbeschreibung</h2>
         <div className="col-lg-9 text-start">
-          <p className="fw-lighter pe-lg-5 lh-base text-justify">{singleBook.beschreibung}</p>
+          <p className="fw-lighter pe-lg-5 lh-base text-justify">
+            {singleBook.beschreibung}
+          </p>
         </div>
         <div className="col-lg-3 text-start">
           <h4>Details</h4>
@@ -109,9 +122,6 @@ function Bookarea() {
           </p>
         </div>
       </div>
-
-      
-
     </div>
   );
 }

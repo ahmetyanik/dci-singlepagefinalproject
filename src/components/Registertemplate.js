@@ -1,10 +1,12 @@
 import React, { useContext, useState } from "react";
 import DataStore from "./DataStore";
 import Singinsignupbuttons from "./Signinsignupbutton";
+import { useNavigate } from "react-router-dom";
 
 function RegisterTemplate() {
-  const { allUsers, setAllUsers, currentUser, setCurrentUser } =
-    useContext(DataStore);
+  const { allUsers, setAllUsers, currentUser, setCurrentUser } = useContext(DataStore);
+  let navigate = useNavigate();
+  
 
   /* Register */
 
@@ -33,7 +35,8 @@ function RegisterTemplate() {
     e.preventDefault();
     const newArray = [...allUsers, person];
     setAllUsers(newArray);
-
+    setCurrentUser(person);
+    navigate("/");
     alert("You are registered!");
   }
 
