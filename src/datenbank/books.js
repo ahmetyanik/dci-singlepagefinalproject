@@ -25,7 +25,7 @@ const books = [
     Erstverkaufstag: "17.06.2021",
     Gewicht: "304 g",
     ArtikelNr: "16393351",
-    Genre: "Neu und Bestseller"
+    Genre: "Neu und Bestseller",
   },
   {
     titel: "Wir können auch anders",
@@ -203,7 +203,6 @@ const books = [
     ArtikelNr: "20282790",
     Genre: "Sachbuch",
   },
-  ,
   {
     titel: "Eine Art Bescherung",
     autor: "Siegfried Lenz",
@@ -224,7 +223,6 @@ const books = [
     ArtikelNr: "1228567",
     Genre: "Belletristik",
   },
-  ,
   {
     titel: "Olympia",
     autor: "Volker Kutscher",
@@ -252,7 +250,6 @@ const books = [
     ArtikelNr: "19564174",
     Genre: "Krimis",
   },
-  ,
   {
     titel: "Vergissmeinnicht - Was man bei Licht nicht sehen kann",
     autor: "Kerstin Gier",
@@ -274,7 +271,6 @@ const books = [
     ArtikelNr: "19862005",
     Genre: "Literatur",
   },
-  ,
   {
     titel: "Die Dämonen",
     autor: "Fjodor Dostojewski",
@@ -295,7 +291,6 @@ const books = [
     ArtikelNr: "19617576",
     Genre: "Belletristik",
   },
-  ,
   {
     titel: "Ungeduld des Herzens",
     autor: "Stefan Zweig",
@@ -316,7 +311,6 @@ const books = [
     ArtikelNr: "16414445",
     Genre: "Belletristik",
   },
-  ,
   {
     titel: "Die Brüder Karamasow",
     autor: "Fjodor Dostojewski",
@@ -342,7 +336,6 @@ const books = [
     ArtikelNr: "18819322",
     Genre: "Literatur",
   },
-  ,
   {
     titel: "Effingers",
     autor: "Gabriele Tergit",
@@ -363,7 +356,6 @@ const books = [
     ArtikelNr: "16538003",
     Genre: "Literatur",
   },
-  ,
   {
     titel: "Verbrechen und Strafe",
     autor: "Fjodor Dostojewski",
@@ -408,7 +400,6 @@ const books = [
     ArtikelNr: "1229762",
     Genre: "Belletristik",
   },
-  ,
   {
     titel: "Spinnst du?",
     autor: "Sonja Kopitz",
@@ -429,7 +420,7 @@ const books = [
     ArtikelNr: "19798388",
     Genre: "Belletristik",
   },
-  ,
+
   {
     titel: "Outlander - Das Schwärmen von tausend Bienen",
     autor: "Diana Gabaldon",
@@ -456,7 +447,6 @@ const books = [
     ArtikelNr: "19778695",
     Genre: "Belletristik",
   },
-  ,
   {
     titel: "Die Topeka Schule",
     autor: "Ben Lerner",
@@ -478,7 +468,6 @@ const books = [
     ArtikelNr: "16414854",
     Genre: "Belletristik",
   },
-  ,
   {
     titel: "Starlight Full Of Chances",
     autor: "Mounia Jaywand",
@@ -501,7 +490,7 @@ const books = [
     ArtikelNr: "19689428",
     Genre: "Literatur",
   },
-  ,
+
   {
     titel: "Sunrise Full Of Wonder",
     autor: "Mounia jajawanth",
@@ -523,7 +512,7 @@ const books = [
     ArtikelNr: "19686363",
     Genre: "Literatur",
   },
-  ,
+
   {
     titel: "Worlds Beyond",
     autor: "Annabelle Stehl",
@@ -546,7 +535,6 @@ const books = [
     ArtikelNr: "19686843",
     Genre: "Literatur",
   },
-  ,
   {
     titel: "Worlds Apart",
     autor: "Annabelle Stehl",
@@ -570,7 +558,6 @@ const books = [
     ArtikelNr: "19687604",
     Genre: "Literatur",
   },
-  ,
   {
     titel: "Drowning in Stars",
     autor: "Debra Anastasia",
@@ -782,7 +769,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     ArtikelNr: "19436331",
     Genre: "Krimi",
   },
-  ,
   {
     titel: "Ostfriesensturm",
     autor: "Klaus Wolf",
@@ -805,7 +791,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     ArtikelNr: "19765723",
     Genre: "Krimi",
   },
-  ,
   {
     titel: "Geheime Quellen",
     autor: "Donna Leon",
