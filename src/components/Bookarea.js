@@ -9,7 +9,7 @@ function Bookarea({ reducerState, dispatch }) {
 
   const [singleBook, setSingleBook] = useState({});
 
-  console.log(params);
+  
 
   const filteredBook = allBooks.filter((book) => {
     return params.ISBN === book["ISBN/GTIN"] && params.bookName === book.titel;

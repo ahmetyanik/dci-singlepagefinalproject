@@ -87,7 +87,6 @@ function App() {
   }, []);
 
 
-  console.log(allBooks);
 
   return (
     <div className="App">

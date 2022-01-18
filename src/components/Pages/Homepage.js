@@ -9,7 +9,7 @@ import DataStore from "../DataStore";
 function Homepage() {
   const { allBooks, setAllBooks } = useContext(DataStore);
 
-  console.log(allBooks);
+
 
   return (
     <div>
