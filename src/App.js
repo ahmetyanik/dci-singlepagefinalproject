@@ -12,7 +12,7 @@ import books from "./datenbank/books";
 import Adminpage from "./components/Pages/Adminpage";
 import Adminloginpage from "./components/Pages/Adminloginpage";
 import alertify from "alertifyjs"
-import ShoppingCart from "./components/Pages/ShoppingCart";
+import ShoppingCart from "./components/Pages/Shoppingcartpage";
 
 
 function reducer(state,action){
