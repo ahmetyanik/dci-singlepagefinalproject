@@ -7,6 +7,7 @@ function ShoppingCartArea() {
   const { currentUser, setCurrentUser, warenkorbState, warenkorbDispatch } =
     useContext(DataStore);
   const array = [];
+  let totalPreis = 0;
 
   console.log(warenkorbState);
 
@@ -97,12 +98,17 @@ function ShoppingCartArea() {
                       <h5 class="text-grey">{book.preis}</h5>
                     </div>
                     <div class="d-flex align-items-center">
-                      <i class="fa fa-trash mb-1 text-danger"></i>
+                      <span class="text-grey">
+                        {(parseFloat(book.preis) * filteredBook.length).toFixed(
+                          2
+                        )}
+                      </span>
                     </div>
                   </div>
                 );
               }
             })}
+
 
             <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
               <button
