@@ -7,7 +7,6 @@ const users = [
         image: "https://lh5.googleusercontent.com/proxy/bMQcJCLaq4js3x72sWU-cqc6gaqwxAexN6l3ZuxGl8mLiLQjJZV0o8GdWZ4sf37iWjTzPi_ZJwXwSWv278tFJ4toiPVMyzDWEkqDmbVV2roSnPD5brL-NLgy7klnVQjHxFfH_BtxFfAaOXrQcoXkmJF158tTnmgDffRJ5lO5-dgxfy9Qhp4MQySA1rYZBpKavOgTNCXcj7z7JLnAfn_VzjLCWNy4yyT_BRowocFQo9bnfDyeOOEGwgkErUb95V9VQVUJQygDrxwazDY5iVWVpoC0",
         active: false,
         purchasedBooks : [],
-        selectedBooks: [{kitap:"suc ve ceza"}],
         address : "Freeway GmbH Industriestrasse 36 65439 Floersheim",
         creditCard : "1234567890",
         expirationDateOfCard : "12.12.2022"

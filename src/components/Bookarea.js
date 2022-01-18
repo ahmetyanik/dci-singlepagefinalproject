@@ -2,14 +2,14 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import DataStore from "./DataStore";
 
-function Bookarea({ reducerState, dispatch }) {
+function Bookarea() {
   const params = useParams();
-  const { allBooks, setAllBooks, currentUser, setCurrentUser } =
+  const { allBooks, setAllBooks, currentUser, setCurrentUser, warenkorbState, warenkorbDispatch } =
     useContext(DataStore);
 
   const [singleBook, setSingleBook] = useState({});
 
-  console.log(params);
+  
 
   const filteredBook = allBooks.filter((book) => {
     return params.ISBN === book["ISBN/GTIN"] && params.bookName === book.titel;
@@ -50,8 +50,13 @@ function Bookarea({ reducerState, dispatch }) {
             <div>
               <button
                 onClick={() => {
+
                   console.log(singleBook);
                   dispatch({
+
+                  console.log(singleBook)
+                  warenkorbDispatch({
+
                     type: "add",
                     payload: { singleBook: singleBook },
                   });
