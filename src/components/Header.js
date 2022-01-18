@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import DataStore from "./DataStore";
+import Logo from "../images/logo.png";
 
 function Header() {
 
@@ -60,7 +61,7 @@ console.log(currentUser);
             <Link to="/">
               {" "}
               <a className="navbar-brand" href="#">
-                <img src="https://www.kulturkaufhaus.de/htdyn/3HKDZ4XW26S9/kuka-logo.svg" />
+                <img src={Logo} className="logo" />
               </a>
             </Link>
             <button
