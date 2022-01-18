@@ -139,7 +139,7 @@ function Footer() {
                  >
               © 2020 Copyright:
               <a className='text-white text-decoration-none' href="https://mdbootstrap.com/"
-                 >MDBootstrap.com</a
+                 ></a
                 >
             </div>
             {/* <!-- Copyright --> */}
