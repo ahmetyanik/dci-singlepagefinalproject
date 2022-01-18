@@ -2,9 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import DataStore from "./DataStore";
 
-function Bookarea({ reducerState, dispatch }) {
+function Bookarea() {
   const params = useParams();
-  const { allBooks, setAllBooks, currentUser, setCurrentUser } =
+  const { allBooks, setAllBooks, currentUser, setCurrentUser, warenkorbState, warenkorbDispatch } =
     useContext(DataStore);
 
   const [singleBook, setSingleBook] = useState({});
@@ -51,7 +51,7 @@ function Bookarea({ reducerState, dispatch }) {
               <button
                 onClick={() => {
                   console.log(singleBook)
-                  dispatch({
+                  warenkorbDispatch({
                     type: "add",
                     payload: { singleBook: singleBook },
                   });

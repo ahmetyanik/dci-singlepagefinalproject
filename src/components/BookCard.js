@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import DataStore from "./DataStore";
 
 function BookCard({ book, index }) {
+
+
+  const { warenkorbState,warenkorbDispatch } = useContext(DataStore);
+
   return (
     <div className="card m-3 shadow">
       <Link to={`/book/${book["ISBN/GTIN"]}/${book.titel}`}>
@@ -36,7 +41,13 @@ function BookCard({ book, index }) {
             <div>
                 <i class="far fa-heart fs-3 pb-1 me-4 text-dark"></i>
             </div>
-              <button href="#" class="btn btn-danger m-3 d-flex justify-content-center align-items-center">
+              <button    onClick={() => {
+                  console.log(book)
+                  warenkorbDispatch({
+                    type: "add",
+                    payload: { singleBook: book },
+                  });
+                }} href="#" class="btn btn-danger m-3 d-flex justify-content-center align-items-center">
                 <i className="fas fa-shopping-cart me-3"></i>
                 WARENKORB
               </button>

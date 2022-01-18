@@ -73,12 +73,12 @@ function App() {
   const [adminlogin, setAdminLogin] = useState(true);
   
   
-  const initialState = [currentUser.selectedBooks];
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const initialState = [];
+  const [warenkorbState, warenkorbDispatch] = useReducer(reducer, initialState)
   
 
   
-  console.log(state);
+  console.log(warenkorbState);
 
 
   useEffect(() => {
@@ -92,13 +92,13 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <DataStore.Provider
-          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks }}
+          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch }}
         >
           <Routes>
-            <Route exact path="/" element={<Homepage reducerState={state} dispatch={dispatch} />} />
+            <Route exact path="/" element={<Homepage  />} />
             <Route path="/login" element={<Loginpage />} />
             <Route path="/register" element={<RegisterPage />} />
-            <Route path="/book/:ISBN/:bookName" element={<Singlebuchpage reducerState = {state} dispatch={dispatch} />} />
+            <Route path="/book/:ISBN/:bookName" element={<Singlebuchpage  />} />
             <Route path="/user/:id/:name" element={<Userpage/>} />
             <Route path="/admin" element={adminlogin ? <Adminpage/> : <Adminloginpage/>} />
           </Routes>
