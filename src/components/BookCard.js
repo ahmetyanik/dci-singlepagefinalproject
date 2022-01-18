@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import DataStore from "./DataStore";
+import "../App.css"
 
 function BookCard({ book, index }) {
 
 
-  const { warenkorbState,warenkorbDispatch } = useContext(DataStore);
+  const { warenkorbState,warenkorbDispatch, merkListDispatch } = useContext(DataStore);
 
   return (
     <div className="card m-3 shadow">
@@ -39,7 +40,12 @@ function BookCard({ book, index }) {
       </Link>
           <div className="d-flex justify-content-center align-items-center">
             <div>
-                <i class="far fa-heart fs-3 pb-1 me-4 text-dark"></i>
+                <i onClick={() => {
+                  merkListDispatch({
+                    type: "add_merk_book",
+                    payload: { singleBook: book },
+                  });
+                }} class="far fa-heart fs-3 pb-1 me-4 text-dark cursor"></i>
             </div>
               <button    onClick={() => {
                   console.log(book)

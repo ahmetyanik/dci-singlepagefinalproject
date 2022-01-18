@@ -13,12 +13,23 @@ import Adminpage from "./components/Pages/Adminpage";
 import Adminloginpage from "./components/Pages/Adminloginpage";
 import alertify from "alertifyjs"
 import Shoppingcartpage from "./components/Pages/Shoppingcartpage";
+import MerkListPage from "./components/Pages/MerkListPage";
+
+
 
 
 function reducer(state,action){
 
 
   if(action.type==="add"){   
+
+
+    alertify.success(action.payload.singleBook.titel + " added.",1);
+    
+    return [...state,action.payload.singleBook]
+  }
+
+  if(action.type==="add_merk_book"){   
 
 
     alertify.success(action.payload.singleBook.titel + " added.",1);
@@ -67,6 +78,7 @@ function App() {
   
   const initialState = [];
   const [warenkorbState, warenkorbDispatch] = useReducer(reducer, initialState)
+  const [merkListState, merkListDispatch] = useReducer(reducer, initialState)
   
 
   
@@ -84,7 +96,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <DataStore.Provider
-          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch }}
+          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch }}
         >
           <Routes>
             <Route exact path="/" element={<Homepage  />} />
@@ -94,6 +106,7 @@ function App() {
             <Route path="/user/:id/:name" element={<Userpage/>} />
             <Route path="/admin" element={adminlogin ? <Adminpage/> : <Adminloginpage/>} />
             <Route path="/shoppingCart/:userName" element={<Shoppingcartpage/>} />
+            <Route path="/merklist/:userName" element={<MerkListPage/>} />
           </Routes>
         </DataStore.Provider>
       </BrowserRouter>
