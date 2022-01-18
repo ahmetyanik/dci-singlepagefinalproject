@@ -25,6 +25,14 @@ function reducer(state,action){
     
     return [...state,action.payload.singleBook]
   }
+
+  if(action.type==="add_merk_book"){   
+
+
+    alertify.success(action.payload.singleBook.titel + " added.",1);
+    
+    return [...state,action.payload.singleBook]
+  }
   
   if(action.type==="plusFromCart"){
 
@@ -76,6 +84,7 @@ function App() {
   
   const initialState = [];
   const [warenkorbState, warenkorbDispatch] = useReducer(reducer, initialState)
+  const [merkListState, merkListDispatch] = useReducer(reducer, initialState)
   
 
   
@@ -93,7 +102,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <DataStore.Provider
-          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch }}
+          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch }}
         >
           <Routes>
             <Route exact path="/" element={<Homepage  />} />

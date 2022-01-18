@@ -2,9 +2,10 @@ import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import DataStore from "./DataStore";
 import Logo from "../images/logo.png";
+import "../App.css"
 
 function Header() {
-  const { currentUser, setCurrentUser, warenkorbState, warenkorbDispatch } =
+  const { currentUser, setCurrentUser, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch} =
     useContext(DataStore);
 
   console.log(currentUser);
@@ -82,6 +83,7 @@ function Header() {
                     Home
                   </a>
                 </li>
+                
                 <Link to={`/shoppingCart/${currentUser.name === undefined ? "Gast User" : currentUser.name}`}>
                   <li className="nav-item">
                     <a className="nav-link" href="#">
@@ -95,6 +97,53 @@ function Header() {
                 </li>
               </ul>
               <div className="d-flex flex-column align-items-lg-end">
+                {/* Merk List und Mein Konto */}
+              <div className="d-flex">
+                {/* Merk List */}
+                <Link
+                  className="py-3 "
+                  style={{ textDecoration: "none" }}
+                  to={"/login"}
+                >
+                  <span
+                    className="d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center flex-lg-row"
+                    style={{ color: "#de030e" }}
+                  >
+                    {currentUser.name ? null : (
+                      <i className="far fa-heart text-danger px-1"></i>
+                    )}
+
+                    <span className="mx-2" >
+                      {currentUser.name ? (
+                        <Link
+                          to={`/user/${currentUser.id}/${currentUser.name}/merklist`}
+                        >
+                          {" "}
+                          <span  style={{ color: "#de030e" }}>
+                            {" "}
+                            Merk List{" "}
+                            <span class="badge rounded-pill bg-success">
+                              {merkListState.length}
+                            </span>{" "}
+                          </span>
+                        </Link>
+                      ) : (
+                        <span>
+                          Merk List{" "}
+                          {merkListState.length > 0 ? (
+                            <span class="badge rounded-pill bg-success">
+                              {merkListState.length}
+                            </span>
+                          ) : null}{" "}
+                        </span>
+                      )}
+                    </span>
+                  </span>
+
+                </Link>
+                {/* Merk List endet */}
+
+                {/* Mein Konto */}
                 <Link
                   className="py-3 "
                   style={{ textDecoration: "none" }}
@@ -152,8 +201,11 @@ function Header() {
                     <span onClick={() => setCurrentUser({})} className="mx-2">
                       {currentUser.name ? "Log Out" : null}
                     </span>
-                  </span>
+                  </span>                  
                 </Link>
+                {/* Mein Konto endet */}
+                </div>
+                {/*MerkList und Mein Konto endet */}
                 <form className="d-flex">
                   <input
                     className="form-control me-2"
