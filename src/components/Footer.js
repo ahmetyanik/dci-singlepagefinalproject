@@ -121,7 +121,7 @@ function Footer() {
                         style={{width: "60px", backgroundColor: "#7c4dff", height: "2px"}}
                         />
                     <p><i className="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                    <p><i className="fas fa-envelope mr-3"></i> info@example.com</p>
+                    <p><i className="fas fa-envelope mr-3"></i><a href = "mailto: abc@example.com"> info@fachsbooks.com</a></p>
                     <p><i className="fas fa-phone mr-3"></i> + 01 234 567 88</p>
                     <p><i className="fas fa-print mr-3"></i> + 01 234 567 89</p>
                   </div>
@@ -139,7 +139,7 @@ function Footer() {
                  >
               © 2020 Copyright:
               <a className='text-white text-decoration-none' href="https://mdbootstrap.com/"
-                 ></a
+                 >MDBootstrap.com</a
                 >
             </div>
             {/* <!-- Copyright --> */}
