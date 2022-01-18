@@ -4,15 +4,13 @@ import DataStore from "./DataStore";
 import Logo from "../images/logo.png";
 
 function Header() {
+  const { currentUser, setCurrentUser, warenkorbState, warenkorbDispatch } =
+    useContext(DataStore);
 
-  const { currentUser, setCurrentUser, warenkorbState, warenkorbDispatch } = useContext(DataStore);
+  console.log(currentUser);
 
-console.log(currentUser);
-  
   return (
     <div>
-
-
       {/*  Grey Area of Header */}
       <div
         style={{
@@ -53,7 +51,6 @@ console.log(currentUser);
         </div>
       </div>
 
-
       {/* Navbar Area of Header */}
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -85,11 +82,13 @@ console.log(currentUser);
                     Home
                   </a>
                 </li>
+                <Link to={`/shoppingCart/${currentUser.name}`}>
                   <li className="nav-item">
                     <a className="nav-link" href="#">
-                      Link
+                      Shopping Cart
                     </a>
                   </li>
+                </Link>
 
                 <li className="nav-item">
                   <a className="nav-link disabled">Disabled</a>
@@ -106,21 +105,46 @@ console.log(currentUser);
                     style={{ color: "#de030e" }}
                   >
                     {currentUser.name ? (
-                   <Link to={`/user/${currentUser.id}/${currentUser.name}`}>  <img
-                        style={{
-                          width: "40px",
-                          height: "40px",
-                          borderRadius: "50%",
-                        }}
-                        src={currentUser.image}
-                        alt=""
-                      /> </Link> 
+                      <Link to={`/user/${currentUser.id}/${currentUser.name}`}>
+                        {" "}
+                        <img
+                          style={{
+                            width: "40px",
+                            height: "40px",
+                            borderRadius: "50%",
+                          }}
+                          src={currentUser.image}
+                          alt=""
+                        />{" "}
+                      </Link>
                     ) : (
                       <i className="far fa-user text-danger px-2"></i>
                     )}
 
                     <span className="mx-2">
-                      {currentUser.name ? <Link to={`/user/${currentUser.id}/${currentUser.name}`}> <span style={{color:"#de030e"}}> { currentUser.name} <span class="badge rounded-pill bg-success">{warenkorbState.length}</span> </span></Link> : <span>Mein Konto {warenkorbState.length>0 ? <span class="badge rounded-pill bg-success">{warenkorbState.length}</span> : null } </span> }
+                      {currentUser.name ? (
+                        <Link
+                          to={`/user/${currentUser.id}/${currentUser.name}`}
+                        >
+                          {" "}
+                          <span style={{ color: "#de030e" }}>
+                            {" "}
+                            {currentUser.name}{" "}
+                            <span class="badge rounded-pill bg-success">
+                              {warenkorbState.length}
+                            </span>{" "}
+                          </span>
+                        </Link>
+                      ) : (
+                        <span>
+                          Mein Konto{" "}
+                          {warenkorbState.length > 0 ? (
+                            <span class="badge rounded-pill bg-success">
+                              {warenkorbState.length}
+                            </span>
+                          ) : null}{" "}
+                        </span>
+                      )}
                     </span>
                     <span className="mx-2">
                       {currentUser.name ? "|" : null}

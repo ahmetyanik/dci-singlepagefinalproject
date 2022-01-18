@@ -12,6 +12,7 @@ import books from "./datenbank/books";
 import Adminpage from "./components/Pages/Adminpage";
 import Adminloginpage from "./components/Pages/Adminloginpage";
 import alertify from "alertifyjs"
+import ShoppingCart from "./components/Pages/ShoppingCart";
 
 
 function reducer(state,action){
@@ -101,6 +102,7 @@ function App() {
             <Route path="/book/:ISBN/:bookName" element={<Singlebuchpage  />} />
             <Route path="/user/:id/:name" element={<Userpage/>} />
             <Route path="/admin" element={adminlogin ? <Adminpage/> : <Adminloginpage/>} />
+            <Route path="/shoppingCart/:userName" element={<ShoppingCart/>} />
           </Routes>
         </DataStore.Provider>
       </BrowserRouter>
