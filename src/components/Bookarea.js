@@ -11,6 +11,7 @@ function Bookarea() {
     setCurrentUser,
     warenkorbState,
     warenkorbDispatch,
+    merkListDispatch
   } = useContext(DataStore);
 
   const [singleBook, setSingleBook] = useState({});
@@ -44,9 +45,14 @@ function Bookarea() {
           <h1>EUR 10,50</h1>
           <div className="d-flex align-items-end justify-content-lg-end">
             <div>
-              <a href="like">
-                <i className="far fa-heart fs-3 pb-1 me-4 text-dark"></i>
-              </a>
+              
+                <i onClick={() => {
+                  merkListDispatch({
+                    type: "add_merk_book",
+                    payload: { singleBook: singleBook },
+                  });
+                }} className="far fa-heart fs-3 pb-1 me-4 text-dark cursor"></i>
+              
               <a href="like">
                 <i className="fas fa-share-alt fs-3 pb-1 me-4 text-dark"></i>
               </a>
