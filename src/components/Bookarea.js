@@ -51,10 +51,6 @@ function Bookarea() {
               <button
                 onClick={() => {
 
-                  console.log(singleBook);
-                  dispatch({
-
-                  console.log(singleBook)
                   warenkorbDispatch({
 
                     type: "add",
