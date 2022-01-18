@@ -99,11 +99,11 @@ function ShoppingCartArea() {
                       ></i>
                     </div>
                     <div>
-                      <h5 class="text-grey">{book.preis}</h5>
+                      <h5 class="text-grey">{book.preis}€</h5>
                     </div>
                     <div class="d-flex align-items-center">
                       <span class="text-grey">
-                        {(parseFloat(book.preis) * filteredBook.length).toFixed(2)}
+                        {(parseFloat(book.preis) * filteredBook.length).toFixed(2)}€
                       </span>
                     </div>
                   </div>
@@ -111,9 +111,11 @@ function ShoppingCartArea() {
               }
             })}
 
-            <span>
+            <span className="d-flex flex-column align-items-end mt-3">
 
-              {totalPreis}
+            <h3>Total</h3>
+
+              <h4>{totalPreis}€</h4>
             </span>
 
             <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
