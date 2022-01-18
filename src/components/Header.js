@@ -1,6 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import DataStore from "./DataStore";
+import Logo from '../images/logo.png';
+
+
 
 function Header() {
 
@@ -22,8 +25,8 @@ function Header() {
           backgroundColor: "#cccccc",
         }}
       >
-        <span style={{ color: "#c42b32", fontWeight: "bold" }}>
-          3G im KulturKaufhaus
+        <span style={{ color: "#D90416", fontWeight: "bold" }}>
+          3G im Bücherhaus
         </span>
       </div>
 
@@ -31,7 +34,7 @@ function Header() {
 
       <div
         className="d-none d-sm-none d-md-block d-md-flex justify-content-md-between d-lg-flex justify-content-lg-around align-items-center px-1"
-        style={{ display: "flex", height: "40px", backgroundColor: "#de030e" }}
+        style={{ display: "flex", height: "40px", backgroundColor: "#D90416" }}
       >
         <div className="text-light">
           <span>KulturKaufhaus</span>
@@ -60,7 +63,7 @@ function Header() {
             <Link to="/">
               {" "}
               <a className="navbar-brand" href="#">
-                <img src="https://www.kulturkaufhaus.de/htdyn/3HKDZ4XW26S9/kuka-logo.svg" />
+                <img src={Logo} className="logo"/>
               </a>
             </Link>
             <button
@@ -102,7 +105,7 @@ function Header() {
                 >
                   <span
                     className="d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center flex-lg-row"
-                    style={{ color: "#de030e" }}
+                    style={{ color: "#D90416" }}
                   >
                     {currentUser.name ? (
                    <Link to={`/user/${currentUser.id}/${currentUser.name}`}>  <img
@@ -120,7 +123,7 @@ function Header() {
 
                     <span className="mx-2">
                       {" "}
-                      {currentUser.name ? <Link to={`/user/${currentUser.id}/${currentUser.name}`}> <span style={{color:"#de030e"}}> { currentUser.name} </span></Link> : "Mein Konto"}
+                      {currentUser.name ? <Link to={`/user/${currentUser.id}/${currentUser.name}`}> <span style={{color:"#D90416"}}> { currentUser.name} </span></Link > : "Mein Konto"}
                     </span>
                     <span className="mx-2">
                       {" "}

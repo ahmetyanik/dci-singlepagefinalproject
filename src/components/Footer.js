@@ -12,7 +12,7 @@ function Footer() {
             {/* <!-- Section: Social media --> */}
             <section
                      className="d-flex justify-content-between p-4 text-white"
-                     style={{backgroundColor: "#de030e"}}
+                     style={{backgroundColor: "#D90416"}}
                      >
               {/* <!-- Left --> */}
               <div className="me-5">
@@ -135,7 +135,7 @@ function Footer() {
             {/* <!-- Copyright --> */}
             <div
                  className="text-center p-3 text-white"
-                 style={{backgroundColor: "#de030e"}}
+                 style={{backgroundColor: "#D90416"}}
                  >
               © 2020 Copyright:
               <a className='text-white text-decoration-none' href="https://mdbootstrap.com/"
