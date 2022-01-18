@@ -82,7 +82,7 @@ function Header() {
                     Home
                   </a>
                 </li>
-                <Link to={`/shoppingCart/${currentUser.name}`}>
+                <Link to={`/shoppingCart/${currentUser.name === undefined ? "Gast User" : currentUser.name}`}>
                   <li className="nav-item">
                     <a className="nav-link" href="#">
                       Shopping Cart

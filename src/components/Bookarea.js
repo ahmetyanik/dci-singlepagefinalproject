@@ -4,12 +4,16 @@ import DataStore from "./DataStore";
 
 function Bookarea() {
   const params = useParams();
-  const { allBooks, setAllBooks, currentUser, setCurrentUser, warenkorbState, warenkorbDispatch } =
-    useContext(DataStore);
+  const {
+    allBooks,
+    setAllBooks,
+    currentUser,
+    setCurrentUser,
+    warenkorbState,
+    warenkorbDispatch,
+  } = useContext(DataStore);
 
   const [singleBook, setSingleBook] = useState({});
-
-  
 
   const filteredBook = allBooks.filter((book) => {
     return params.ISBN === book["ISBN/GTIN"] && params.bookName === book.titel;
@@ -50,9 +54,7 @@ function Bookarea() {
             <div>
               <button
                 onClick={() => {
-
                   warenkorbDispatch({
-
                     type: "add",
                     payload: { singleBook: singleBook },
                   });
@@ -124,7 +126,7 @@ function Bookarea() {
         </div>
       </div>
 
-      <section >
+      <section>
         <div class="container my-5 py-5">
           <div class="row d-flex justify-content-center">
             <div class="col-md-12 col-lg-10 col-xl-8">
@@ -169,7 +171,7 @@ function Bookarea() {
                   class="card-footer py-3 border-0"
                   style={{ backgroundColor: "#f8f9fa" }}
                 >
-                  <form action="" >
+                  <form action="">
                     <div class="d-flex flex-start w-100">
                       <img
                         class="rounded-circle shadow-1-strong me-3"
@@ -180,7 +182,7 @@ function Bookarea() {
                       />
 
                       <div class="form-outline w-100">
-                        <textarea 
+                        <textarea
                           class="form-control"
                           id="textAreaExample"
                           rows="4"
