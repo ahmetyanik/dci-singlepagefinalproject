@@ -30,11 +30,39 @@ function reducer(state,action){
   }
 
   if(action.type==="add_merk_book"){   
-
-
+    
+    
     alertify.success(action.payload.singleBook.titel + " added.",1);
     
     return [...state,action.payload.singleBook]
+
+  }
+  if(action.type==="remove_merklist"){
+
+    alertify.error(action.payload.singleBook.titel + " cikarildi.",1)
+
+
+    const newArray2 = [...state];
+
+
+    const bulunanIndex2 = [];
+    
+    for(let i=0;i<state.length;i++){
+      
+      if(state[i].titel===action.payload.singleBook.titel){
+        
+       bulunanIndex2.push(i);
+       break;
+
+      }
+    }
+
+    newArray2.splice(bulunanIndex2[0],1);
+   
+    console.log(newArray2);
+ 
+
+    return newArray2
   }
   
   
@@ -80,10 +108,11 @@ function App() {
   const [warenkorbState, warenkorbDispatch] = useReducer(reducer, initialState)
   const [merkListState, merkListDispatch] = useReducer(reducer, initialState)
   
+ 
 
   
   console.log(warenkorbState);
-
+  console.log(merkListState);
 
   useEffect(() => {
     setAllUsers(users);
