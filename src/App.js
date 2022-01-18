@@ -26,29 +26,20 @@ function reducer(state,action){
     return [...state,action.payload.singleBook]
   }
   
-  if(action.type==="plusFromCart"){
-
-    
-
-    alertify.success(action.payload.kitap[0].kitapismi + " eklendi.",1);
-    return [...state,action.payload.kitap[0]]
-  }
   
-  if(action.type==="minusFromCart"){
+  if(action.type==="remove"){
 
-    alertify.error(action.payload.kitap[0].kitapismi + " cikarildi.",1)
+    alertify.error(action.payload.singleBook.titel + " cikarildi.",1)
 
 
     const newArray = [...state];
 
-    console.log(action.payload.index);
-    console.log(action.payload.kitap);
 
     const bulunanIndex = [];
     
     for(let i=0;i<state.length;i++){
       
-      if(state[i].kitapismi===action.payload.kitap[0].kitapismi){
+      if(state[i].titel===action.payload.singleBook.titel){
         
        bulunanIndex.push(i);
        break;
