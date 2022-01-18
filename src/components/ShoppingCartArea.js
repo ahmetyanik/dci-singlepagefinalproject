@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "../shoppingCard.css";
 import DataStore from "./DataStore";
@@ -7,7 +7,14 @@ function ShoppingCartArea() {
   const { currentUser, setCurrentUser, warenkorbState, warenkorbDispatch } =
     useContext(DataStore);
   const array = [];
+
   let totalPreis = 0;
+
+  warenkorbState.forEach(book=>{
+    return totalPreis += parseFloat(book.preis);
+  })
+
+  console.log(array);
 
   console.log(warenkorbState);
 
@@ -17,21 +24,17 @@ function ShoppingCartArea() {
         <div class="d-flex justify-content-center row">
           <div class="col-md-8">
             <div class="p-2">
-              <h4>Shopping cart</h4>
-              <div class="d-flex flex-row align-items-center pull-right">
-                <span class="mr-1">Sort by:</span>
-                <span class="mr-1 font-weight-bold">Price</span>
-                <i class="fa fa-angle-down"></i>
-              </div>
             </div>
 
             {warenkorbState.map((book, index) => {
-              if (!array.includes(book.titel)) {
-                array.push(book.titel);
+              if (!array.includes(book)) {
+                array.push(book);
 
                 const filteredBook = warenkorbState.filter((element, index) => {
                   return book.titel === element.titel;
                 });
+
+                
 
                 return (
                   <div
@@ -90,7 +93,8 @@ function ShoppingCartArea() {
                             type: "add",
                             payload: { singleBook: book },
                           });
-                        }}
+                        }
+                        }
                         class="fas fa-cart-plus"
                       ></i>
                     </div>
@@ -99,9 +103,7 @@ function ShoppingCartArea() {
                     </div>
                     <div class="d-flex align-items-center">
                       <span class="text-grey">
-                        {(parseFloat(book.preis) * filteredBook.length).toFixed(
-                          2
-                        )}
+                        {(parseFloat(book.preis) * filteredBook.length).toFixed(2)}
                       </span>
                     </div>
                   </div>
@@ -109,6 +111,10 @@ function ShoppingCartArea() {
               }
             })}
 
+            <span>
+
+              {totalPreis}
+            </span>
 
             <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
               <button

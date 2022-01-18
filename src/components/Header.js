@@ -101,7 +101,7 @@ function Header() {
               <div className="d-flex">
                 {/* Merk List */}
                 <Link
-                  className="py-3 "
+                  className="d-flex align-items-center py-3 "
                   style={{ textDecoration: "none" }}
                   to={`/merklist/${currentUser.name}`}
                 >
