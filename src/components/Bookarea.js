@@ -4,11 +4,12 @@ import DataStore from "./DataStore";
 
 function Bookarea() {
   const params = useParams();
-  const { allBooks, setAllBooks } = useContext(DataStore);
+  const { allBooks, setAllBooks, currentUser, setCurrentUser, warenkorbState, warenkorbDispatch } =
+    useContext(DataStore);
 
   const [singleBook, setSingleBook] = useState({});
 
-  console.log(params);
+  
 
   const filteredBook = allBooks.filter((book) => {
     return params.ISBN === book["ISBN/GTIN"] && params.bookName === book.titel;
@@ -47,8 +48,22 @@ function Bookarea() {
               </a>
             </div>
             <div>
+
               <button href="#" className="btn btn-danger mt-3" style={{ backgroundColor: "#D90416" }}>
                 <i className="fas fa-shopping-cart me-3" ></i>
+
+              <button
+                onClick={() => {
+                  console.log(singleBook)
+                  warenkorbDispatch({
+                    type: "add",
+                    payload: { singleBook: singleBook },
+                  });
+                }}
+                href="#"
+                className="btn btn-danger mt-3 "
+              >
+                <i className="fas fa-shopping-cart me-3"></i>
                 WARENKORB
               </button>
             </div>
@@ -67,7 +82,9 @@ function Bookarea() {
       <div className="row">
         <h2 className="text-start my-4"> Produktbeschreibung</h2>
         <div className="col-lg-9 text-start">
-          <p className="fw-lighter pe-lg-5 lh-base text-justify">{singleBook.beschreibung}</p>
+          <p className="fw-lighter pe-lg-5 lh-base text-justify">
+            {singleBook.beschreibung}
+          </p>
         </div>
         <div className="col-lg-3 text-start">
           <h4>Details</h4>
@@ -109,9 +126,6 @@ function Bookarea() {
           </p>
         </div>
       </div>
-
-      
-
     </div>
   );
 }

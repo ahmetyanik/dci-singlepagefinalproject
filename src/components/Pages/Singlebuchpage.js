@@ -3,11 +3,11 @@ import Bookarea from '../Bookarea'
 import Footer from '../Footer'
 import Header from '../Header'
 
-function Singlebuchpage() {
+function Singlebuchpage({reducerState,dispatch}) {
     return (
         <div>
         <Header/>
-        <Bookarea/>
+        <Bookarea reducerState={reducerState} dispatch={dispatch}/>
         <Footer/>
         </div>
     )
