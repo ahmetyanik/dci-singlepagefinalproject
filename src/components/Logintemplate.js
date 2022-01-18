@@ -2,10 +2,11 @@ import React, { useContext, useState } from "react";
 import "../login.css";
 import DataStore from "./DataStore";
 import Singinsignupbuttons from "./Signinsignupbutton";
+import { useNavigate } from "react-router-dom";
 
 function Logintemplate() {
-  const { allUsers, setAllUsers, currentUser, setCurrentUser } =
-    useContext(DataStore);
+  const { allUsers, setAllUsers, currentUser, setCurrentUser } = useContext(DataStore);
+  const navigate = useNavigate();
 
   const [activeUser, setActiveUser] = useState({});
 
@@ -22,7 +23,7 @@ function Logintemplate() {
       return element.name === user && parseInt(password) === element.password;
     });
 
-    setActiveUser(gettingUser[0] ? { ...gettingUser[0], active: true } : {});
+    setActiveUser(gettingUser[0] ? { ...gettingUser[0], active: true } && navigate("/") : {});
 
     setCurrentUser({ ...gettingUser[0], active: true });
   }

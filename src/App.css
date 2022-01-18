@@ -3,3 +3,18 @@
 }
 
 /*Carousel*/
+@media screen and (max-width: 767px) {
+  
+}
+
+/*Header*/
+.logo {
+ width: 18em;
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    width: 13em;
+  }
+}
+
