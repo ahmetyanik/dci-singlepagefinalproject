@@ -103,32 +103,15 @@ function Header() {
                 <Link
                   className="py-3 "
                   style={{ textDecoration: "none" }}
-                  to={"/login"}
+                  to={`/merklist/${currentUser.name}`}
                 >
                   <span
                     className="d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center flex-lg-row"
                     style={{ color: "#de030e" }}
                   >
-                    {currentUser.name ? null : (
-                      <i className="far fa-heart text-danger px-1"></i>
-                    )}
-
-                    <span className="mx-2" >
-                      {currentUser.name ? (
-                        <Link
-                          to={`/user/${currentUser.id}/${currentUser.name}/merklist`}
-                        >
-                          {" "}
-                          <span  style={{ color: "#de030e" }}>
-                            {" "}
-                            Merk List{" "}
-                            <span class="badge rounded-pill bg-success">
-                              {merkListState.length}
-                            </span>{" "}
-                          </span>
-                        </Link>
-                      ) : (
-                        <span>
+                    <span className="mx-4 " >
+                    <i className="far fa-heart text-danger mx-3 "></i>
+                    <span>
                           Merk List{" "}
                           {merkListState.length > 0 ? (
                             <span class="badge rounded-pill bg-success">
@@ -136,8 +119,9 @@ function Header() {
                             </span>
                           ) : null}{" "}
                         </span>
-                      )}
                     </span>
+
+                    
                   </span>
 
                 </Link>
