@@ -27,6 +27,7 @@ const books = [
     ArtikelNr: "16393351",
     Genre: "Neu und Bestseller",
     comments: [],
+    menge: 30,
   },
   {
     titel: "Wir können auch anders",
@@ -48,6 +49,7 @@ const books = [
     Gewicht: "",
     ArtikelNr: "19810368",
     Genre: "Sachbuch",
+    menge: 32,
   },
   {
     titel: "Bevor es zu spät ist",
@@ -69,6 +71,7 @@ const books = [
     Gewicht: "",
     ArtikelNr: "19798089",
     Genre: "Sachbuch",
+    menge: 21,
   },
   {
     titel: "Der fürsorgliche Mr Cave",
@@ -95,6 +98,7 @@ const books = [
     Gewicht: "373 g",
     ArtikelNr: "19602265",
     Genre: "Belletristik",
+    menge: 12,
   },
   {
     titel: "Die Afghanistan Papers",
@@ -122,6 +126,7 @@ const books = [
     Gewicht: "610 ",
     ArtikelNr: "20599671",
     Genre: "Sachbuch",
+    menge: 36,
   },
   {
     titel: "Iran - die Freiheit ist weiblich",
@@ -142,6 +147,7 @@ const books = [
     Gewicht: "482 g",
     ArtikelNr: "19797092",
     Genre: "Sachbuch",
+    menge: 57,
   },
   {
     titel: "Allein",
@@ -162,6 +168,7 @@ const books = [
     Gewicht: "260",
     ArtikelNr: "16414389",
     Genre: "Belletristik",
+    menge: 62,
   },
   {
     titel: "Renegades",
@@ -203,6 +210,7 @@ const books = [
     Gewicht: "1517 ",
     ArtikelNr: "20282790",
     Genre: "Sachbuch",
+    menge: 32
   },
   {
     titel: "Eine Art Bescherung",
@@ -223,6 +231,7 @@ const books = [
     Gewicht: "118",
     ArtikelNr: "1228567",
     Genre: "Belletristik",
+    menge: 21,
   },
   {
     titel: "Olympia",
@@ -250,6 +259,7 @@ const books = [
     Gewicht: "385 ",
     ArtikelNr: "19564174",
     Genre: "Krimis",
+    menge: 17,
   },
   {
     titel: "Vergissmeinnicht - Was man bei Licht nicht sehen kann",
@@ -271,6 +281,7 @@ const books = [
     Gewicht: "761",
     ArtikelNr: "19862005",
     Genre: "Literatur",
+    menge: 13,
   },
   {
     titel: "Die Dämonen",
@@ -291,6 +302,7 @@ const books = [
     Gewicht: "552 ",
     ArtikelNr: "19617576",
     Genre: "Belletristik",
+    menge: 69,
   },
   {
     titel: "Ungeduld des Herzens",
@@ -311,6 +323,7 @@ const books = [
     Gewicht: "604",
     ArtikelNr: "16414445",
     Genre: "Belletristik",
+    menge: 72,
   },
   {
     titel: "Die Brüder Karamasow",
@@ -336,6 +349,7 @@ const books = [
     Gewicht: "805",
     ArtikelNr: "18819322",
     Genre: "Literatur",
+    menge: 50,
   },
   {
     titel: "Effingers",
@@ -356,6 +370,7 @@ const books = [
     Gewicht: "723",
     ArtikelNr: "16538003",
     Genre: "Literatur",
+    menge: 19,
   },
   {
     titel: "Verbrechen und Strafe",
@@ -380,6 +395,7 @@ const books = [
     Gewicht: "492 ",
     ArtikelNr: "18819263",
     Genre: "Literatur",
+    menge: 24,
   },
   {
     titel: "Elementarteilchen",
@@ -400,6 +416,7 @@ const books = [
     Gewicht: "",
     ArtikelNr: "1229762",
     Genre: "Belletristik",
+    menge: 35,
   },
   {
     titel: "Spinnst du?",
@@ -420,6 +437,7 @@ const books = [
     Gewicht: "422",
     ArtikelNr: "19798388",
     Genre: "Belletristik",
+    menge: 44,
   },
 
   {
@@ -447,6 +465,7 @@ const books = [
     Gewicht: "1509 ",
     ArtikelNr: "19778695",
     Genre: "Belletristik",
+    menge: 23,
   },
   {
     titel: "Die Topeka Schule",
@@ -468,6 +487,7 @@ const books = [
     Gewicht: "362 ",
     ArtikelNr: "16414854",
     Genre: "Belletristik",
+    menge: 17,
   },
   {
     titel: "Starlight Full Of Chances",
@@ -490,6 +510,7 @@ const books = [
     Gewicht: "",
     ArtikelNr: "19689428",
     Genre: "Literatur",
+    menge: 11,
   },
 
   {
@@ -512,6 +533,7 @@ const books = [
     Gewicht: "",
     ArtikelNr: "19686363",
     Genre: "Literatur",
+    menge: 25,
   },
 
   {
@@ -535,6 +557,7 @@ const books = [
     Gewicht: "",
     ArtikelNr: "19686843",
     Genre: "Literatur",
+    menge: 20,
   },
   {
     titel: "Worlds Apart",
@@ -558,6 +581,7 @@ const books = [
     Gewicht: "",
     ArtikelNr: "19687604",
     Genre: "Literatur",
+    menge: 21,
   },
   {
     titel: "Drowning in Stars",
@@ -577,6 +601,7 @@ const books = [
     Einbandart: " Kartoniert, Paperback",
     Verlag: "LYX",
     Erscheinungsjahr: "2021",
+    menge: 17,
   },
   {
     titel: "Off the Record. Unsere Worte sind unsere Macht",
@@ -602,6 +627,7 @@ In "Off the Record" gibt Camryn Garrett all den mutigen und kämpferischen Mensc
     Gewicht: "621",
     ArtikelNr: "19538709",
     Genre: "Jugendbuch",
+    menge: 14,
   },
   {
     titel: "Gregs Tagebuch 16 - Volltreffer!",
@@ -624,6 +650,7 @@ Gregs Tagebuch von Jeff Kinney ist eine der erfolgreichsten Kinderbuchserien der
     Gewicht: "",
     ArtikelNr: "19686672",
     Genre: "Jugendbuch",
+    menge: 11,
   },
   {
     titel: "Lustiges Taschenbuch Weihnachten 27",
@@ -644,6 +671,7 @@ Gregs Tagebuch von Jeff Kinney ist eine der erfolgreichsten Kinderbuchserien der
     Gewicht: "",
     ArtikelNr: "19574618",
     Genre: "Comic",
+    menge: 18,
   },
   {
     titel: "Muttis Rückkehr",
@@ -664,6 +692,7 @@ Gregs Tagebuch von Jeff Kinney ist eine der erfolgreichsten Kinderbuchserien der
     Gewicht: "500 ",
     ArtikelNr: "19979780",
     Genre: "Comic",
+    menge: 13,
   },
   {
     titel: "Deutschland Was Geht",
@@ -684,6 +713,7 @@ Gregs Tagebuch von Jeff Kinney ist eine der erfolgreichsten Kinderbuchserien der
     Gewicht: "",
     ArtikelNr: "19638636",
     Genre: "Comic",
+    menge: 24,
   },
   {
     titel: "Beste Bilder 12",
@@ -710,6 +740,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "646 ",
     ArtikelNr: "19761334",
     Genre: "Comic",
+    menge: 13,
   },
   {
     titel: "Was wir verschweigen",
@@ -732,6 +763,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "",
     ArtikelNr: "20226341",
     Genre: "Krimi",
+    menge: 11,
   },
   {
     titel: "Funkenmord",
@@ -749,6 +781,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Einbandart: "Kartoniert, Paperback ",
     Verlag: "Ullstein TB",
     Genre: "Krimi",
+    menge: 9,
   },
   {
     titel: "Der Geheimbund",
@@ -769,6 +802,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "",
     ArtikelNr: "19436331",
     Genre: "Krimi",
+    menge: 18,
   },
   {
     titel: "Ostfriesensturm",
@@ -791,6 +825,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "487 ",
     ArtikelNr: "19765723",
     Genre: "Krimi",
+    menge: 23,
   },
   {
     titel: "Geheime Quellen",
@@ -811,6 +846,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "",
     ArtikelNr: "19638737",
     Genre: "Krimi",
+    menge: 14,
   },
   {
     titel: "Eines Menschen Flügel",
@@ -831,6 +867,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "",
     ArtikelNr: "19686422",
     Genre: "Science-Fiction",
+    menge: 11,
   },
   {
     titel: "Stalker",
@@ -852,6 +889,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "528 ",
     ArtikelNr: "17504008",
     Genre: "Science-Fiction",
+    menge: 14,
   },
   {
     titel: "Die Haarteppichknüpfer",
@@ -872,6 +910,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "",
     ArtikelNr: "19690063",
     Genre: "Science-Fiction",
+    menge: 21,
   },
   {
     titel: "Der Gottkaiser des Wüstenplaneten",
@@ -892,6 +931,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "642 ",
     ArtikelNr: "1595066",
     Genre: "Science-Fiction",
+    menge: 10,
   },
   {
     titel: "The Ministry for the Future",
@@ -918,6 +958,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "408 ",
     ArtikelNr: "19101228",
     Genre: "Science-Fiction",
+    menge: 10,
   },
   {
     titel: "Die Hohenzollern und die Nazis",
@@ -939,6 +980,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "837 ",
     ArtikelNr: "20116662",
     Genre: "Sachbuch",
+    menge: 13,
   },
   {
     titel: "Der Storyteller - Geschichten aus dem Leben und der Musik",
@@ -962,6 +1004,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "573 ",
     ArtikelNr: "19811209",
     Genre: "Sachbuch",
+    menge: 20,
   },
   {
     titel: "Immun",
@@ -986,6 +1029,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "623",
     ArtikelNr: "19543543",
     Genre: "Sachbuch",
+    menge: 23,
   },
   {
     titel: "Pfoten vom Tisch!",
