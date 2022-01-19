@@ -26,7 +26,7 @@ const books = [
     Gewicht: "304 g",
     ArtikelNr: "16393351",
     Genre: "Neu und Bestseller",
-    comments: [],
+    comments: []
   },
   {
     titel: "Wir können auch anders",
