@@ -114,7 +114,6 @@ function App() {
  let searchedBook = allBooks.filter(movie => {
   return movie.titel.toLowerCase().indexOf(searchState.toLowerCase()) !== -1
 })
-console.log('searchedbook',searchedBook);
 
 
 
@@ -137,7 +136,6 @@ console.log('searchedbook',searchedBook);
       setCategories(newArray);
     },[allBooks])
   
-    console.log(categories);
 
 
   return (

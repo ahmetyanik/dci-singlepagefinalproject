@@ -16,7 +16,7 @@ function CategorieArea() {
     setCategorizieredBooks(findingBooks);
   }, [findingBooks]);
 
-  console.log();
+  
 
   return (
     <div>

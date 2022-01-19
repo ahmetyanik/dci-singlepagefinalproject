@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Header from "../Header";
 import Carousel from "../Carousel";
@@ -11,7 +11,17 @@ import CarouselBook from "../CarouselBooks";
 function Homepage() {
   const { allBooks, setAllBooks } = useContext(DataStore);
 
-  console.log(allBooks)
+  const [newBooks,setNewBooks] = useState([]);
+
+  const findingBooks = allBooks.filter((book) => {
+    return book.kategorie === "Neu und Bestseller"
+  });
+
+  useEffect(() => {
+    setNewBooks(findingBooks);
+  }, [allBooks]);
+
+  console.log(newBooks)
 
   return (
     <div>
