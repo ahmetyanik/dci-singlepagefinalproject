@@ -27,7 +27,6 @@ const books = [
     ArtikelNr: "16393351",
     Genre: "Neu und Bestseller",
     comments: [],
-    menge: 30,
   },
   {
     titel: "Wir können auch anders",
@@ -49,7 +48,6 @@ const books = [
     Gewicht: "",
     ArtikelNr: "19810368",
     Genre: "Sachbuch",
-    menge: 32,
   },
   {
     titel: "Bevor es zu spät ist",
@@ -71,7 +69,6 @@ const books = [
     Gewicht: "",
     ArtikelNr: "19798089",
     Genre: "Sachbuch",
-    menge: 21,
   },
   {
     titel: "Der fürsorgliche Mr Cave",
@@ -98,7 +95,6 @@ const books = [
     Gewicht: "373 g",
     ArtikelNr: "19602265",
     Genre: "Belletristik",
-    menge: 12,
   },
   {
     titel: "Die Afghanistan Papers",
@@ -126,7 +122,6 @@ const books = [
     Gewicht: "610 ",
     ArtikelNr: "20599671",
     Genre: "Sachbuch",
-    menge: 36,
   },
   {
     titel: "Iran - die Freiheit ist weiblich",
@@ -147,7 +142,6 @@ const books = [
     Gewicht: "482 g",
     ArtikelNr: "19797092",
     Genre: "Sachbuch",
-    menge: 57,
   },
   {
     titel: "Allein",
@@ -168,7 +162,6 @@ const books = [
     Gewicht: "260",
     ArtikelNr: "16414389",
     Genre: "Belletristik",
-    menge: 62,
   },
   {
     titel: "Renegades",
@@ -210,7 +203,6 @@ const books = [
     Gewicht: "1517 ",
     ArtikelNr: "20282790",
     Genre: "Sachbuch",
-    menge: 32
   },
   {
     titel: "Eine Art Bescherung",
@@ -231,7 +223,6 @@ const books = [
     Gewicht: "118",
     ArtikelNr: "1228567",
     Genre: "Belletristik",
-    menge: 21,
   },
   {
     titel: "Olympia",
@@ -259,7 +250,6 @@ const books = [
     Gewicht: "385 ",
     ArtikelNr: "19564174",
     Genre: "Krimis",
-    menge: 17,
   },
   {
     titel: "Vergissmeinnicht - Was man bei Licht nicht sehen kann",
@@ -281,7 +271,6 @@ const books = [
     Gewicht: "761",
     ArtikelNr: "19862005",
     Genre: "Literatur",
-    menge: 13,
   },
   {
     titel: "Die Dämonen",
@@ -302,7 +291,6 @@ const books = [
     Gewicht: "552 ",
     ArtikelNr: "19617576",
     Genre: "Belletristik",
-    menge: 69,
   },
   {
     titel: "Ungeduld des Herzens",
@@ -323,7 +311,6 @@ const books = [
     Gewicht: "604",
     ArtikelNr: "16414445",
     Genre: "Belletristik",
-    menge: 72,
   },
   {
     titel: "Die Brüder Karamasow",
@@ -349,7 +336,6 @@ const books = [
     Gewicht: "805",
     ArtikelNr: "18819322",
     Genre: "Literatur",
-    menge: 50,
   },
   {
     titel: "Effingers",
@@ -370,7 +356,6 @@ const books = [
     Gewicht: "723",
     ArtikelNr: "16538003",
     Genre: "Literatur",
-    menge: 19,
   },
   {
     titel: "Verbrechen und Strafe",
@@ -395,7 +380,6 @@ const books = [
     Gewicht: "492 ",
     ArtikelNr: "18819263",
     Genre: "Literatur",
-    menge: 24,
   },
   {
     titel: "Elementarteilchen",
@@ -416,7 +400,6 @@ const books = [
     Gewicht: "",
     ArtikelNr: "1229762",
     Genre: "Belletristik",
-    menge: 35,
   },
   {
     titel: "Spinnst du?",
@@ -437,7 +420,6 @@ const books = [
     Gewicht: "422",
     ArtikelNr: "19798388",
     Genre: "Belletristik",
-    menge: 44,
   },
 
   {
@@ -465,7 +447,6 @@ const books = [
     Gewicht: "1509 ",
     ArtikelNr: "19778695",
     Genre: "Belletristik",
-    menge: 23,
   },
   {
     titel: "Die Topeka Schule",
@@ -487,7 +468,6 @@ const books = [
     Gewicht: "362 ",
     ArtikelNr: "16414854",
     Genre: "Belletristik",
-    menge: 17,
   },
   {
     titel: "Starlight Full Of Chances",
@@ -510,7 +490,6 @@ const books = [
     Gewicht: "",
     ArtikelNr: "19689428",
     Genre: "Literatur",
-    menge: 11,
   },
 
   {
@@ -533,7 +512,6 @@ const books = [
     Gewicht: "",
     ArtikelNr: "19686363",
     Genre: "Literatur",
-    menge: 25,
   },
 
   {
@@ -557,7 +535,6 @@ const books = [
     Gewicht: "",
     ArtikelNr: "19686843",
     Genre: "Literatur",
-    menge: 20,
   },
   {
     titel: "Worlds Apart",
@@ -581,7 +558,6 @@ const books = [
     Gewicht: "",
     ArtikelNr: "19687604",
     Genre: "Literatur",
-    menge: 21,
   },
   {
     titel: "Drowning in Stars",
@@ -601,7 +577,6 @@ const books = [
     Einbandart: " Kartoniert, Paperback",
     Verlag: "LYX",
     Erscheinungsjahr: "2021",
-    menge: 17,
   },
   {
     titel: "Off the Record. Unsere Worte sind unsere Macht",
@@ -627,7 +602,6 @@ In "Off the Record" gibt Camryn Garrett all den mutigen und kämpferischen Mensc
     Gewicht: "621",
     ArtikelNr: "19538709",
     Genre: "Jugendbuch",
-    menge: 14,
   },
   {
     titel: "Gregs Tagebuch 16 - Volltreffer!",
@@ -650,7 +624,6 @@ Gregs Tagebuch von Jeff Kinney ist eine der erfolgreichsten Kinderbuchserien der
     Gewicht: "",
     ArtikelNr: "19686672",
     Genre: "Jugendbuch",
-    menge: 11,
   },
   {
     titel: "Lustiges Taschenbuch Weihnachten 27",
@@ -671,7 +644,6 @@ Gregs Tagebuch von Jeff Kinney ist eine der erfolgreichsten Kinderbuchserien der
     Gewicht: "",
     ArtikelNr: "19574618",
     Genre: "Comic",
-    menge: 18,
   },
   {
     titel: "Muttis Rückkehr",
@@ -692,7 +664,6 @@ Gregs Tagebuch von Jeff Kinney ist eine der erfolgreichsten Kinderbuchserien der
     Gewicht: "500 ",
     ArtikelNr: "19979780",
     Genre: "Comic",
-    menge: 13,
   },
   {
     titel: "Deutschland Was Geht",
@@ -713,7 +684,6 @@ Gregs Tagebuch von Jeff Kinney ist eine der erfolgreichsten Kinderbuchserien der
     Gewicht: "",
     ArtikelNr: "19638636",
     Genre: "Comic",
-    menge: 24,
   },
   {
     titel: "Beste Bilder 12",
@@ -740,7 +710,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "646 ",
     ArtikelNr: "19761334",
     Genre: "Comic",
-    menge: 13,
   },
   {
     titel: "Was wir verschweigen",
@@ -763,7 +732,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "",
     ArtikelNr: "20226341",
     Genre: "Krimi",
-    menge: 11,
   },
   {
     titel: "Funkenmord",
@@ -781,7 +749,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Einbandart: "Kartoniert, Paperback ",
     Verlag: "Ullstein TB",
     Genre: "Krimi",
-    menge: 9,
   },
   {
     titel: "Der Geheimbund",
@@ -802,7 +769,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "",
     ArtikelNr: "19436331",
     Genre: "Krimi",
-    menge: 18,
   },
   {
     titel: "Ostfriesensturm",
@@ -825,7 +791,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "487 ",
     ArtikelNr: "19765723",
     Genre: "Krimi",
-    menge: 23,
   },
   {
     titel: "Geheime Quellen",
@@ -846,7 +811,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "",
     ArtikelNr: "19638737",
     Genre: "Krimi",
-    menge: 14,
   },
   {
     titel: "Eines Menschen Flügel",
@@ -867,7 +831,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "",
     ArtikelNr: "19686422",
     Genre: "Science-Fiction",
-    menge: 11,
   },
   {
     titel: "Stalker",
@@ -889,7 +852,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "528 ",
     ArtikelNr: "17504008",
     Genre: "Science-Fiction",
-    menge: 14,
   },
   {
     titel: "Die Haarteppichknüpfer",
@@ -910,7 +872,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "",
     ArtikelNr: "19690063",
     Genre: "Science-Fiction",
-    menge: 21,
   },
   {
     titel: "Der Gottkaiser des Wüstenplaneten",
@@ -931,7 +892,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "642 ",
     ArtikelNr: "1595066",
     Genre: "Science-Fiction",
-    menge: 10,
   },
   {
     titel: "The Ministry for the Future",
@@ -958,7 +918,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "408 ",
     ArtikelNr: "19101228",
     Genre: "Science-Fiction",
-    menge: 10,
   },
   {
     titel: "Die Hohenzollern und die Nazis",
@@ -980,7 +939,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "837 ",
     ArtikelNr: "20116662",
     Genre: "Sachbuch",
-    menge: 13,
   },
   {
     titel: "Der Storyteller - Geschichten aus dem Leben und der Musik",
@@ -1004,7 +962,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "573 ",
     ArtikelNr: "19811209",
     Genre: "Sachbuch",
-    menge: 20,
   },
   {
     titel: "Immun",
@@ -1029,7 +986,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "623",
     ArtikelNr: "19543543",
     Genre: "Sachbuch",
-    menge: 23,
   },
   {
     titel: "Pfoten vom Tisch!",
@@ -1058,7 +1014,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "427 ",
     ArtikelNr: "19564491",
     Genre: "Sachbuch",
-    menge: 11,
   },
   {
     titel: "Sapiens",
@@ -1083,8 +1038,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Erstverkaufstag: "20.10.2021",
     Gewicht: "1170 ",
     ArtikelNr: "16414567",
-    Genre: "Sachbuch",menge:
-    menge: 24,
+    Genre: "Sachbuch",
   },
   {
     titel: "The Girls I've Been",
@@ -1111,7 +1065,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "522 ",
     ArtikelNr: "19760742",
     Genre: "Kinderbuch",
-    menge: 33,
   },
   {
     titel: "Mein Lotta-Leben (18). Im Zeichen des Tapirs",
@@ -1134,7 +1087,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "293 ",
     ArtikelNr: "19538775",
     Genre: "Kinderbuch",
-    menge: 13,
   },
   {
     titel: "Guinness World Records 2022",
@@ -1155,7 +1107,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "1160 ",
     ArtikelNr: "19510259",
     Genre: "Kinderbuch",
-    menge: 25,
   },
   {
     titel: "Die Schule der magischen Tiere 12: Voll das Chaos!",
@@ -1181,7 +1132,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "483 ",
     ArtikelNr: "19760929",
     Genre: "Kinderbuch",
-    menge: 34,
   },
   {
     titel: "Die Duftapotheke (6). Das Vermächtnis der Villa Evie",
@@ -1204,7 +1154,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "604 ",
     ArtikelNr: "19538619",
     Genre: "Kinderbuch",
-    menge: 30,
   },
   {
     titel: "Elisa Hemmiltons Kofferkrimi",
@@ -1225,7 +1174,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "503",
     ArtikelNr: "20142523",
     Genre: "Jugendbuch",
-    menge: 10,
   },
   {
     titel:
@@ -1249,7 +1197,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "662",
     ArtikelNr: "19766148",
     Genre: "Jugendbuch",
-    menge: 23,
   },
   {
     titel: "Krabat: Roman",
@@ -1272,7 +1219,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "438 ",
     ArtikelNr: "1765090",
     Genre: "Jugendbuch",
-    menge: 30,
   },
   {
     titel: "Off the Record. Unsere Worte sind unsere Macht",
@@ -1298,7 +1244,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "621",
     ArtikelNr: "19538709",
     Genre: "Jugendbuch",
-    menge: 30,
   },
   {
     titel: "Gregs Tagebuch 16 - Volltreffer!",
@@ -1321,7 +1266,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "",
     ArtikelNr: "19686672",
     Genre: "Jugendbuch",
-    menge: 28,
   },
   {
     titel: "Lustiges Taschenbuch Weihnachten 27",
@@ -1342,7 +1286,6 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "",
     ArtikelNr: "19574618",
     Genre: "Comic",
-    menge: 29,
   },
   {
     titel: "Muttis Rückkehr",
@@ -1383,6 +1326,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "",
     ArtikelNr: "19638636",
     Genre: "Comic",
+    menge:4
   },
   {
     titel: "Beste Bilder 12",
@@ -1409,6 +1353,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "646 ",
     ArtikelNr: "19761334",
     Genre: "Comic",
+    menge:2
   },
   {
     titel: "Das verlorene Paradies",
@@ -1448,6 +1393,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "545 g",
     ArtikelNr: "16430532",
     Genre: "Belletristik",
+    menge:20
   },
   {
     titel: "Vernichten",
@@ -1467,6 +1413,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Erstverkaufstag: "11.01.2022",
     ArtikelNr: "16431062",
     Genre: "Belletristik",
+    menge:16
   },
   {
     titel: "Zum Paradies",
@@ -1493,6 +1440,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "875 g",
     ArtikelNr: "19648141",
     Genre: "Belletristik",
+    menge:13
   },
   {
     titel: "Einer von euch",
@@ -1512,6 +1460,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Erstverkaufstag: "26.01.2022",
     ArtikelNr: "19543813",
     Genre: "Belletristik",
+    menge:19
   },
   {
     titel: "Strömung",
@@ -1533,6 +1482,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "20 g",
     ArtikelNr: "16430740",
     Genre: "Belletristik",
+    menge:20
   },
   {
     titel: "Liebe in Zeiten des Hasses",
@@ -1556,6 +1506,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "640g",
     ArtikelNr: "19765871",
     Genre: "Sachbuch",
+    menge:14
   },
   {
     titel: "Das NEINhorn und die SchLANGEWEILE",
@@ -1581,6 +1532,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "441 g",
     ArtikelNr: "19761016",
     Genre: "Kinder- und Jugendbücher | Bilderbücher",
+    menge:8
   },
   {
     titel: "Die Enkelin",
@@ -1600,6 +1552,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Erstverkaufstag: "27.10.2021",
     ArtikelNr: "20323465",
     Genre: "Belletristik | Erzählende Literatur",
+    menge:4
   },
   {
     titel: "Belletristik | Erzählende Literatur",
@@ -1624,6 +1577,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "971 g",
     ArtikelNr: "16402655",
     Genre: "Belletristik | Erzählende Literatur",
+    menge:20
   },
   {
     titel: "Ottolenghi Test Kitchen - Shelf Love",
@@ -1651,6 +1605,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "770 g",
     ArtikelNr: "19537777",
     Genre: "Themenkochbücher",
+    menge:20
   },
   {
     titel: "Memoiren eines Irren",
@@ -1671,6 +1626,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "293 g",
     ArtikelNr: "16414403",
     Genre: "Belletristik | Erzählende Literatur",
+    menge:11
   },
   {
     titel: "Vom Verachtetwerden oder Drei Guineen",
@@ -1690,6 +1646,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Erstverkaufstag: "23.09.2021",
     ArtikelNr: "19605553",
     Genre: "Belletristik | Erzählende Literatur",
+    menge:13
   },
   {
     titel: "Aufzeichnungen aus einem toten Haus",
@@ -1710,6 +1667,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "340 g",
     ArtikelNr: "16275045",
     Genre: "Belletristik | Erzählende Literatur",
+    menge:17
   },
   {
     titel: "Little Women",
@@ -1729,6 +1687,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Erstverkaufstag: "08.10.2021",
     ArtikelNr: "19896888",
     Genre: "Belletristik | Erzählende Literatur",
+    menge:6
   },
   {
     titel: "Der Geldverleiher",
@@ -1755,6 +1714,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "733 g",
     ArtikelNr: "19774330",
     Genre: "Belletristik | Erzählende Literatur",
+    menge:2
   },
   {
     titel: "Die Dorfschullehrerin",
@@ -1775,6 +1735,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Erstverkaufstag: "26.11.2021",
     ArtikelNr: "19692490",
     Genre: "Belletristik | Erzählende Literatur",
+    menge:20
   },
   {
     titel: "Das Seidenraupenzimmer",
@@ -1795,6 +1756,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "394 g",
     ArtikelNr: "16729235",
     Genre: "Belletristik | Erzählende Literatur",
+    menge:6
   },
   {
     titel: "Die Surrealistin",
@@ -1817,6 +1779,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "555 g",
     ArtikelNr: "17730759",
     Genre: "Belletristik | Erzählende Literatur",
+    menge:2
   },
   {
     titel: "Worlds Collide",
@@ -1840,6 +1803,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "",
     ArtikelNr: "19691382",
     Genre: "Belletristik | Erzählende Literatur",
+    menge:16
   },
   {
     titel: "Step into my Heart",
@@ -1861,6 +1825,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "513 g",
     ArtikelNr: "16412641",
     Genre: "Belletristik | Erzählende Literatur",
+    menge:12
   },
   {
     titel: "Midnight Chronicles - Seelenband",
@@ -1884,6 +1849,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Erstverkaufstag: "23.02.2022",
     ArtikelNr: "16464508",
     Genre: "Belletristik | Science Fiction, Fantasy",
+    menge:10
   },
   {
     titel: "Cassardim 3: Jenseits der Tanzenden Nebel",
@@ -1904,6 +1870,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "772 g",
     ArtikelNr: "19765904",
     Genre: "Kinder- und Jugendbücher",
+    menge:20
   },
   {
     titel: "Words I Keep",
@@ -1925,6 +1892,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "529 g",
     ArtikelNr: "16415036",
     Genre: "Belletristik",
+    menge:10
   },
   {
     titel: "Barbarotti und der schwermütige Busfahrer",
@@ -1945,6 +1913,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "360 g",
     ArtikelNr: "19596098",
     Genre: "Belletristik | Spannung | Krimis, Thriller, Spionage",
+    menge:16
   },
   {
     titel: "Rehragout-Rendezvous",
@@ -1966,7 +1935,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Erstverkaufstag: "17.09.2021",
     ArtikelNr: "17373617",
     Genre: "Belletristik | Spannung | Krimis, Thriller, Spionage",
-  },
+    menge:3
   {
     titel: "Rue de Paradis",
     autor: "Alexander, Oetker",
@@ -1987,6 +1956,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "389 g",
     ArtikelNr: "19648294",
     Genre: "Belletristik | Spannung | Krimis, Thriller, Spionage",
+    menge:2
   },
   {
     titel: "Eifersucht",
@@ -2011,6 +1981,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "434 g",
     ArtikelNr: "19811084",
     Genre: "Belletristik | Spannung | Krimis, Thriller, Spionage",
+    menge:19
   },
   {
     titel: "Die unhöfliche Tote",
@@ -2036,6 +2007,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "495 g",
     ArtikelNr: "19602049",
     Genre: "Belletristik | Spannung | Krimis, Thriller, Spionage",
+    menge:9
   },
   {
     titel: "Das Ministerium für die Zukunft",
@@ -2057,6 +2029,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "688 g",
     ArtikelNr: "16415021",
     Genre: "Belletristik | Science Fiction, Fantasy | Science Fiction",
+    menge:3
   },
   {
     titel: "Snow Crash",
@@ -2081,6 +2054,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "533 g",
     ArtikelNr: "19766373",
     Genre: "Belletristik | Science Fiction, Fantasy | Science Fiction",
+    menge:5
   },
   {
     titel: "Supernova",
@@ -2101,6 +2075,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "650 g",
     ArtikelNr: "18922370",
     Genre: "Belletristik | Science Fiction, Fantasy | Science Fiction",
+    menge:20
   },
   {
     titel: "Outpost - Der Posten",
@@ -2121,6 +2096,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "590 g",
     ArtikelNr: "19595665",
     Genre: "Belletristik | Science Fiction, Fantasy | Science Fiction",
+    menge:10
   },
   {
     titel: "Algorytmica",
@@ -2141,6 +2117,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "564 g",
     ArtikelNr: "19596070",
     Genre: "Belletristik | Science Fiction, Fantasy | Science Fiction",
+    menge:15
   },
   {
     titel: "Sensibel",
@@ -2164,6 +2141,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "330 g",
     ArtikelNr: "19602392",
     Genre: "Sachbuch | Politik, Gesellschaft, Wirtschaft | Gesellschaft",
+    menge:20
   },
   {
     titel: "Nachruf auf mich selbst.",
@@ -2185,7 +2163,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "405 g",
     ArtikelNr: "19766438",
     Genre: "Sachbuch | Politik, Gesellschaft, Wirtschaft | Gesellschaft",
-  },
+    menge:18
   {
     titel: "Hier gehts lang - das ist dran! Klasse 7-10",
     autor: "Corinne, Keller",
@@ -2204,6 +2182,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Dateigroesse: "5891 Kbytes",
     ArtikelNr: "2533083",
     Genre: "Schule und Lernen",
+    menge:20
   },
   {
     titel: "Entscheidungstage",
@@ -2229,6 +2208,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "618 g",
     ArtikelNr: "20420874",
     Genre: "Sachbuch | Politik, Gesellschaft, Wirtschaft | Politik",
+    menge:15
   },
   {
     titel: "1000 Jahre Freud und Leid",
@@ -2250,6 +2230,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "732 g",
     ArtikelNr: "16417108",
     Genre: "Sachbuch | Politik, Gesellschaft, Wirtschaft",
+    menge:12
   },
   {
     titel: "Die Hüterin der Drachen",
@@ -2271,6 +2252,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "989 g",
     ArtikelNr: "19596035",
     Genre: "Kinder- und Jugendbücher | Sachbücher, Sachbilderbücher",
+    menge:20
   },
   {
     titel: "You will be the death of me",
@@ -2292,6 +2274,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "580 g",
     ArtikelNr: "20346206",
     Genre: "Kinder- und Jugendbücher | Jugendbücher",
+    menge:19
   },
   {
     titel: "Alea Aquarius 7. Im Bannkreis des Schwurs",
@@ -2312,6 +2295,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "754 g",
     ArtikelNr: "19436457",
     Genre: "Kinder- und Jugendbücher | Kinderbücher",
+    menge:20
   },
   {
     titel: "Die Kackwurstfabrik",
@@ -2331,6 +2315,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Erstverkaufstag: "06.12.2021",
     ArtikelNr: "1907256",
     Genre: "Kinder- und Jugendbücher",
+    menge:17
   },
   {
     titel: "Book Rebels",
@@ -2351,6 +2336,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "617 g",
     ArtikelNr: "16414404",
     Genre: "16414404",
+    menge:12
   },
   {
     titel: "Shelter",
@@ -2373,6 +2359,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "648 g",
     ArtikelNr: "19888573",
     Genre: "Kinder- und Jugendbücher",
+    menge:9
   },
   {
     titel: "Das Reich der sieben Höfe - Dornen und Rosen",
@@ -2393,6 +2380,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Erstverkaufstag: "22.05.2020",
     ArtikelNr: "16491439",
     Genre: "Kinder- und Jugendbücher",
+    menge:3
   },
   {
     titel: "Das Reich der sieben Höfe - Silbernes Feuer",
@@ -2418,6 +2406,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Erstverkaufstag: "20.10.2021",
     ArtikelNr: "19392179",
     Genre: "Kinder- und Jugendbücher",
+    menge:22
   },
   {
     titel:
@@ -2446,6 +2435,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "1077 g",
     ArtikelNr: "19761482",
     Genre: "Kinder- und Jugendbücher",
+    menge:20
   },
   {
     titel: "One Of The Good Ones",
@@ -2471,6 +2461,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "503 g",
     ArtikelNr: "19890064",
     Genre: "Kinder- und Jugendbücher",
+    menge:10
   },
   {
     titel: "Asterix 39",
@@ -2491,6 +2482,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "364 g",
     ArtikelNr: "16408235",
     Genre: "Belletristik | Comic, Cartoon, Humor, Satire",
+    menge:5
   },
   {
     titel: "Im Spiegelsaal",
@@ -2510,6 +2502,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Erstverkaufstag: "26.10.2021",
     ArtikelNr: "19897159",
     Genre: "Belletristik | Comic, Cartoon, Humor, Satire",
+    menge:30
   },
   {
     titel: "Es kann nur eine geben",
@@ -2533,6 +2526,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "436 g",
     ArtikelNr: "19895616",
     Genre: "Belletristik | Comic, Cartoon, Humor, Satire",
+    menge:13
   },
   {
     titel: "Starman - David Bowie's Ziggy Stardust Years",
@@ -2556,6 +2550,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "827 g",
     ArtikelNr: "19760775",
     Genre: "Belletristik | Comic, Cartoon, Humor, Satire | Comic",
+    menge:20
   },
   {
     titel: "Sonne und Beton - Die Graphic Novel",
@@ -2576,6 +2571,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Gewicht: "748 g",
     ArtikelNr: "16397032",
     Genre: "Belletristik | Comic, Cartoon, Humor, Satire | Comic",
+    menge:10,
   },
 ];
 
