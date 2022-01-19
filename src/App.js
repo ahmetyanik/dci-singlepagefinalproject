@@ -12,7 +12,12 @@ import books from "./datenbank/books";
 import Adminpage from "./components/Pages/Adminpage";
 import Adminloginpage from "./components/Pages/Adminloginpage";
 import alertify from "alertifyjs"
-import ShoppingCart from "./components/Pages/Shoppingcartpage";
+import Shoppingcartpage from "./components/Pages/Shoppingcartpage";
+import MerkListPage from "./components/Pages/MerkListPage";
+import SearchPage from "./components/Pages/SearchPage";
+import Categoriepage from "./components/Pages/Categoriepage";
+
+
 
 
 function reducer(state,action){
@@ -25,30 +30,57 @@ function reducer(state,action){
     
     return [...state,action.payload.singleBook]
   }
-  
-  if(action.type==="plusFromCart"){
 
+  if(action.type==="add_merk_book"){   
     
+    
+    alertify.success(action.payload.singleBook.titel + " added.",1);
+    
+    return [...state,action.payload.singleBook]
 
-    alertify.success(action.payload.kitap[0].kitapismi + " eklendi.",1);
-    return [...state,action.payload.kitap[0]]
+  }
+  if(action.type==="remove_merklist"){
+
+    alertify.error(action.payload.singleBook.titel + " cikarildi.",1)
+
+
+    const newArray2 = [...state];
+
+
+    const bulunanIndex2 = [];
+    
+    for(let i=0;i<state.length;i++){
+      
+      if(state[i].titel===action.payload.singleBook.titel){
+        
+       bulunanIndex2.push(i);
+       break;
+
+      }
+    }
+
+    newArray2.splice(bulunanIndex2[0],1);
+   
+    console.log(newArray2);
+ 
+
+    return newArray2
   }
   
-  if(action.type==="minusFromCart"){
+  
+  if(action.type==="remove"){
 
-    alertify.error(action.payload.kitap[0].kitapismi + " cikarildi.",1)
+    alertify.error(action.payload.singleBook.titel + " cikarildi.",1)
 
 
     const newArray = [...state];
 
-    console.log(action.payload.index);
-    console.log(action.payload.kitap);
 
     const bulunanIndex = [];
     
     for(let i=0;i<state.length;i++){
       
-      if(state[i].kitapismi===action.payload.kitap[0].kitapismi){
+      if(state[i].titel===action.payload.singleBook.titel){
         
        bulunanIndex.push(i);
        break;
@@ -72,28 +104,47 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [allBooks, setAllBooks] = useState([])
   const [adminlogin, setAdminLogin] = useState(true);
-  
+  const[searchState, setSearchState]=useState("");
+  const [categories, setCategories] = useState([]);
   
   const initialState = [];
   const [warenkorbState, warenkorbDispatch] = useReducer(reducer, initialState)
+  const [merkListState, merkListDispatch] = useReducer(reducer, initialState)
   
+ let searchedBook = allBooks.filter(movie => {
+  return movie.titel.toLowerCase().indexOf(searchState.toLowerCase()) !== -1
+})
+console.log('searchedbook',searchedBook);
 
-  
-  console.log(warenkorbState);
 
 
   useEffect(() => {
     setAllUsers(users);
     setAllBooks(books);
-  }, []);
+  },[]);
 
+  const newArray = [];
+
+    allBooks.forEach((book) => {
+
+      
+      if (!newArray.includes(book.kategorie)) {
+        newArray.push(book.kategorie);
+      }
+    });
+
+    useEffect(()=>{
+      setCategories(newArray);
+    },[allBooks])
+  
+    console.log(categories);
 
 
   return (
     <div className="App">
       <BrowserRouter>
         <DataStore.Provider
-          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch }}
+          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch, searchState, setSearchState, searchedBook,categories,setCategories }}
         >
           <Routes>
             <Route exact path="/" element={<Homepage  />} />
@@ -102,7 +153,10 @@ function App() {
             <Route path="/book/:ISBN/:bookName" element={<Singlebuchpage  />} />
             <Route path="/user/:id/:name" element={<Userpage/>} />
             <Route path="/admin" element={adminlogin ? <Adminpage/> : <Adminloginpage/>} />
-            <Route path="/shoppingCart/:userName" element={<ShoppingCart/>} />
+            <Route path="/shoppingCart/:userName" element={<Shoppingcartpage/>} />
+            <Route path="/merklist/:userName" element={<MerkListPage/>} />
+            <Route path="/search/:userName" element={<SearchPage/>} />
+            <Route path="/categorie/:categorie" element={<Categoriepage/>} />
           </Routes>
         </DataStore.Provider>
       </BrowserRouter>

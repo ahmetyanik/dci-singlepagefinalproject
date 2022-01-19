@@ -1,22 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "../shoppingCard.css";
 import DataStore from "./DataStore";
 
-function ShoppingCartArea() {
-  const { currentUser, setCurrentUser, warenkorbState, warenkorbDispatch } =
+function MerkListTemplate() {
+  const { currentUser, setCurrentUser, merkListState, merkListDispatch, warenkorbDispatch } =
     useContext(DataStore);
   const array = [];
-
   let totalPreis = 0;
 
-  warenkorbState.forEach(book=>{
-    return totalPreis += parseFloat(book.preis);
-  })
-
-  console.log(array);
-
-  console.log(warenkorbState);
+  console.log(merkListState);
 
   return (
     <div style={{ minHeight: "50vh" }}>
@@ -24,17 +17,17 @@ function ShoppingCartArea() {
         <div class="d-flex justify-content-center row">
           <div class="col-md-8">
             <div class="p-2">
+              <h4>Merk Liste</h4>
+              
             </div>
 
-            {warenkorbState.map((book, index) => {
-              if (!array.includes(book)) {
-                array.push(book);
+            {merkListState.map((book, index) => {
+              if (!array.includes(book.titel)) {
+                array.push(book.titel);
 
-                const filteredBook = warenkorbState.filter((element, index) => {
+                const filteredBook = merkListState.filter((element, index) => {
                   return book.titel === element.titel;
                 });
-
-                
 
                 return (
                   <div
@@ -62,12 +55,31 @@ function ShoppingCartArea() {
                         </div>
                       </div>
                     </div>
+                   
+                    <div>
+                      <h5 class="text-grey">{book.preis}</h5>
+                    </div>
+                    <div >
+              <button
+                onClick={() => {
+                  warenkorbDispatch({
+                    type: "add",
+                    payload: { singleBook: book },
+                  });
+                }}
+                href="#"
+                className="btn btn-danger mt-3 "
+              >
+                <i className="fas fa-shopping-cart me-3"></i>
+                WARENKORB
+              </button>
+            </div>
                     <div class="d-flex flex-row align-items-center qty">
                       <i
                         onClick={() => {
                           console.log(book);
-                          warenkorbDispatch({
-                            type: "remove",
+                          merkListDispatch({
+                            type: "remove_merklist",
                             payload: { singleBook: book },
                           });
                         }}
@@ -76,56 +88,20 @@ function ShoppingCartArea() {
                           color: "red",
                           marginRight: "5px",
                         }}
-                        class="fas fa-minus-square"
+                        class="far fa-trash-alt"
                       ></i>
-                      <h5 class="text-grey mt-1 mr-1 ml-1">
-                        {filteredBook.length}
-                      </h5>
-                      <i
-                        style={{
-                          fontSize: "20px",
-                          color: "green",
-                          marginLeft: "5px",
-                        }}
-                        onClick={() => {
-                          console.log(book);
-                          warenkorbDispatch({
-                            type: "add",
-                            payload: { singleBook: book },
-                          });
-                        }
-                        }
-                        class="fas fa-cart-plus"
-                      ></i>
+                      
+                     
                     </div>
-                    <div>
-                      <h5 class="text-grey">{book.preis}€</h5>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <span class="text-grey">
-                        {(parseFloat(book.preis) * filteredBook.length).toFixed(2)}€
-                      </span>
-                    </div>
+                   
+                   
                   </div>
                 );
               }
             })}
 
-            <span className="d-flex flex-column align-items-end mt-3">
 
-            <h3>Total</h3>
-
-              <h4>{totalPreis}€</h4>
-            </span>
-
-            <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
-              <button
-                class="btn btn-warning btn-block btn-lg ml-2 pay-button"
-                type="button"
-              >
-                Proceed to Pay
-              </button>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -133,4 +109,4 @@ function ShoppingCartArea() {
   );
 }
 
-export default ShoppingCartArea;
+export default MerkListTemplate;
