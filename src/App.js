@@ -15,6 +15,7 @@ import alertify from "alertifyjs"
 import Shoppingcartpage from "./components/Pages/Shoppingcartpage";
 import MerkListPage from "./components/Pages/MerkListPage";
 import SearchPage from "./components/Pages/SearchPage";
+import Categoriepage from "./components/Pages/Categoriepage";
 
 
 
@@ -103,33 +104,71 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [allBooks, setAllBooks] = useState([])
   const [adminlogin, setAdminLogin] = useState(true);
-  const[searchState, setSearchState]=useState("")
+  const[searchState, setSearchState]=useState("");
+  const [categories, setCategories] = useState([]);
   
   const initialState = [];
   const [warenkorbState, warenkorbDispatch] = useReducer(reducer, initialState)
   const [merkListState, merkListDispatch] = useReducer(reducer, initialState)
+
+  const [newBooks,setNewBooks] = useState([]);
+  const [recBooks,setRecBooks] = useState([]);
   
  let searchedBook = allBooks.filter(movie => {
   return movie.titel.toLowerCase().indexOf(searchState.toLowerCase()) !== -1
 })
-console.log('searchedbook',searchedBook);
 
 
 
   useEffect(() => {
     setAllUsers(users);
     setAllBooks(books);
-  });
+  },[]);
+
+  const newArray = [];
+
+    allBooks.forEach((book) => {
+
+      
+      if (!newArray.includes(book.kategorie)) {
+        newArray.push(book.kategorie);
+      }
+    });
+
+    useEffect(()=>{
+      setCategories(newArray);
+    },[allBooks])
+
+
 
   
 
+  const findingBooks = allBooks.filter((book) => {
+    return book.kategorie === "Neu und Bestseller"
+  });
+
+  useEffect(() => {
+    setNewBooks(findingBooks);
+  }, [allBooks]);
+
+  console.log(newBooks)
+  
+  const findingBooks2 = allBooks.filter((book) => {
+    return book.kategorie === "Empfehlungen"
+  });
+
+  useEffect(() => {
+    setRecBooks(findingBooks2);
+  }, [allBooks]);
+
+  console.log(recBooks)
 
 
   return (
     <div className="App">
       <BrowserRouter>
         <DataStore.Provider
-          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch, searchState, setSearchState, searchedBook }}
+          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch, searchState, setSearchState, searchedBook,categories,setCategories, newBooks, setNewBooks, recBooks, setRecBooks }}
         >
           <Routes>
             <Route exact path="/" element={<Homepage  />} />
@@ -141,6 +180,7 @@ console.log('searchedbook',searchedBook);
             <Route path="/shoppingCart/:userName" element={<Shoppingcartpage/>} />
             <Route path="/merklist/:userName" element={<MerkListPage/>} />
             <Route path="/search/:userName" element={<SearchPage/>} />
+            <Route path="/categorie/:categorie" element={<Categoriepage/>} />
           </Routes>
         </DataStore.Provider>
       </BrowserRouter>

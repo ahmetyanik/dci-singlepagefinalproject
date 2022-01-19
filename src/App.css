@@ -3,9 +3,21 @@
 }
 
 .dog{height: 400px;}
+.color-red {
+  background-color: #D90416;
+
+}
 
 /*Carousel*/
 @media screen and (max-width: 767px) {
+  
+}
+
+.home-title {
+  font-weight: bolder;
+  color:#D90416;
+  font-size: 1.6em;
+  
   
 }
 
@@ -24,7 +36,16 @@
   }
 }
 
+/*BookCard*/
+.book-div h5 {
+ overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
+}
+
+
 .cursor{
   cursor: pointer;
 }
+
 

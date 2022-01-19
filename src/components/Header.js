@@ -2,15 +2,24 @@ import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import DataStore from "./DataStore";
 import Logo from "../images/logo.png";
-import "../App.css"
+import "../App.css";
 
 function Header() {
-  const { currentUser, setCurrentUser, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch, searchState, setSearchState, searchedBook} =
-    useContext(DataStore);
+  const {
+    currentUser,
+    setCurrentUser,
+    warenkorbState,
+    warenkorbDispatch,
+    merkListState,
+    merkListDispatch,
+    searchState,
+    setSearchState,
+    searchedBook,
+    categories,
+    setCategories
+  } = useContext(DataStore);
 
-
-
-  console.log(currentUser);
+  console.log(categories);
 
   return (
     <div>
@@ -80,13 +89,42 @@ function Header() {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
-                    Home
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Kategorie
                   </a>
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    {categories.map((cate, index) => {
+                      return (
+                        <Link key={index} to={`/categorie/${cate}`}>
+                          <li>
+                            <div className="dropdown-item" href="#">
+                              {cate}
+                            </div>
+                          </li>
+                        </Link>
+                      );
+                    })}
+                  </ul>
                 </li>
-                
-                <Link to={`/shoppingCart/${currentUser.name === undefined ? "Gast User" : currentUser.name}`}>
+
+                <Link
+                  to={`/shoppingCart/${
+                    currentUser.name === undefined
+                      ? "Gast User"
+                      : currentUser.name
+                  }`}
+                >
                   <li className="nav-item">
                     <a className="nav-link" href="#">
                       Shopping Cart
@@ -94,26 +132,23 @@ function Header() {
                   </li>
                 </Link>
 
-                <li className="nav-item">
-                  <a className="nav-link disabled">Disabled</a>
-                </li>
               </ul>
               <div className="d-flex flex-column align-items-lg-end">
                 {/* Merk List und Mein Konto */}
-              <div className="d-flex">
-                {/* Merk List */}
-                <Link
-                  className="d-flex align-items-center py-3 "
-                  style={{ textDecoration: "none" }}
-                  to={`/merklist/${currentUser.name}`}
-                >
-                  <span
-                    className="d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center flex-lg-row"
-                    style={{ color: "#de030e" }}
+                <div className="d-flex">
+                  {/* Merk List */}
+                  <Link
+                    className="d-flex align-items-center py-3 "
+                    style={{ textDecoration: "none" }}
+                    to={`/merklist/${currentUser.name}`}
                   >
-                    <span className="mx-4 " >
-                    <i className="far fa-heart text-danger mx-3 "></i>
-                    <span>
+                    <span
+                      className="d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center flex-lg-row"
+                      style={{ color: "#de030e" }}
+                    >
+                      <span className="mx-4 ">
+                        <i className="far fa-heart text-danger mx-3 "></i>
+                        <span>
                           Merk List{" "}
                           {merkListState.length > 0 ? (
                             <span class="badge rounded-pill bg-success">
@@ -121,95 +156,96 @@ function Header() {
                             </span>
                           ) : null}{" "}
                         </span>
+                      </span>
                     </span>
+                  </Link>
+                  {/* Merk List endet */}
 
-                    
-                  </span>
-
-                </Link>
-                {/* Merk List endet */}
-
-                {/* Mein Konto */}
-                <Link
-                  className="py-3 "
-                  style={{ textDecoration: "none" }}
-                  to={"/login"}
-                >
-                  <span
-                    className="d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center flex-lg-row"
-                    style={{ color: "#de030e" }}
+                  {/* Mein Konto */}
+                  <Link
+                    className="py-3 "
+                    style={{ textDecoration: "none" }}
+                    to={"/login"}
                   >
-                    {currentUser.name ? (
-                      <Link to={`/user/${currentUser.id}/${currentUser.name}`}>
-                        {" "}
-                        <img
-                          style={{
-                            width: "40px",
-                            height: "40px",
-                            borderRadius: "50%",
-                          }}
-                          src={currentUser.image}
-                          alt=""
-                        />{" "}
-                      </Link>
-                    ) : (
-                      <i className="far fa-user text-danger px-2"></i>
-                    )}
-
-                    <span className="mx-2">
+                    <span
+                      className="d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center flex-lg-row"
+                      style={{ color: "#de030e" }}
+                    >
                       {currentUser.name ? (
                         <Link
                           to={`/user/${currentUser.id}/${currentUser.name}`}
                         >
                           {" "}
-                          <span style={{ color: "#de030e" }}>
-                            {" "}
-                            {currentUser.name}{" "}
-                            <span class="badge rounded-pill bg-success">
-                              {warenkorbState.length}
-                            </span>{" "}
-                          </span>
+                          <img
+                            style={{
+                              width: "40px",
+                              height: "40px",
+                              borderRadius: "50%",
+                            }}
+                            src={currentUser.image}
+                            alt=""
+                          />{" "}
                         </Link>
                       ) : (
-                        <span>
-                          Mein Konto{" "}
-                          {warenkorbState.length > 0 ? (
-                            <span class="badge rounded-pill bg-success">
-                              {warenkorbState.length}
-                            </span>
-                          ) : null}{" "}
-                        </span>
+                        <i className="far fa-user text-danger px-2"></i>
                       )}
+
+                      <span className="mx-2">
+                        {currentUser.name ? (
+                          <Link
+                            to={`/user/${currentUser.id}/${currentUser.name}`}
+                          >
+                            {" "}
+                            <span style={{ color: "#de030e" }}>
+                              {" "}
+                              {currentUser.name}{" "}
+                              <span class="badge rounded-pill bg-success">
+                                {warenkorbState.length}
+                              </span>{" "}
+                            </span>
+                          </Link>
+                        ) : (
+                          <span>
+                            Mein Konto{" "}
+                            {warenkorbState.length > 0 ? (
+                              <span class="badge rounded-pill bg-success">
+                                {warenkorbState.length}
+                              </span>
+                            ) : null}{" "}
+                          </span>
+                        )}
+                      </span>
+                      <span className="mx-2">
+                        {currentUser.name ? "|" : null}
+                      </span>
+                      <span onClick={() => setCurrentUser({})} className="mx-2">
+                        {currentUser.name ? "Log Out" : null}
+                      </span>
                     </span>
-                    <span className="mx-2">
-                      {currentUser.name ? "|" : null}
-                    </span>
-                    <span onClick={() => setCurrentUser({})} className="mx-2">
-                      {currentUser.name ? "Log Out" : null}
-                    </span>
-                  </span>                  
-                </Link>
-                {/* Mein Konto endet */}
+                  </Link>
+                  {/* Mein Konto endet */}
                 </div>
                 {/*MerkList und Mein Konto endet */}
-               
-                <form className="d-flex" onSubmit={(e)=>{e.preventDefault()}}>
-                
-                
+
+                <form
+                  className="d-flex"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                  }}
+                >
                   <input
-                  onChange={(e)=>setSearchState(e.target.value)}
+                    onChange={(e) => setSearchState(e.target.value)}
                     className="form-control me-2"
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
                   />
-                   <Link to={`/search/${searchState}`} className="d-flex">
-                  <button className="btn btn-outline-danger" type="submit">
-                    Search
-                  </button>
-                  </Link> 
+                  <Link to={`/search/${searchState}`} className="d-flex">
+                    <button className="btn btn-outline-danger" type="submit">
+                      Search
+                    </button>
+                  </Link>
                 </form>
-               
               </div>
             </div>
           </div>

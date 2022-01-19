@@ -9,21 +9,25 @@ function BookCard({ book, index }) {
   const { warenkorbState,warenkorbDispatch, merkListDispatch } = useContext(DataStore);
 
   return (
-    <div className="card m-3 shadow">
+    <div className="card m-3 shadow d-flex align-items-center">
       <Link to={`/book/${book["ISBN/GTIN"]}/${book.titel}`}>
         <div>
           <div            
             key={index}
             style={{ width: "18rem" }}
           >
+            
             <img
               className="card-img-top p-1"
-              style={{ height: "20rem" }}
+              style={{ height: "25rem" }}
               src={book.image}
               alt="Card cap"
             />
             <div className="card-body ">
-              <h5 className="card-title">{book.titel}</h5>
+              <div className="book-div d-flex justify-content-center align-items-center" style={{ height: "2rem"}}>
+                <h5 className="card-title">{book.titel}</h5>
+              </div>
+              
               <p className="card-text">
                 <span>{book.autor}</span> <span></span>
               </p>
@@ -53,7 +57,7 @@ function BookCard({ book, index }) {
                     type: "add",
                     payload: { singleBook: book },
                   });
-                }} href="#" class="btn btn-danger m-3 d-flex justify-content-center align-items-center">
+                }} href="#" class="color-red btn btn-danger m-3 d-flex justify-content-center align-items-center">
                 <i className="fas fa-shopping-cart me-3"></i>
                 WARENKORB
               </button>

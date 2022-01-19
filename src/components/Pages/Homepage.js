@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Header from "../Header";
 import Carousel from "../Carousel";
@@ -6,27 +6,20 @@ import Footer from "../Footer";
 import BookCard from "../BookCard";
 import DataStore from "../DataStore";
 
+import CarouselBook from "../CarouselBooks";
+import CarouselBookRec from "../CarouselBooksRec";
+
 function Homepage() {
   const { allBooks, setAllBooks } = useContext(DataStore);
-
 
 
   return (
     <div>
       <Header />
       <Carousel />
-      <div className="container d-flex flex-row flex-wrap justify-content-around">
-     
-     {
-       allBooks.map((book,index)=>{
+      <CarouselBook/>
+      <CarouselBookRec/>
 
-         return(
-           <BookCard book={book} index={index}/>
-         )
-       })
-     }
-
-      </div>
       <Footer />
     </div>
   );
