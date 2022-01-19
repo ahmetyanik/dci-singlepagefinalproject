@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import books from "../datenbank/books";
 import "../shoppingCard.css";
+import Bookarea from "./Bookarea";
 import DataStore from "./DataStore";
 
 function ShoppingCartArea() {
@@ -22,6 +24,9 @@ function ShoppingCartArea() {
     <div style={{ minHeight: "50vh" }}>
       <div class="container mt-5 mb-5 border shadow">
         <div class="d-flex justify-content-center row">
+          {warenkorbState.length == 0 ? <div><h3>Dein Einkaufskorb ist leer.</h3><h2>Füge etwas hinzu!</h2></div> : 
+          
+
           <div class="col-md-8">
             <div class="p-2">
             </div>
@@ -136,6 +141,9 @@ function ShoppingCartArea() {
             }
 
           </div>
+
+          </div>}
+
         </div>
       </div>
     </div>
