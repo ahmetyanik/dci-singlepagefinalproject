@@ -16,9 +16,13 @@ function ShoppingCartArea() {
     return totalPreis += parseFloat(book.preis);
   })
 
-  console.log(array);
 
-  console.log(warenkorbState);
+  function buyingBuch(){
+
+    
+
+  }
+
 
   return (
     <div style={{ minHeight: "50vh" }}>
@@ -110,7 +114,7 @@ function ShoppingCartArea() {
                     </div>
                     <div class="d-flex align-items-center">
                       <span class="text-grey">
-                        {(parseFloat(book.preis) * filteredBook.length).toFixed(2)}€
+                        {parseFloat(parseFloat(book.preis) * parseFloat(filteredBook.length)).toFixed(2)} €
                       </span>
                     </div>
                   </div>
@@ -124,11 +128,12 @@ function ShoppingCartArea() {
 
             <h3>Total</h3>
 
-              <h4>{totalPreis}€</h4>
+              <h4>{totalPreis.toFixed(2)} €</h4>
             </span>
 
             <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
               <button
+                onClick={buyingBuch}
                 class="btn btn-warning btn-block btn-lg ml-2 pay-button"
                 type="button"
               >
@@ -142,7 +147,7 @@ function ShoppingCartArea() {
 
           </div>
 
-          </div>}
+          }
 
         </div>
       </div>
