@@ -113,6 +113,8 @@ function App() {
 
   const [newBooks,setNewBooks] = useState([]);
   const [recBooks,setRecBooks] = useState([]);
+  const [childBooks,setChildBooks] = useState([]);
+  
   
  let searchedBook = allBooks.filter(movie => {
   return movie.titel.toLowerCase().indexOf(searchState.toLowerCase()) !== -1
@@ -163,12 +165,22 @@ function App() {
 
   console.log(recBooks)
 
+  const findingBooks3 = allBooks.filter((book) => {
+    return book.kategorie === "Kinderbücher"
+  });
+
+  useEffect(() => {
+    setChildBooks(findingBooks3);
+  }, [allBooks]);
+
+  console.log(childBooks)
+
 
   return (
     <div className="App">
       <BrowserRouter>
         <DataStore.Provider
-          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch, searchState, setSearchState, searchedBook,categories,setCategories, newBooks, setNewBooks, recBooks, setRecBooks }}
+          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch, searchState, setSearchState, searchedBook,categories,setCategories, newBooks, setNewBooks, recBooks, setRecBooks, childBooks, setChildBooks }}
         >
           <Routes>
             <Route exact path="/" element={<Homepage  />} />

@@ -8,6 +8,7 @@ import DataStore from "../DataStore";
 
 import CarouselBook from "../CarouselBooks";
 import CarouselBookRec from "../CarouselBooksRec";
+import CarouselBookChild from "../CarouselBooksChild";
 
 function Homepage() {
   const { allBooks, setAllBooks } = useContext(DataStore);
@@ -17,9 +18,12 @@ function Homepage() {
     <div>
       <Header />
       <Carousel />
-      <CarouselBook/>
-      <CarouselBookRec/>
-
+      <CarouselBook />
+      <CarouselBookRec />
+      <div className="container pb-5 pt-5 border-banner">
+        <div class="banner"></div>
+      </div>
+      <CarouselBookChild />
       <Footer />
     </div>
   );
