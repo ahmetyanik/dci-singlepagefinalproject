@@ -12,6 +12,14 @@
   
 }
 
+.home-title {
+  font-weight: bolder;
+  color:#D90416;
+  font-size: 1.6em;
+  
+  
+}
+
 /*Header*/
 .logo {
  width: 18em;
