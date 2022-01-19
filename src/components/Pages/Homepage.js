@@ -6,15 +6,18 @@ import Footer from "../Footer";
 import BookCard from "../BookCard";
 import DataStore from "../DataStore";
 
+import CarouselBook from "../CarouselBooks";
+
 function Homepage() {
   const { allBooks, setAllBooks } = useContext(DataStore);
 
-
+  console.log(allBooks)
 
   return (
     <div>
       <Header />
       <Carousel />
+      <CarouselBook/>
       <div className="container d-flex flex-row flex-wrap justify-content-around">
      
      {

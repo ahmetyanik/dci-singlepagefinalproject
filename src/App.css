@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.color-red {
+  background-color: #D90416;
+
+}
+
 /*Carousel*/
 @media screen and (max-width: 767px) {
   
@@ -18,7 +23,16 @@
   }
 }
 
+/*BookCard*/
+.book-div h5 {
+ overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
+}
+
+
 .cursor{
   cursor: pointer;
 }
+
 
