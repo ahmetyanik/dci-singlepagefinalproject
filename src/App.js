@@ -14,6 +14,7 @@ import Adminloginpage from "./components/Pages/Adminloginpage";
 import alertify from "alertifyjs"
 import Shoppingcartpage from "./components/Pages/Shoppingcartpage";
 import MerkListPage from "./components/Pages/MerkListPage";
+import SearchPage from "./components/Pages/SearchPage";
 
 
 
@@ -102,13 +103,16 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [allBooks, setAllBooks] = useState([])
   const [adminlogin, setAdminLogin] = useState(true);
-  
+  const[searchState, setSearchState]=useState("")
   
   const initialState = [];
   const [warenkorbState, warenkorbDispatch] = useReducer(reducer, initialState)
   const [merkListState, merkListDispatch] = useReducer(reducer, initialState)
   
- 
+ let searchedBook = allBooks.filter(movie => {
+  return movie.titel.toLowerCase().indexOf(searchState.toLowerCase()) !== -1
+})
+console.log('searchedbook',searchedBook);
 
 
 
@@ -117,7 +121,7 @@ function App() {
     setAllBooks(books);
   });
 
-  console.log(allBooks);
+  
 
 
 
@@ -125,7 +129,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <DataStore.Provider
-          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch }}
+          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch, searchState, setSearchState, searchedBook }}
         >
           <Routes>
             <Route exact path="/" element={<Homepage  />} />
@@ -136,6 +140,7 @@ function App() {
             <Route path="/admin" element={adminlogin ? <Adminpage/> : <Adminloginpage/>} />
             <Route path="/shoppingCart/:userName" element={<Shoppingcartpage/>} />
             <Route path="/merklist/:userName" element={<MerkListPage/>} />
+            <Route path="/search/:userName" element={<SearchPage/>} />
           </Routes>
         </DataStore.Provider>
       </BrowserRouter>
