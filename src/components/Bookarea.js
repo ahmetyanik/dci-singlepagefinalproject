@@ -50,7 +50,7 @@ function Bookarea() {
 
     const findingBook = array[findingIndex];
 
-    findingBook.comments ? findingBook.comments.push(commentObject) : findingBook.comments = [commentObject];
+    findingBook.comments ? findingBook.comments.unshift(commentObject) : findingBook.comments = [commentObject];
 
 
     array.splice(findingIndex,1,findingBook)
@@ -58,6 +58,8 @@ function Bookarea() {
     console.log("array:",array);
 
     setAllBooks(array);
+
+    commentArea.value = "";
 
 
   }
