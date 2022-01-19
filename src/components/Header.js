@@ -132,9 +132,6 @@ function Header() {
                   </li>
                 </Link>
 
-                <li className="nav-item">
-                  <a className="nav-link disabled">Disabled</a>
-                </li>
               </ul>
               <div className="d-flex flex-column align-items-lg-end">
                 {/* Merk List und Mein Konto */}
