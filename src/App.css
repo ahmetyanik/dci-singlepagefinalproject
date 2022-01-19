@@ -5,27 +5,57 @@
 .dog{height: 400px;}
 .color-red {
   background-color: #D90416;
-
 }
-
-/*Carousel*/
-@media screen and (max-width: 767px) {
-  
-}
-
+/*Home*/
 .home-title {
   font-weight: bolder;
   color:#D90416;
   font-size: 1.6em;
-  
-  
+  text-align: start;
+  margin-left: 1em; 
+}
+.border-banner {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.border-home {
+  border-top: 1px solid black;
+
+}
+.banner {
+  background-image: url(../src/images/banner.png);
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 
+}
+
+@media screen and (min-width: 768px) and (max-width: 1082px) {
+  .banner {
+    background-image: url(../src/images/banner1.png);
+    background-position: left;
+  }
+}
+@media screen and (max-width: 767px) {
+  .logo {
+    width: 13em;
+  }
+  .banner {
+    background-position: center;
+  }
+  .banner-child {
+    padding-top: 2em;
+  }
+}
+.slick-arrow {
+  background-color: #D90416 !important;
+  border-radius: 50%;
 }
 
 /*Header*/
 .logo {
  width: 18em;
 }
-
 
 @media screen and (max-width: 768px) {
   .logo {
@@ -34,6 +64,7 @@
   .dog{
     height: 200px;
   }
+
 }
 
 /*BookCard*/
