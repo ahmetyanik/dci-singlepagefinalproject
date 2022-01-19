@@ -7,7 +7,7 @@ import DataStore from "../components/DataStore";
 
 
 function CarouselBooks() {
-  const { newBooks, setnewBooks } = useContext(DataStore);
+  const { recBooks, setRecBooks } = useContext(DataStore);
 
   const sliderSettings = {
     dots:true,
@@ -33,12 +33,12 @@ function CarouselBooks() {
   }
   
   return (
-      <div className='content container mb-5 mt-5'>
-        <h6 className="home-title">Neu und Bestseller</h6>
+      <div className='container mb-5'>
+        <h6 className="home-title">Empfehlungen</h6>
       <Slider {...sliderSettings}>
         
       {
-       newBooks.map((book,index)=>{
+       recBooks.map((book,index)=>{
 
          return(
            <BookCard book={book} index={index}/>
