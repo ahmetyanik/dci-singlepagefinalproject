@@ -48,6 +48,7 @@ const books = [
     Gewicht: "",
     ArtikelNr: "19810368",
     Genre: "Sachbuch",
+    menge:0
   },
   {
     titel: "Bevor es zu spät ist",

@@ -1,9 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import DataStore from "./DataStore";
 
 function Userpagearea() {
-  const { allUsers, setAllUsers, currentUser, setCurrentUser } =
-    useContext(DataStore);
+  const {
+    allUsers,
+    setAllUsers,
+    currentUser,
+    setCurrentUser,
+    warenkorbState,
+    warenkorbDispatch,
+  } = useContext(DataStore);
+
+  const array = [];
 
   const [userPageCurrentUser, setUserPageCurrentUser] = useState({});
 
@@ -40,12 +49,12 @@ function Userpagearea() {
 
   return (
     <div>
-    <div className="bg-danger">
-      <h1 className="text-light">{currentUser.name}</h1>
-    </div>
+      <div className="bg-danger">
+        <h1 className="text-light">{currentUser.name}</h1>
+      </div>
       <div className="row" style={{ minHeight: "70vh" }}>
         <div className="col-sm-12 col-lg-6 d-lg-flex flex-lg-column flex-lg-row p-lg-3 border shadow">
-          <h3 style={{fontWeight:"bold"}}>General Information</h3>
+          <h3 style={{ fontWeight: "bold" }}>General Information</h3>
           <div>
             <img
               className="mx-lg-5"
@@ -67,56 +76,115 @@ function Userpagearea() {
             </div>
           </div>
           <div>
-          <button style={{maxWidth:"300px"}} onClick={changeUserInfos} className="btn btn-danger">
-            Change My Information
-          </button>
-          </div>
-      <div className="d-flex justify-content-center">
-          <div style={{width:"450px"}}  className="d-none" id="changeForm">
-            <form
-              onSubmit={changeCurrentUserInfos}
-              className="d-flex flex-column"
+            <button
+              style={{ maxWidth: "300px" }}
+              onClick={changeUserInfos}
+              className="btn btn-danger"
             >
-              <input
-                onChange={inputChange}
-                id="input-image"
-                name="image"
-                className="p-[10px] bg-white border rounded-[10px] focus:outline-none"
-                type="text"
-                placeholder="Image URL"
-              />
-              <input
-                onChange={inputChange}
-                id="creditCard"
-                name="creditCard"
-                className="p-[10px] bg-white border rounded-[10px] focus:outline-none"
-                type="text"
-                placeholder="Credit Card Number"
-              />
-              <input
-                onChange={inputChange}
-                id="creditCardDate"
-                name="expirationDateOfCard"
-                className="p-[10px] bg-white border rounded-[10px] focus:outline-none"
-                type="date"
-                placeholder="Credit Card Date"
-              />
-              <input
-                onChange={inputChange}
-                id="address"
-                name="address"
-                className="p-[10px] bg-white border rounded-[10px] focus:outline-none"
-                type="text"
-                placeholder="Address"
-              />
-              <button className="btn btn-success">CHANGE IMAGE</button>
-            </form>
+              Change My Information
+            </button>
           </div>
+          <div className="d-flex justify-content-center">
+            <div style={{ width: "450px" }} className="d-none" id="changeForm">
+              <form
+                onSubmit={changeCurrentUserInfos}
+                className="d-flex flex-column"
+              >
+                <input
+                  onChange={inputChange}
+                  id="input-image"
+                  name="image"
+                  className="p-[10px] bg-white border rounded-[10px] focus:outline-none"
+                  type="text"
+                  placeholder="Image URL"
+                />
+                <input
+                  onChange={inputChange}
+                  id="creditCard"
+                  name="creditCard"
+                  className="p-[10px] bg-white border rounded-[10px] focus:outline-none"
+                  type="text"
+                  placeholder="Credit Card Number"
+                />
+                <input
+                  onChange={inputChange}
+                  id="creditCardDate"
+                  name="expirationDateOfCard"
+                  className="p-[10px] bg-white border rounded-[10px] focus:outline-none"
+                  type="date"
+                  placeholder="Credit Card Date"
+                />
+                <input
+                  onChange={inputChange}
+                  id="address"
+                  name="address"
+                  className="p-[10px] bg-white border rounded-[10px] focus:outline-none"
+                  type="text"
+                  placeholder="Address"
+                />
+                <button className="btn btn-success">CHANGE IMAGE</button>
+              </form>
+            </div>
           </div>
         </div>
-        <div className="col-sm-12 col-lg-6 d-lg-flex flex-column flex-lg-row p-lg-3 border shadow">
-        <h3 style={{fontWeight:"bold"}}>Activities</h3>
+        <div className="col-sm-12 col-lg-6 d-lg-flex flex-column flex-lg-column p-lg-3 border shadow">
+          <h3 style={{ fontWeight: "bold" }}>Activities</h3>
+          <hr/>
+          <h5>Purchased Books</h5>
+          
 
+          {currentUser.purchasedBooks.map((book, index) => {
+            if (!array.includes(book)) {
+              array.push(book);
+
+              const filteredBook = warenkorbState.filter((element) => {
+                return book.titel === element.titel;
+              });
+
+              return (
+                <div
+                  key={index}
+                  class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded border shadow"
+                >
+                  <div class="mr-1">
+                    <Link to={`/book/${book["ISBN/GTIN"]}/${book.titel}`}>
+                      {" "}
+                      <img class="rounded" src={book.image} width="70" alt="" />
+                    </Link>
+                  </div>
+                  <div class="d-flex flex-column align-items-center product-details">
+                    <span class="font-weight-bold">{book.titel}</span>
+                    <div class="d-flex flex-row product-desc">
+                      <div class="size mr-1">
+                        <span class="text-grey">
+                          {book.autor} | {book.Verlag}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row align-items-center qty">
+                    <h5 class="text-grey mt-1 mr-1 ml-1">
+                      {filteredBook.length}
+                    </h5>
+                    <span className="text-muted mx-1">X</span>
+                  </div>
+                  <div>
+                    <h5 class="text-grey">{book.preis}€</h5>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <span class="text-grey">
+                      {parseFloat(
+                        parseFloat(book.preis) * parseFloat(filteredBook.length)
+                      ).toFixed(2)}{" "}
+                      €
+                    </span>
+                  </div>
+                </div>
+              );
+            }
+          })}
+
+          <h5 className="mt-2">Comments</h5>
         </div>
       </div>
     </div>

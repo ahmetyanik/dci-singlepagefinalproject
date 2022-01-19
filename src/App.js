@@ -123,7 +123,7 @@ function App() {
   useEffect(() => {
     setAllUsers(users);
     setAllBooks(books);
-  },[]);
+  },[allUsers]);
 
   const newArray = [];
 
@@ -161,8 +161,8 @@ function App() {
     setRecBooks(findingBooks2);
   }, [allBooks]);
 
-  console.log(recBooks)
 
+  console.log(allUsers);
 
   return (
     <div className="App">
