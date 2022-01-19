@@ -81,14 +81,14 @@ function App() {
   const [merkListState, merkListDispatch] = useReducer(reducer, initialState)
   
 
-  
-  console.log(warenkorbState);
 
 
   useEffect(() => {
     setAllUsers(users);
     setAllBooks(books);
-  }, []);
+  });
+
+  console.log(allBooks);
 
 
 
