@@ -16,11 +16,24 @@ function Userpagearea() {
 
   const [userPageCurrentUser, setUserPageCurrentUser] = useState({});
 
+  const [selectedUser, setSelectedUser] = useState({});
+
+  let selectedPerson = allUsers.filter((user,index)=>{
+
+    return user.name === currentUser.name;
+  })
+
+  console.log(selectedPerson);
+
+  useEffect(()=>{
+    setSelectedUser(selectedPerson[0])
+  },[])
+
   useEffect(() => {
     setUserPageCurrentUser(currentUser);
   }, []);
-
-  console.log(userPageCurrentUser);
+  
+  console.log(selectedUser);
 
   const changeForm = document.querySelector("#changeForm");
 
@@ -39,13 +52,17 @@ function Userpagearea() {
     });
   }
 
-  console.log(userPageCurrentUser);
 
   function changeCurrentUserInfos(e) {
     e.preventDefault();
     setCurrentUser(userPageCurrentUser);
     changeForm.setAttribute("class", "d-none");
   }
+
+  console.log(allUsers);
+  console.log(currentUser);
+
+
 
   return (
     <div>
@@ -132,7 +149,10 @@ function Userpagearea() {
           <hr/>
           <h5>Purchased Books</h5>
 
-          {currentUser.purchasedBooks ? currentUser.purchasedBooks.map((book, index) => {
+          {selectedUser.name ? selectedUser.purchasedBooks.map((book, index) => {
+
+              console.log(book)
+
             if (!array.includes(book)) {
               array.push(book);
 
@@ -181,9 +201,8 @@ function Userpagearea() {
                 </div>
               );
             } 
-          }) : null}
+          }) : console.log(selectedUser)}
 
-          <h5 className="mt-2">Comments</h5>
         </div>
       </div>
     </div>

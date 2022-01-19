@@ -96,6 +96,10 @@ function reducer(state,action){
     return newArray
   }
 
+  if(action.type==="clean"){
+    return [];
+  }
+
 }
 
 

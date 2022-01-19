@@ -31,15 +31,22 @@ function ShoppingCartArea() {
         if (user.name === currentUser.name) {
           const array = [...allUsers];
 
-          const newObject = { ...array[index], purchasedBooks: warenkorbState };
+          const newObject = { ...array[index], purchasedBooks: [...user.purchasedBooks,...warenkorbState] };
 
           array.splice(index, 1, newObject);
           users.splice(index,1,newObject);
 
           setCurrentUser({...currentUser,purchasedBooks: warenkorbState})
+
+          warenkorbDispatch({
+            type: "clean"
+          });
+          
         }
       });
     }
+
+    alert("Ihre Bestellung ist eingegangen.")
   }
 
   console.log(currentUser);
