@@ -110,14 +110,14 @@ function App() {
   
  
 
-  
-  console.log(warenkorbState);
-  console.log(merkListState);
+
 
   useEffect(() => {
     setAllUsers(users);
     setAllBooks(books);
-  }, []);
+  });
+
+  console.log(allBooks);
 
 
 

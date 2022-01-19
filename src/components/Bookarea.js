@@ -11,7 +11,7 @@ function Bookarea() {
     setCurrentUser,
     warenkorbState,
     warenkorbDispatch,
-    merkListDispatch
+    merkListDispatch,
   } = useContext(DataStore);
 
   const [singleBook, setSingleBook] = useState({});
@@ -23,6 +23,46 @@ function Bookarea() {
   useEffect(() => {
     setSingleBook(filteredBook[0]);
   }, []);
+
+  console.log(currentUser);
+
+  function addComment(e) {
+    e.preventDefault();
+
+    const commentArea = document.querySelector("#textArea");
+    const gettingComment = commentArea.value;
+
+    const commentObject ={
+      name : currentUser.name,
+      image: currentUser.image,
+      comment:gettingComment,
+      date : new Date().toDateString()
+    }
+
+    const array = [...allBooks];
+    let findingIndex;
+
+    allBooks.forEach((book, index) => {
+      if (params.ISBN === book["ISBN/GTIN"] && params.bookName === book.titel) {
+        findingIndex = index;
+      }
+    });
+
+    const findingBook = array[findingIndex];
+
+    findingBook.comments ? findingBook.comments.unshift(commentObject) : findingBook.comments = [commentObject];
+
+
+    array.splice(findingIndex,1,findingBook)
+
+    console.log("array:",array);
+
+    setAllBooks(array);
+
+    commentArea.value = "";
+
+
+  }
 
   return (
     <div className="container bg-white mt-5 mb-5">
@@ -45,14 +85,16 @@ function Bookarea() {
           <h1>EUR 10,50</h1>
           <div className="d-flex align-items-end justify-content-lg-end">
             <div>
-              
-                <i onClick={() => {
+              <i
+                onClick={() => {
                   merkListDispatch({
                     type: "add_merk_book",
                     payload: { singleBook: singleBook },
                   });
-                }} className="far fa-heart fs-3 pb-1 me-4 text-dark cursor"></i>
-              
+                }}
+                className="far fa-heart fs-3 pb-1 me-4 text-dark cursor"
+              ></i>
+
               <a href="like">
                 <i className="fas fa-share-alt fs-3 pb-1 me-4 text-dark"></i>
               </a>
@@ -138,73 +180,70 @@ function Bookarea() {
             <div class="col-md-12 col-lg-10 col-xl-8">
               <h3>Ihre Bewertungen</h3>
               <div class="card">
+                <h5>Comments</h5>
                 <div class="card-body">
-                  <div class="d-flex flex-start align-items-center">
-                    <img
-                      class="rounded-circle shadow-1-strong me-3"
-                      src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp"
-                      alt="avatar"
-                      width="60"
-                      height="60"
-                    />
-                    <div>
-                      <h6 class="fw-bold text-primary mb-1">Lily Coleman</h6>
-                      <p class="text-muted small mb-0">
-                        Shared publicly - Jan 2020
-                      </p>
-                    </div>
-                  </div>
+                  {singleBook.comments
+                    ? singleBook.comments.map((comment, index) => {
+                        return (
+                          <div className="border shadow p-3 mt-2 text-start">
+                            <div class="d-flex flex-start align-items-center">
+                              <img
+                                class="rounded-circle shadow-1-strong me-3"
+                                src={comment.image}
+                                alt="avatar"
+                                width="60"
+                                height="60"
+                              />
+                              <div>
+                                <h6 class="fw-bold text-primary ">
+                                  {comment.name}
+                                </h6>
+                                <p class="text-muted small mb-0">
+                                  {comment.date}
+                                </p>
+                              </div>
+                            </div>
 
-                  <p class="mt-3 mb-4 pb-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip consequat.
-                  </p>
-
-                  <div class="small d-flex justify-content-start">
-                    <a href="#!" class="d-flex align-items-center me-3">
-                      <i class="far fa-thumbs-up me-2"></i>
-                      <p class="mb-0">12</p>
-                    </a>
-                    <a href="#!" class="d-flex align-items-center me-3">
-                      <i class="far fa-thumbs-down me-2"></i>
-                      <p class="mb-0">2</p>
-                    </a>
-                  </div>
+                            <p class="mt-3 ">{comment.comment}</p>
+                          </div>
+                        );
+                      })
+                    : null}
                 </div>
                 <div
                   class="card-footer py-3 border-0"
                   style={{ backgroundColor: "#f8f9fa" }}
                 >
-                  <form action="">
-                    <div class="d-flex flex-start w-100">
-                      <img
-                        class="rounded-circle shadow-1-strong me-3"
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp"
-                        alt="avatar"
-                        width="40"
-                        height="40"
-                      />
+                  {currentUser.name ? (
+                    <div>
+                      <form onSubmit={addComment}>
+                        <div class="d-flex flex-start w-100">
+                          <img
+                            class="rounded-circle shadow-1-strong me-3"
+                            src={currentUser.image}
+                            alt="avatar"
+                            width="40"
+                            height="40"
+                          />
 
-                      <div class="form-outline w-100">
-                        <textarea
-                          class="form-control"
-                          id="textAreaExample"
-                          rows="4"
-                          style={{ background: " #fff" }}
-                        ></textarea>
-                        <label class="form-label" for="textAreaExample">
-                          Message
-                        </label>
-                      </div>
+                          <div class="form-outline w-100">
+                            <textarea
+                              placeholder="Write your comment here!"
+                              class="form-control"
+                              id="textArea"
+                              rows="4"
+                              style={{ background: " #fff" }}
+                            ></textarea>
+                          </div>
+                        </div>
+                        <div class="float-end mt-2 pt-1">
+                          <button type="submit" class="btn btn-primary btn-sm">
+                            Post comment
+                          </button>
+                        </div>
+                      </form>
                     </div>
-                    <div class="float-end mt-2 pt-1">
-                      <button type="submit" class="btn btn-primary btn-sm">
-                        Post comment
-                      </button>
-                    </div>
-                  </form>
+                  ) : null}
                 </div>
               </div>
             </div>
