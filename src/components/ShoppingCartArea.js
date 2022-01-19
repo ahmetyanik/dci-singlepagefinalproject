@@ -37,6 +37,8 @@ function ShoppingCartArea() {
                 
 
                 return (
+                  
+
                   <div
                     key={index}
                     class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded border shadow"
@@ -111,6 +113,8 @@ function ShoppingCartArea() {
               }
             })}
 
+            {
+              warenkorbState.length>0 ? <div>
             <span className="d-flex flex-column align-items-end mt-3">
 
             <h3>Total</h3>
@@ -126,6 +130,11 @@ function ShoppingCartArea() {
                 Proceed to Pay
               </button>
             </div>
+            </div> : <div>
+              Es gibt keine Bücher in Ihre Warenkorb!
+            </div>
+            }
+
           </div>
         </div>
       </div>
