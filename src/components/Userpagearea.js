@@ -131,9 +131,8 @@ function Userpagearea() {
           <h3 style={{ fontWeight: "bold" }}>Activities</h3>
           <hr/>
           <h5>Purchased Books</h5>
-          
 
-          {currentUser.purchasedBooks.map((book, index) => {
+          {currentUser.purchasedBooks ? currentUser.purchasedBooks.map((book, index) => {
             if (!array.includes(book)) {
               array.push(book);
 
@@ -181,8 +180,8 @@ function Userpagearea() {
                   </div>
                 </div>
               );
-            }
-          })}
+            } 
+          }) : null}
 
           <h5 className="mt-2">Comments</h5>
         </div>

@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import books from "../datenbank/books";
+import users from "../datenbank/users";
 import "../shoppingCard.css";
 import Bookarea from "./Bookarea";
 import CarouselBooks from "./CarouselBooksRec";
@@ -33,15 +34,16 @@ function ShoppingCartArea() {
           const newObject = { ...array[index], purchasedBooks: warenkorbState };
 
           array.splice(index, 1, newObject);
+          users.splice(index,1,newObject);
 
-          setAllUsers(array);
-          setCurrentUser({...currentUser,purchasedBooks: {warenkorbState}})
+          setCurrentUser({...currentUser,purchasedBooks: warenkorbState})
         }
       });
     }
   }
 
   console.log(currentUser);
+  console.log(allUsers);
 
   return (
     <div style={{ minHeight: "50vh" }}>

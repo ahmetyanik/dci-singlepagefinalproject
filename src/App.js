@@ -120,12 +120,15 @@ function App() {
   return movie.titel.toLowerCase().indexOf(searchState.toLowerCase()) !== -1
 })
 
-
+  useEffect(()=>{
+    setAllUsers(users)
+  },[users,allUsers,currentUser])
 
   useEffect(() => {
-    setAllUsers(users);
     setAllBooks(books);
-  },[allUsers]);
+  },[allUsers,currentUser]);
+
+  console.log(allUsers);
 
   const newArray = [];
 
