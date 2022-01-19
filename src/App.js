@@ -110,6 +110,8 @@ function App() {
   const initialState = [];
   const [warenkorbState, warenkorbDispatch] = useReducer(reducer, initialState)
   const [merkListState, merkListDispatch] = useReducer(reducer, initialState)
+
+  const [newBooks,setNewBooks] = useState([]);
   
  let searchedBook = allBooks.filter(movie => {
   return movie.titel.toLowerCase().indexOf(searchState.toLowerCase()) !== -1
@@ -135,6 +137,20 @@ function App() {
     useEffect(()=>{
       setCategories(newArray);
     },[allBooks])
+
+
+
+  
+
+  const findingBooks = allBooks.filter((book) => {
+    return book.kategorie === "Neu und Bestseller"
+  });
+
+  useEffect(() => {
+    setNewBooks(findingBooks);
+  }, [allBooks]);
+
+  console.log(newBooks)
   
 
 
@@ -142,7 +158,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <DataStore.Provider
-          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch, searchState, setSearchState, searchedBook,categories,setCategories }}
+          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch, searchState, setSearchState, searchedBook,categories,setCategories, newBooks, setNewBooks }}
         >
           <Routes>
             <Route exact path="/" element={<Homepage  />} />

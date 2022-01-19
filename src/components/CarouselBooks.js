@@ -7,7 +7,7 @@ import DataStore from "../components/DataStore";
 
 
 function CarouselBooks() {
-  const { allBooks, setAllBooks } = useContext(DataStore);
+  const { newBooks, setnewBooks } = useContext(DataStore);
 
   const sliderSettings = {
     dots:true,
@@ -37,7 +37,7 @@ function CarouselBooks() {
       <Slider {...sliderSettings}>
         
       {
-       allBooks.map((book,index)=>{
+       newBooks.map((book,index)=>{
 
          return(
            <BookCard book={book} index={index}/>
