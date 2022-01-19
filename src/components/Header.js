@@ -5,8 +5,10 @@ import Logo from "../images/logo.png";
 import "../App.css"
 
 function Header() {
-  const { currentUser, setCurrentUser, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch} =
+  const { currentUser, setCurrentUser, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch, searchState, setSearchState, searchedBook} =
     useContext(DataStore);
+
+
 
   console.log(currentUser);
 
@@ -190,17 +192,24 @@ function Header() {
                 {/* Mein Konto endet */}
                 </div>
                 {/*MerkList und Mein Konto endet */}
-                <form className="d-flex">
+               
+                <form className="d-flex" onSubmit={(e)=>{e.preventDefault()}}>
+                
+                
                   <input
+                  onChange={(e)=>setSearchState(e.target.value)}
                     className="form-control me-2"
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
                   />
+                   <Link to={`/search/${searchState}`} className="d-flex">
                   <button className="btn btn-outline-danger" type="submit">
                     Search
                   </button>
+                  </Link> 
                 </form>
+               
               </div>
             </div>
           </div>
