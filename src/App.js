@@ -125,7 +125,7 @@ function App() {
   useEffect(() => {
     setAllUsers(users);
     setAllBooks(books);
-  },[]);
+  },[allUsers]);
 
   const newArray = [];
 
@@ -163,7 +163,6 @@ function App() {
     setRecBooks(findingBooks2);
   }, [allBooks]);
 
-  console.log(recBooks)
 
   const findingBooks3 = allBooks.filter((book) => {
     return book.kategorie === "Kinderbücher"

@@ -51,8 +51,8 @@ function BookCard({ book, index }) {
                   });
                 }} class="far fa-heart fs-3 pb-1 me-4 text-dark cursor"></i>
             </div>
-              <button    onClick={() => {
-                  console.log(book)
+              <button
+                  onClick={() => {
                   warenkorbDispatch({
                     type: "add",
                     payload: { singleBook: book },
