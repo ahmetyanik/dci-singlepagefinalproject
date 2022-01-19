@@ -7,7 +7,7 @@ import Img3 from '../images/10.png'
 
 function Carousel() {
   return (
-    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+    <div id="carol carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img src={Img1} className="d-block w-100" alt="..."></img>

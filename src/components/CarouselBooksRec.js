@@ -33,8 +33,8 @@ function CarouselBooks() {
   }
   
   return (
-      <div className='container mb-5'>
-        <h6 className="home-title">Empfehlungen</h6>
+      <div className='container mb-5 border-home'>
+        <h6 className="home-title pt-5">Empfehlungen</h6>
       <Slider {...sliderSettings}>
         
       {
