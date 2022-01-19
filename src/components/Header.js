@@ -45,7 +45,7 @@ function Header() {
         style={{ display: "flex", height: "40px", backgroundColor: "#de030e" }}
       >
         <div className="text-light">
-          <span>KulturKaufhaus</span>
+          <span>Bücherhaus</span>
           <span className="px-2">|</span>
           <span>Veranstellungen</span>
           <span className="px-2">|</span>

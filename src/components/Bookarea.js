@@ -160,8 +160,8 @@ function Bookarea() {
             <span>{singleBook.Erscheinungsjahr}</span>
           </p>
           <p className="d-flex justify-content-between">
-            <span className="fw-lighter">Erscheinungsdatum</span>{" "}
-            <span>{singleBook.Erscheinungsdatum}</span>
+            <span className="fw-lighter">Erstverkaufstag</span>{" "}
+            <span>{singleBook.Erstverkaufstag}</span>
           </p>
           <p className="d-flex justify-content-between">
             <span className="fw-lighter">Seiten</span>{" "}

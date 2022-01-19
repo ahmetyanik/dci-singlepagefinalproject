@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+.dog{height: 400px;}
 .color-red {
   background-color: #D90416;
 }
@@ -54,6 +55,16 @@
 /*Header*/
 .logo {
  width: 18em;
+
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 13em;
+  }
+  .dog{
+    height: 200px;
+  }
+
 }
 
 /*BookCard*/

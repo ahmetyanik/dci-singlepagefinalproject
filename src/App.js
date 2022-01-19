@@ -76,19 +76,19 @@ function reducer(state,action){
     const newArray = [...state];
 
 
-    const bulunanIndex = [];
+    const findingIndex = [];
     
     for(let i=0;i<state.length;i++){
       
       if(state[i].titel===action.payload.singleBook.titel){
         
-       bulunanIndex.push(i);
+       findingIndex.push(i);
        break;
 
       }
     }
 
-    newArray.splice(bulunanIndex[0],1);
+    newArray.splice(findingIndex[0],1);
    
     console.log(newArray);
  
