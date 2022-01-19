@@ -17,6 +17,7 @@ function Homepage() {
   return (
     <div>
       <Header />
+      <div className="banner-first"></div>
       <Carousel />
       <CarouselBook />
       <CarouselBookRec />

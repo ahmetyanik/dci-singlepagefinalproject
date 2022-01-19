@@ -34,7 +34,7 @@ function Header() {
         }}
       >
         <span style={{ color: "#c42b32", fontWeight: "bold" }}>
-          3G im KulturKaufhaus
+          3G im Bücherhaus
         </span>
       </div>
 
@@ -89,9 +89,9 @@ function Header() {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
+                <li className="nav-item dropdown ms-lg-4 me-lg-4">
                   <a
-                    class="nav-link dropdown-toggle"
+                    className="nav-link dropdown-toggle"
                     href="#"
                     id="navbarDropdown"
                     role="button"
@@ -127,7 +127,8 @@ function Header() {
                 >
                   <li className="nav-item">
                     <a className="nav-link" href="#">
-                      Shopping Cart
+                    Warenkorb
+                    <i className="fas fa-shopping-cart ms-1"></i>
                     </a>
                   </li>
                 </Link>
@@ -151,7 +152,7 @@ function Header() {
                         <span>
                           Merk List{" "}
                           {merkListState.length > 0 ? (
-                            <span class="badge rounded-pill bg-success">
+                            <span className="badge rounded-pill bg-success">
                               {merkListState.length}
                             </span>
                           ) : null}{" "}
@@ -199,7 +200,7 @@ function Header() {
                             <span style={{ color: "#de030e" }}>
                               {" "}
                               {currentUser.name}{" "}
-                              <span class="badge rounded-pill bg-success">
+                              <span className="badge rounded-pill bg-success">
                                 {warenkorbState.length}
                               </span>{" "}
                             </span>
@@ -208,7 +209,7 @@ function Header() {
                           <span>
                             Mein Konto{" "}
                             {warenkorbState.length > 0 ? (
-                              <span class="badge rounded-pill bg-success">
+                              <span className="badge rounded-pill bg-success">
                                 {warenkorbState.length}
                               </span>
                             ) : null}{" "}

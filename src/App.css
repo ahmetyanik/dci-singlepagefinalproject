@@ -1,7 +1,7 @@
 .App {
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
-
 .dog{height: 400px;}
 .color-red {
   background-color: #D90416;
@@ -26,27 +26,9 @@
   background-image: url(../src/images/banner.png);
   height: 300px;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 
+  background-repeat: no-repeat; 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1082px) {
-  .banner {
-    background-image: url(../src/images/banner1.png);
-    background-position: left;
-  }
-}
-@media screen and (max-width: 767px) {
-  .logo {
-    width: 13em;
-  }
-  .banner {
-    background-position: center;
-  }
-  .banner-child {
-    padding-top: 2em;
-  }
-}
 .slick-arrow {
   background-color: #D90416 !important;
   border-radius: 50%;
@@ -54,9 +36,15 @@
 
 /*Header*/
 .logo {
- width: 18em;
-}
+  width: 18em;
+ }
 
+@media screen and (min-width: 768px) and (max-width: 1082px) {
+  .banner {
+    background-image: url(../src/images/banner1.png);
+    background-position: left;
+  }
+}
 @media screen and (max-width: 768px) {
   .logo {
     width: 13em;
@@ -64,7 +52,21 @@
   .dog{
     height: 200px;
   }
-
+  .display-none {
+    display: none;
+  }
+  .banner {
+    background-position: center;
+  }
+  .banner-child {
+    padding-top: 2em;
+  }
+  .banner-first {
+    width: 100%;
+    height: 300px;
+    background-image: url(../src/images/bannerhome.jpg);
+    background-size: cover;
+  }
 }
 
 /*BookCard*/
