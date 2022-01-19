@@ -55,7 +55,7 @@
 /*Header*/
 .logo {
  width: 18em;
-
+}
 
 @media screen and (max-width: 768px) {
   .logo {
