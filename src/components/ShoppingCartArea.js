@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import books from "../datenbank/books";
 import "../shoppingCard.css";
 import Bookarea from "./Bookarea";
+import CarouselBooks from "./CarouselBooksRec";
 import DataStore from "./DataStore";
 
 function ShoppingCartArea() {
@@ -34,7 +35,7 @@ function ShoppingCartArea() {
           array.splice(index, 1, newObject);
 
           setAllUsers(array);
-          setCurrentUser({...currentUser,purchasedBooks: warenkorbState})
+          setCurrentUser({...currentUser,purchasedBooks: {warenkorbState}})
         }
       });
     }
@@ -50,6 +51,8 @@ function ShoppingCartArea() {
             <div>
               <h3>Dein Einkaufskorb ist leer.</h3>
               <h2>Füge etwas hinzu!</h2>
+              <h3>Unsere Empfehlungen</h3>
+              <CarouselBooks/>
             </div>
           ) : (
             <div class="col-md-8">
@@ -160,7 +163,7 @@ function ShoppingCartArea() {
                   </div>
                 </div>
               ) : (
-                <div>Es gibt keine Bücher in Ihre Warenkorb!</div>
+                null
               )}
             </div>
           )}
