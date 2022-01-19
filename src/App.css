@@ -2,6 +2,8 @@
   text-align: center;
 }
 
+.dog{height: 400px;}
+
 /*Carousel*/
 @media screen and (max-width: 767px) {
   
@@ -12,9 +14,13 @@
  width: 18em;
 }
 
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 768px) {
   .logo {
     width: 13em;
+  }
+  .dog{
+    height: 200px;
   }
 }
 
