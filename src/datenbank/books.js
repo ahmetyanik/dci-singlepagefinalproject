@@ -592,7 +592,7 @@ Für was würdest du dich entscheiden?
 Schreiben ist Josies Leben. In Texten kann sie ihre Gedanken fliegen lassen und ihr inneres Sorgenkarussell anhalten. Als die 17-Jährige einen Schreibwettbewerb gewinnt, darf sie ein Filmteam auf eine Pressetour durch die USA begleiten. Doch auf der Reise erfährt Josie etwas Ungeheuerliches: Ein gefeierter Regisseur belästigt Mädchen und Frauen am Set - und kommt offenbar schon lange damit durch. Schnell wird die ersehnte Reise zu ihrer größten Herausforderung, denn was kann ein Mädchen wie sie schon ausrichten? Es gibt so viele Gründe, zu schweigen. Es gibt so viele Gründe, nichts zu sagen. Und doch muss Josie den Mut finden, den Text zu schreiben, der alles verändern wird.
 In "Off the Record" gibt Camryn Garrett all den mutigen und kämpferischen Menschen ein Gesicht, die sich für Gerechtigkeit einsetzen und deren Geschichten doch zu oft unsichtbar bleiben.
 "Selten habe ich einen Menschen, der sich selbst als ängstlich bezeichnet, so für seinen Mut bewundert, wie Josie Wright. Ihre Story macht Mut. Sie geht uns alle an - und dieser Roman ist ganz großes Kino." (Isabel Abedi)`,
-    kategorie: "Jugenbücher",
+    kategorie: "Jugendbücher",
     "ISBN/GTIN": "978-3-401-60645-3",
     Produktart: "Buch",
     Einbandart: "Kartoniert, Paperback ",
@@ -1187,7 +1187,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     beschreibung: `Stell Dir vor, du könntest die Welt verändern ... Welche Entscheidung triffst Du?
     Ash ist ein weißer, heterosexueller cis-Junge aus der Mittelschicht. Er hält sich selbst für einen guten Kerl, aber nicht gerade für den Mittelpunkt des Universums. Bis er eines Freitags in eine andere Dimension katapultiert wird, in der er genau das ist - der Mittelpunkt des Universums! Damit verfügt ausgerechnet Ash nun über die Macht, die Welt zu verändern. Doch irgendetwas geht schief, und Ash führt - aus Versehen - die Rassentrennung wieder ein. Natürlich will er das wieder geradebiegen, aber: Es gibt unendlich viele Möglichkeiten, alles falsch zu machen.
     Ein Social Thriller der Extraklasse über eine durch und durch ungerechte Welt wie unsere.`,
-    kategorie: "Jugenbücher",
+    kategorie: "Jugendbücher",
     "ISBN/GTIN": "978-3-7373-5884-2",
     Produktart: "Buch",
     Einbandart: "Gebunden",
@@ -1234,7 +1234,7 @@ Der satirische Jahresrückblick mit den besten Cartoons des Jahres 2021`,
     Schreiben ist Josies Leben. In Texten kann sie ihre Gedanken fliegen lassen und ihr inneres Sorgenkarussell anhalten. Als die 17-Jährige einen Schreibwettbewerb gewinnt, darf sie ein Filmteam auf eine Pressetour durch die USA begleiten. Doch auf der Reise erfährt Josie etwas Ungeheuerliches: Ein gefeierter Regisseur belästigt Mädchen und Frauen am Set - und kommt offenbar schon lange damit durch. Schnell wird die ersehnte Reise zu ihrer größten Herausforderung, denn was kann ein Mädchen wie sie schon ausrichten? Es gibt so viele Gründe, zu schweigen. Es gibt so viele Gründe, nichts zu sagen. Und doch muss Josie den Mut finden, den Text zu schreiben, der alles verändern wird.
     In "Off the Record" gibt Camryn Garrett all den mutigen und kämpferischen Menschen ein Gesicht, die sich für Gerechtigkeit einsetzen und deren Geschichten doch zu oft unsichtbar bleiben.
     "Selten habe ich einen Menschen, der sich selbst als ängstlich bezeichnet, so für seinen Mut bewundert, wie Josie Wright. Ihre Story macht Mut. Sie geht uns alle an - und dieser Roman ist ganz großes Kino." (Isabel Abedi)`,
-    kategorie: "Jugenbücher",
+    kategorie: "Jugendbücher",
     "ISBN/GTIN": "978-3-401-60645-3",
     Produktart: "Buch",
     Einbandart: "Kartoniert, Paperback ",

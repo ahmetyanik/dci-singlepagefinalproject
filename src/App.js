@@ -15,6 +15,7 @@ import alertify from "alertifyjs"
 import Shoppingcartpage from "./components/Pages/Shoppingcartpage";
 import MerkListPage from "./components/Pages/MerkListPage";
 import SearchPage from "./components/Pages/SearchPage";
+import Categoriepage from "./components/Pages/Categoriepage";
 
 
 
@@ -103,7 +104,8 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [allBooks, setAllBooks] = useState([])
   const [adminlogin, setAdminLogin] = useState(true);
-  const[searchState, setSearchState]=useState("")
+  const[searchState, setSearchState]=useState("");
+  const [categories, setCategories] = useState([]);
   
   const initialState = [];
   const [warenkorbState, warenkorbDispatch] = useReducer(reducer, initialState)
@@ -119,17 +121,30 @@ console.log('searchedbook',searchedBook);
   useEffect(() => {
     setAllUsers(users);
     setAllBooks(books);
-  });
+  },[]);
 
+  const newArray = [];
+
+    allBooks.forEach((book) => {
+
+      
+      if (!newArray.includes(book.kategorie)) {
+        newArray.push(book.kategorie);
+      }
+    });
+
+    useEffect(()=>{
+      setCategories(newArray);
+    },[allBooks])
   
-
+    console.log(categories);
 
 
   return (
     <div className="App">
       <BrowserRouter>
         <DataStore.Provider
-          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch, searchState, setSearchState, searchedBook }}
+          value={{ allUsers, setAllUsers, currentUser, setCurrentUser, allBooks, setAllBooks, warenkorbState, warenkorbDispatch, merkListState, merkListDispatch, searchState, setSearchState, searchedBook,categories,setCategories }}
         >
           <Routes>
             <Route exact path="/" element={<Homepage  />} />
@@ -141,6 +156,7 @@ console.log('searchedbook',searchedBook);
             <Route path="/shoppingCart/:userName" element={<Shoppingcartpage/>} />
             <Route path="/merklist/:userName" element={<MerkListPage/>} />
             <Route path="/search/:userName" element={<SearchPage/>} />
+            <Route path="/categorie/:categorie" element={<Categoriepage/>} />
           </Routes>
         </DataStore.Provider>
       </BrowserRouter>
