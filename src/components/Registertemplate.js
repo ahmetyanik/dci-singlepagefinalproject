@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import DataStore from "./DataStore";
 import Singinsignupbuttons from "./Signinsignupbutton";
 import { useNavigate } from "react-router-dom";
+import users from "../datenbank/users";
 
 function RegisterTemplate() {
   const { allUsers, setAllUsers, currentUser, setCurrentUser } = useContext(DataStore);
@@ -21,6 +22,7 @@ function RegisterTemplate() {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC4BPQQmAhaOjJX5QGnLcj8spS7lpopLiW36_P8FTSH0mlazlJvkoQRCULvbRtHuEOJbE&usqp=CAU",
     active: false,
     admin: false,
+    purchasedBooks:[]
   });
 
   function inputChange(e) {
@@ -31,17 +33,15 @@ function RegisterTemplate() {
       : setPerson({ ...person, [e.target.name]: dataVonInput });
   }
 
+
   function addNewPerson(e) {
     e.preventDefault();
-    const newArray = [...allUsers, person];
-    setAllUsers(newArray);
+    users.push(person);
     setCurrentUser(person);
     navigate("/");
     alert("You are registered!");
   }
 
-  console.log(person);
-  console.log(allUsers);
 
   return (
     <div>

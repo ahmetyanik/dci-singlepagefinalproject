@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import books from "../datenbank/books";
+import users from "../datenbank/users";
 import "../shoppingCard.css";
-import Bookarea from "./Bookarea";
+import CarouselBooks from "./CarouselBooksRec";
 import DataStore from "./DataStore";
 
 function ShoppingCartArea() {
@@ -12,7 +12,6 @@ function ShoppingCartArea() {
     warenkorbState,
     warenkorbDispatch,
     allUsers,
-    setAllUsers,
   } = useContext(DataStore);
 
   const array = [];
@@ -29,26 +28,39 @@ function ShoppingCartArea() {
         if (user.name === currentUser.name) {
           const array = [...allUsers];
 
-          const newObject = { ...array[index], purchasedBooks: warenkorbState };
+          const newObject = { ...array[index], purchasedBooks: [...user.purchasedBooks,...warenkorbState] };
 
           array.splice(index, 1, newObject);
+          users.splice(index,1,newObject);
 
-          setAllUsers(array);
           setCurrentUser({...currentUser,purchasedBooks: warenkorbState})
+
+          warenkorbDispatch({
+            type: "clean"
+          });
+          
         }
       });
     }
+
+    alert("Ihre Bestellung ist eingegangen.")
   }
 
   console.log(currentUser);
+  console.log(allUsers);
 
   return (
     <div style={{ minHeight: "50vh" }}>
       <div class="container pt-3 pb-5 mt-5 mb-5 border shadow">
         <div class="d-flex justify-content-center row">
-          {warenkorbState.length == 0 ? (
+          {warenkorbState.length === 0 ? (
             <div>
+
               <h3 className="m-5">Dein Einkaufskorb ist leer.</h3>
+
+              
+              <CarouselBooks/>
+
             </div>
           ) : (
             <div class="col-md-8">
@@ -159,7 +171,7 @@ function ShoppingCartArea() {
                   </div>
                 </div>
               ) : (
-                <div>Es gibt keine Bücher in Ihre Warenkorb!</div>
+                null
               )}
             </div>
           )}
