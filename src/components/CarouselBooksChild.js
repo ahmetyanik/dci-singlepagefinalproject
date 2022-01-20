@@ -26,6 +26,7 @@ function CarouselBooksChild() {
       {
         breakpoint: 600,
         settings: {
+          arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1,
         }

@@ -108,7 +108,7 @@ function Bookarea() {
                   });
                 }}
                 href="#"
-                className="btn btn-danger mt-3 "
+                className="btn btn-danger mt-3 color-red "
               >
                 <i className="fas fa-shopping-cart me-3"></i>
                 WARENKORB
