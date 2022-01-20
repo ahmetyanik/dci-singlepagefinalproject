@@ -1,9 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import books from "../datenbank/books";
 import users from "../datenbank/users";
 import "../shoppingCard.css";
-import Bookarea from "./Bookarea";
 import CarouselBooks from "./CarouselBooksRec";
 import DataStore from "./DataStore";
 
@@ -14,7 +12,6 @@ function ShoppingCartArea() {
     warenkorbState,
     warenkorbDispatch,
     allUsers,
-    setAllUsers,
   } = useContext(DataStore);
 
   const array = [];
@@ -56,7 +53,7 @@ function ShoppingCartArea() {
     <div style={{ minHeight: "50vh" }}>
       <div class="container mt-5 mb-5 border shadow">
         <div class="d-flex justify-content-center row">
-          {warenkorbState.length == 0 ? (
+          {warenkorbState.length === 0 ? (
             <div>
               <h3>Dein Einkaufskorb ist leer.</h3>
               <h2>Füge etwas hinzu!</h2>
