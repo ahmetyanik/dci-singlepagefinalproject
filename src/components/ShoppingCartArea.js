@@ -46,8 +46,6 @@ function ShoppingCartArea() {
     alert("Ihre Bestellung ist eingegangen.")
   }
 
-  console.log(currentUser);
-  console.log(allUsers);
 
   return (
     <div style={{ minHeight: "50vh" }}>
@@ -103,7 +101,6 @@ function ShoppingCartArea() {
                       <div class="d-flex flex-row align-items-center qty">
                         <i
                           onClick={() => {
-                            console.log(book);
                             warenkorbDispatch({
                               type: "remove",
                               payload: { singleBook: book },
@@ -126,7 +123,6 @@ function ShoppingCartArea() {
                             marginLeft: "5px",
                           }}
                           onClick={() => {
-                            console.log(book);
                             warenkorbDispatch({
                               type: "add",
                               payload: { singleBook: book },

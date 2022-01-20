@@ -11,7 +11,7 @@ function RegisterTemplate() {
 
   /* Register */
 
-  console.log(allUsers.length);
+
 
   const [person, setPerson] = useState({
     id: allUsers.length + 1,

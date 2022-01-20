@@ -24,7 +24,6 @@ function Bookarea() {
     setSingleBook(filteredBook[0]);
   }, []);
 
-  console.log(currentUser);
 
   function addComment(e) {
     e.preventDefault();
@@ -55,7 +54,6 @@ function Bookarea() {
 
     array.splice(findingIndex,1,findingBook)
 
-    console.log("array:",array);
 
     setAllBooks(array);
 

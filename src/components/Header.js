@@ -19,7 +19,6 @@ function Header() {
     setCategories
   } = useContext(DataStore);
 
-  console.log(categories);
 
   return (
     <div>
