@@ -28,7 +28,6 @@ function Logintemplate() {
     setCurrentUser({ ...gettingUser[0], active: true });
   }
 
-  console.log(activeUser);
 
   return (
     <div>

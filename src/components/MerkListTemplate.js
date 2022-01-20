@@ -9,7 +9,6 @@ function MerkListTemplate() {
   const array = [];
   let totalPreis = 0;
 
-  console.log(merkListState);
 
   return (
     <div style={{ minHeight: "50vh" }}>
@@ -77,7 +76,6 @@ function MerkListTemplate() {
                     <div class="d-flex flex-row align-items-center qty">
                       <i
                         onClick={() => {
-                          console.log(book);
                           merkListDispatch({
                             type: "remove_merklist",
                             payload: { singleBook: book },

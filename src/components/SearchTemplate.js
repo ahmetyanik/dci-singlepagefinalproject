@@ -62,7 +62,6 @@ export default function SearchTemplate() {
                   </div>
                   <button
                     onClick={() => {
-                      console.log(book);
                       warenkorbDispatch({
                         type: "add",
                         payload: { singleBook: book },

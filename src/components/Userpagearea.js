@@ -23,7 +23,6 @@ function Userpagearea() {
     return user.name === currentUser.name;
   })
 
-  console.log(selectedPerson);
 
   useEffect(()=>{
     setSelectedUser(selectedPerson[0])
@@ -33,7 +32,6 @@ function Userpagearea() {
     setUserPageCurrentUser(currentUser);
   }, []);
   
-  console.log(selectedUser);
 
   const changeForm = document.querySelector("#changeForm");
 
@@ -59,8 +57,6 @@ function Userpagearea() {
     changeForm.setAttribute("class", "d-none");
   }
 
-  console.log(allUsers);
-  console.log(currentUser);
 
 
 
@@ -151,7 +147,6 @@ function Userpagearea() {
 
           {selectedUser.name ? selectedUser.purchasedBooks.map((book, index) => {
 
-              console.log(book)
 
             if (!array.includes(book)) {
               array.push(book);
@@ -201,7 +196,7 @@ function Userpagearea() {
                 </div>
               );
             } 
-          }) : console.log(selectedUser)}
+          }) : null}
 
         </div>
       </div>

@@ -44,7 +44,6 @@ function reducer(state, action) {
 
     newArray2.splice(bulunanIndex2[0], 1);
 
-    console.log(newArray2);
 
     return newArray2;
   }
@@ -63,7 +62,6 @@ function reducer(state, action) {
 
     newArray.splice(findingIndex[0], 1);
 
-    console.log(newArray);
 
     return newArray;
   }
@@ -101,7 +99,6 @@ function App() {
     setAllBooks(books);
   }, [allUsers, currentUser]);
 
-  console.log(allUsers);
 
   const newArray = [];
 
@@ -123,7 +120,6 @@ function App() {
     setNewBooks(findingBooks);
   }, [allBooks]);
 
-  console.log(newBooks);
 
   const findingBooks2 = allBooks.filter((book) => {
     return book.kategorie === "Empfehlungen";
@@ -141,7 +137,6 @@ function App() {
     setChildBooks(findingBooks3);
   }, [allBooks]);
 
-  console.log(childBooks);
 
   return (
     <div className="App">
