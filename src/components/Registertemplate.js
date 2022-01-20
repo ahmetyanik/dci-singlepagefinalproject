@@ -33,7 +33,6 @@ function RegisterTemplate() {
       : setPerson({ ...person, [e.target.name]: dataVonInput });
   }
 
-  console.log(person);
 
   function addNewPerson(e) {
     e.preventDefault();
@@ -43,8 +42,6 @@ function RegisterTemplate() {
     alert("You are registered!");
   }
 
-  console.log(person);
-  console.log(allUsers);
 
   return (
     <div>
