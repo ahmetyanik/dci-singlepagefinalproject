@@ -22,6 +22,7 @@ function RegisterTemplate() {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC4BPQQmAhaOjJX5QGnLcj8spS7lpopLiW36_P8FTSH0mlazlJvkoQRCULvbRtHuEOJbE&usqp=CAU",
     active: false,
     admin: false,
+    purchasedBooks:[]
   });
 
   function inputChange(e) {
