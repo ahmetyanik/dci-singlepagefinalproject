@@ -13,7 +13,7 @@ function MerkListTemplate() {
 
   return (
     <div style={{ minHeight: "50vh" }}>
-      <div class="container mt-5 mb-5 border shadow">
+      <div class="container pt-3 pb-5 mt-5 mb-5 border shadow">
         <div class="d-flex justify-content-center row">
           <div class="col-md-8">
             <div class="p-2">

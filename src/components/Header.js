@@ -41,8 +41,8 @@ function Header() {
       {/* Red Area of Header */}
 
       <div
-        className="d-none d-sm-none d-md-block d-md-flex justify-content-md-between d-lg-flex justify-content-lg-around align-items-center px-1"
-        style={{ display: "flex", height: "40px", backgroundColor: "#de030e" }}
+        className="color-red d-none d-sm-none d-md-block d-md-flex justify-content-md-between d-lg-flex justify-content-lg-around align-items-center px-1"
+        style={{ display: "flex", height: "40px"}}
       >
         <div className="text-light">
           <span>Bücherhaus</span>
@@ -170,7 +170,7 @@ function Header() {
                   >
                     <span
                       className="d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center flex-lg-row"
-                      style={{ color: "#de030e" }}
+                      style={{ color: "#D90416" }}
                     >
                       {currentUser.name ? (
                         <Link
@@ -197,7 +197,7 @@ function Header() {
                             to={`/user/${currentUser.id}/${currentUser.name}`}
                           >
                             {" "}
-                            <span style={{ color: "#de030e" }}>
+                            <span style={{ color: "#D90416" }}>
                               {" "}
                               {currentUser.name}{" "}
                               <span className="badge rounded-pill bg-success">
