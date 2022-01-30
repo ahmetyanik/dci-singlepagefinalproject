@@ -8,8 +8,6 @@ function Userpagearea() {
     setAllUsers,
     currentUser,
     setCurrentUser,
-    warenkorbState,
-    warenkorbDispatch,
   } = useContext(DataStore);
 
   const array = [];
@@ -54,7 +52,12 @@ function Userpagearea() {
   function changeCurrentUserInfos(e) {
     e.preventDefault();
     setCurrentUser(userPageCurrentUser);
+
+    
+    
     changeForm.setAttribute("class", "d-none");
+    console.log(allUsers);
+
   }
 
 
@@ -147,13 +150,19 @@ function Userpagearea() {
 
           {selectedUser.name ? selectedUser.purchasedBooks.map((book, index) => {
 
+            console.log(parseFloat(book.preis));
 
             if (!array.includes(book)) {
               array.push(book);
 
-              const filteredBook = warenkorbState.filter((element) => {
+
+              const filteredBook = selectedUser.purchasedBooks.filter((element) => {
+
+                console.log(element)
                 return book.titel === element.titel;
               });
+
+              console.log(filteredBook)
 
               return (
                 <div
@@ -179,11 +188,14 @@ function Userpagearea() {
                   <div class="d-flex flex-row align-items-center qty">
                     <h5 class="text-grey mt-1 mr-1 ml-1">
                       {filteredBook.length}
+                      {console.log(filteredBook.length)}
                     </h5>
                     <span className="text-muted mx-1">X</span>
                   </div>
                   <div>
                     <h5 class="text-grey">{book.preis}€</h5>
+
+                    {console.log(book.preis)}
                   </div>
                   <div class="d-flex align-items-center">
                     <span class="text-grey">
