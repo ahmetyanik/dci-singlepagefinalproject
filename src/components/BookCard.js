@@ -62,7 +62,9 @@ function BookCard({ book, index }) {
                               book.titel + " wurde hinzugefügt.",
                               1
                             );
-                }} href="#" class="color-red btn btn-danger m-3 d-flex justify-content-center align-items-center">
+          
+                }} href="#" className="color-red btn btn-danger m-3 d-flex justify-content-center align-items-center">
+
                 <i className="fas fa-shopping-cart me-3"></i>
                 WARENKORB
               </button>

@@ -51,14 +51,15 @@ function ShoppingCartArea() {
 
   return (
     <div style={{ minHeight: "50vh" }}>
-      <div class="container mt-5 mb-5 border shadow">
+      <div class="container pt-3 pb-5 mt-5 mb-5 border shadow">
         <div class="d-flex justify-content-center row">
           {warenkorbState.length === 0 ? (
             <div>
-              <h3>Dein Einkaufskorb ist leer.</h3>
-              <h2>Füge etwas hinzu!</h2>
-              <h3>Unsere Empfehlungen</h3>
-              <CarouselBooks />
+
+              <h3 className="m-5">Dein Einkaufskorb ist leer.</h3>
+
+              
+              <CarouselBooks/>
             </div>
           ) : (
             <div class="col-md-8">

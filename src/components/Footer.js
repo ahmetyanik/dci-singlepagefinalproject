@@ -16,28 +16,28 @@ function Footer() {
                      >
               {/* <!-- Left --> */}
               <div className="me-5">
-                <span>Get connected with us on social networks:</span>
+                <span>Verbinden Sie sich mit uns in sozialen Netzwerken:</span>
               </div>
               {/* <!-- Left --> */}
         
               {/* <!-- Right --> */}
               <div >
-                <a href="" className="text-white me-4">
+                <a href="#/" className="text-white me-4">
                   <i className="fab fa-facebook-f"></i>
                 </a>
-                <a href="" className="text-white me-4">
+                <a href="#/" className="text-white me-4">
                   <i className="fab fa-twitter"></i>
                 </a>
-                <a href="" className="text-white me-4">
+                <a href="#/" className="text-white me-4">
                   <i className="fab fa-google"></i>
                 </a>
-                <a href="" className="text-white me-4">
+                <a href="#/" className="text-white me-4">
                   <i className="fab fa-instagram"></i>
                 </a>
-                <a href="" className="text-white me-4">
+                <a href="#/" className="text-white me-4">
                   <i className="fab fa-linkedin"></i>
                 </a>
-                <a href="" className="text-white me-4">
+                <a href="#/" className="text-white me-4">
                   <i className="fab fa-github"></i>
                 </a>
               </div>
@@ -53,15 +53,13 @@ function Footer() {
                   {/* <!-- Grid column --> */}
                   <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                    {/*  <!-- Content --> */}
-                    <h6 className="text-uppercase fw-bold">Bookstore</h6>
+                    <h6 className="text-uppercase fw-bold">FACKS-BOOKS</h6>
                     <hr
                         className="mb-4 mt-0 d-inline-block mx-auto"
                         style={{width:"60px", backgroundColor: "#7c4dff", height: "2px"}}
                         />
-                    <p>
-                      Here you can use rows and columns to organize your footer
-                      content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                      elit.
+                    <p className='lh-sm'>
+                    Die Bücher, die Sie suchen, finden Sie in FACKS-BOOKS.
                     </p>
                   </div>
                  {/*  <!-- Grid column --> */}
@@ -69,45 +67,50 @@ function Footer() {
                   {/* <!-- Grid column --> */}
                   <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     {/* <!-- Links --> */}
-                    <h6 className="text-uppercase fw-bold">Products</h6>
+                    <h6 className="text-uppercase fw-bold">Team</h6>
                     <hr
                         className="mb-4 mt-0 d-inline-block mx-auto"
                         style={{width: "60px", backgroundColor: "#7c4dff", height: "2px"}}
                         />
-                    <p>
-                      <a href="#!" className="text-dark text-decoration-none">MDBootstrap</a>
+                        <div className='lh-1'>
+                           <p>
+                      <a href="https://github.com/Felix-Hasse" className="text-dark text-decoration-none"> <i className="fab fa-github"></i> Felix</a>
                     </p>
                     <p>
-                      <a href="#!" className="text-dark text-decoration-none">MDWordPress</a>
+                      <a href="https://github.com/ahmetyanik" className="text-dark text-decoration-none"> <i className="fab fa-github"></i> Ahmet</a>
                     </p>
                     <p>
-                      <a href="#!" className="text-dark text-decoration-none">BrandFlow</a>
+                      <a href="https://github.com/carolmvargas" className="text-dark text-decoration-none"> <i className="fab fa-github"></i> Caroline</a>
                     </p>
                     <p>
-                      <a href="#!" className="text-dark text-decoration-none">Bootstrap Angular</a>
+                      <a href="https://github.com/kutaykurt" className="text-dark text-decoration-none"> <i className="fab fa-github"></i> Kutay</a>
                     </p>
+                    <p>
+                      <a href="https://github.com/s-polat" className="text-dark text-decoration-none"> <i className="fab fa-github"></i> Sıddık</a>
+                    </p>
+                    </div>
+                   
+                    
                   </div>
                  {/*  <!-- Grid column --> */}
         
                  {/*  <!-- Grid column --> */}
                   <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                    {/*  <!-- Links --> */}
-                    <h6 className="text-uppercase fw-bold">Useful links</h6>
+                    <h6 className="text-uppercase fw-bold">Nützliche Links</h6>
                     <hr
                         className="mb-4 mt-0 d-inline-block mx-auto"
                         style={{width: "60px", backgroundColor: "#7c4dff", height:"2px"}}
                         />
                     <p>
-                      <a href="#!" className="text-dark text-decoration-none">Your Account</a>
+                      <a href="#!" className="text-dark text-decoration-none">Ihr Konto</a>
+                    </p>
+                   
+                    <p>
+                      <a href="#!" className="text-dark text-decoration-none">Versandkosten</a>
                     </p>
                     <p>
-                      <a href="#!" className="text-dark text-decoration-none">Become an Affiliate</a>
-                    </p>
-                    <p>
-                      <a href="#!" className="text-dark text-decoration-none">Shipping Rates</a>
-                    </p>
-                    <p>
-                      <a href="#!" className="text-dark text-decoration-none">Help</a>
+                      <a href="#!" className="text-dark text-decoration-none">Hilfe</a>
                     </p>
                   </div>
                  {/*  <!-- Grid column --> */}
@@ -115,7 +118,7 @@ function Footer() {
                  {/*  <!-- Grid column --> */}
                   <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                    {/*  <!-- Links --> */}
-                    <h6 className="text-uppercase fw-bold">Contact</h6>
+                    <h6 className="text-uppercase fw-bold">Kontact</h6>
                     <hr
                         className="mb-4 mt-0 d-inline-block mx-auto"
                         style={{width: "60px", backgroundColor: "#7c4dff", height: "2px"}}
@@ -137,9 +140,9 @@ function Footer() {
                  className="text-center p-3 text-white"
                  style={{backgroundColor: "#de030e"}}
                  >
-              © 2020 Copyright:
-              <a className='text-white text-decoration-none' href="https://mdbootstrap.com/"
-                 >MDBootstrap.com</a
+              © 2022 Copyright by 
+              <a className='text-white text-decoration-none' href="#/"
+                 > FACKS-BOOKS</a
                 >
             </div>
             {/* <!-- Copyright --> */}
