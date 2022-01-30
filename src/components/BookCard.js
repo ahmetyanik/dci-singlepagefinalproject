@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import DataStore from "./DataStore";
-import "../App.css"
+import "../App.css";
+import alertify from "alertifyjs";
 
 function BookCard({ book, index }) {
 
@@ -57,6 +58,10 @@ function BookCard({ book, index }) {
                     type: "add",
                     payload: { singleBook: book },
                   });
+                  alertify.success(
+                              book.titel + " wurde hinzugefügt.",
+                              1
+                            );
                 }} href="#" class="color-red btn btn-danger m-3 d-flex justify-content-center align-items-center">
                 <i className="fas fa-shopping-cart me-3"></i>
                 WARENKORB

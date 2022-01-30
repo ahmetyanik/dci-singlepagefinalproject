@@ -4,6 +4,7 @@ import users from "../datenbank/users";
 import "../shoppingCard.css";
 import CarouselBooks from "./CarouselBooksRec";
 import DataStore from "./DataStore";
+import alertify from "alertifyjs";
 
 function ShoppingCartArea() {
   const {
@@ -28,24 +29,25 @@ function ShoppingCartArea() {
         if (user.name === currentUser.name) {
           const array = [...allUsers];
 
-          const newObject = { ...array[index], purchasedBooks: [...user.purchasedBooks,...warenkorbState] };
+          const newObject = {
+            ...array[index],
+            purchasedBooks: [...user.purchasedBooks, ...warenkorbState],
+          };
 
           array.splice(index, 1, newObject);
-          users.splice(index,1,newObject);
+          users.splice(index, 1, newObject);
 
-          setCurrentUser({...currentUser,purchasedBooks: warenkorbState})
+          setCurrentUser({ ...currentUser, purchasedBooks: warenkorbState });
 
           warenkorbDispatch({
-            type: "clean"
+            type: "clean",
           });
-          
         }
       });
     }
 
-    alert("Ihre Bestellung ist eingegangen.")
+    alert("Ihre Bestellung ist eingegangen.");
   }
-
 
   return (
     <div style={{ minHeight: "50vh" }}>
@@ -56,11 +58,13 @@ function ShoppingCartArea() {
               <h3>Dein Einkaufskorb ist leer.</h3>
               <h2>Füge etwas hinzu!</h2>
               <h3>Unsere Empfehlungen</h3>
-              <CarouselBooks/>
+              <CarouselBooks />
             </div>
           ) : (
             <div class="col-md-8">
               <div class="p-2"></div>
+
+              {console.log(warenkorbState)}
 
               {warenkorbState.map((book, index) => {
                 if (!array.includes(book)) {
@@ -103,6 +107,11 @@ function ShoppingCartArea() {
                               type: "remove",
                               payload: { singleBook: book },
                             });
+
+                            alertify.error(
+                              book.titel + " wurde entfernt.",
+                              1
+                            );
                           }}
                           style={{
                             fontSize: "20px",
@@ -125,6 +134,11 @@ function ShoppingCartArea() {
                               type: "add",
                               payload: { singleBook: book },
                             });
+
+                            alertify.success(
+                              book.titel + " wurde hinzugefügt.",
+                              1
+                            );
                           }}
                           class="fas fa-cart-plus"
                         ></i>
@@ -164,9 +178,7 @@ function ShoppingCartArea() {
                     </button>
                   </div>
                 </div>
-              ) : (
-                null
-              )}
+              ) : null}
             </div>
           )}
         </div>

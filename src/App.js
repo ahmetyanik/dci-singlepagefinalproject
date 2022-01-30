@@ -11,7 +11,6 @@ import Userpage from "./components/Pages/Userpage";
 import books from "./datenbank/books";
 import Adminpage from "./components/Pages/Adminpage";
 import Adminloginpage from "./components/Pages/Adminloginpage";
-import alertify from "alertifyjs";
 import Shoppingcartpage from "./components/Pages/Shoppingcartpage";
 import MerkListPage from "./components/Pages/MerkListPage";
 import SearchPage from "./components/Pages/SearchPage";
@@ -19,10 +18,7 @@ import Categoriepage from "./components/Pages/Categoriepage";
 
 function reducer(state, action) {
   if (action.type === "add") {
-    alertify.success(
-      action.payload.singleBook.titel + " wurde hinzugefügt.",
-      1
-    );
+
 
     return [...state, action.payload.singleBook];
   }
@@ -60,8 +56,9 @@ function reducer(state, action) {
       }
     }
 
+    
     newArray.splice(findingIndex[0], 1);
-
+    
 
     return newArray;
   }
@@ -93,6 +90,7 @@ function App() {
 
   useEffect(() => {
     setAllUsers(users);
+    console.log("M");
   }, [users, allUsers, currentUser]);
 
   useEffect(() => {
