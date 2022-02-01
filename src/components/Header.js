@@ -9,14 +9,10 @@ function Header() {
     currentUser,
     setCurrentUser,
     warenkorbState,
-    warenkorbDispatch,
     merkListState,
-    merkListDispatch,
     searchState,
     setSearchState,
-    searchedBook,
     categories,
-    setCategories
   } = useContext(DataStore);
 
 
