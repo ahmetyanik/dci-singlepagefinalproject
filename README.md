@@ -6,7 +6,7 @@
 - [Preview](#preview)
 - [Book's Cards in Carousel](#book's-cards-in-carousel)
 - [Dynamic Dropdown Button](###dynamic Dropdown Button)
-- [Search Box](###Search Box)
+- [Search Box](#search-box)
 - [Login and Register Page](###Login and Register Page)- 
 - [Cart](#cart)
 - [Comment](###Comment)
