@@ -4,10 +4,14 @@
 
 - [General info](#general-info)
 - [Preview](#preview)
-- [Some prominent features of the system](#some-prominent-features-of-the-system)
-- [Usage](#usage)
+- [Book's Cards in Carousel](### Book's Cards in Carousel)
+- [Dynamic Dropdown Button](### Dynamic Dropdown Button)
+- [Search Box](### Search Box)
+- [Login and Register Page](### Login and Register Page)- 
+- [Cart](### Cart)
+- [Comment](### Comment)
+- [Favorite Books](### Favorite Books)
 - [Technologies](#technologies)
-- [Contact](#contact)
 
 ## General Info
 
