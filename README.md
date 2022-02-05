@@ -7,10 +7,10 @@
 - [Book's Cards in Carousel](#book's-cards-in-carousel)
 - [Dynamic Dropdown Button](###dynamic Dropdown Button)
 - [Search Box](#search-box)
-- [Login and Register Page](###Login and Register Page)- 
+- [Login and Register Page](#login-and-register-page) 
 - [Cart](#cart)
-- [Comment](###Comment)
-- [Favorite Books](###Favorite Books)
+- [Comment](#comment)
+- [Favorite Books](#favorite-books)
 - [Technologies](#technologies)
 
 ## General Info
@@ -50,7 +50,7 @@ Since the backend has not been learned yet in this project, array has been used 
 
 ### Search Box
 
-![alt text](src/images/readmegifs/category.gif)
+![alt text](src/images/readmegifs/searchbox.gif)
 
 
 ### Login and Register Page
