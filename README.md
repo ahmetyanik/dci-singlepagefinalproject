@@ -25,6 +25,10 @@ Since the backend has not been learned yet in this project, array has been used 
 
 ![alt text](src/images/readmegifs/mobile.gif)
 
+### Laptop
+
+![alt text](src/images/readmegifs/laptop.gif)
+
 ### Desktop
 
 ![alt text](src/images/readmegifs/general.gif)
