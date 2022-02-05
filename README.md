@@ -40,34 +40,30 @@ Since the backend has not been learned yet in this project, array has been used 
 
 ![alt text](src/images/readmegifs/slider.gif)
 
-### Adding a new class to the system
-![alt text](src/image/addClass.gif)
+### Dynamic Dropdown Button
 
-### Message sending and reading
+![alt text](src/images/readmegifs/category.gif)
 
-![alt text](src/image/sendingmessage.gif)
-![alt text](src/image/readingmessage.gif)
+### Search Box
 
-## Usage
+![alt text](src/images/readmegifs/category.gif)
 
-Information of some default characters for quick use:
 
-### Director
+### Login and Register Page
 
-Director Full Name : Maxim Mustermann   
-Password           : 1236
+![alt text](src/images/readmegifs/login.gif)
 
-![alt text](src/image/login_directorpage.gif)
+### Cart
 
-### Teacher
+![alt text](src/images/readmegifs/activities.gif)
 
-Teacher Full Name  : Fabian Lehrermann 
-Password           : 1235
+### Comment
 
-### Student
+![alt text](src/images/readmegifs/comment.gif)
 
-Student Full Name  : Ahmet Yanik
-Password           : 1234
+### Favoruite Books
+
+![alt text](src/images/readmegifs/merklist.gif)
 
 
 ## Technologies
