@@ -8,7 +8,7 @@
 - [Dynamic Dropdown Button](###dynamic Dropdown Button)
 - [Search Box](###Search Box)
 - [Login and Register Page](###Login and Register Page)- 
-- [Cart](##cart)
+- [Cart](#cart)
 - [Comment](###Comment)
 - [Favorite Books](###Favorite Books)
 - [Technologies](#technologies)
