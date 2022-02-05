@@ -4,7 +4,7 @@
 
 - [General info](#general-info)
 - [Preview](#preview)
-- [Book's Cards in Carousel](#book's-cards-in-carousel)
+- [Cards in Carousel](#cards-in-carousel)
 - [Dynamic Dropdown Button](#dynamic-dropdown-button)
 - [Search Box](#search-box)
 - [Login and Register Page](#login-and-register-page) 
@@ -40,7 +40,7 @@ Since the backend has not been learned yet in this project, array has been used 
 
 ## Some prominent features of the system
 
-### Book's Cards in Carousel
+### Cards in Carousel
 
 ![alt text](src/images/readmegifs/slider.gif)
 
