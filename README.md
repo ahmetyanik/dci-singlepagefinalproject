@@ -61,7 +61,7 @@ Since the backend has not been learned yet in this project, array has been used 
 
 ![alt text](src/images/readmegifs/comment.gif)
 
-### Favoruite Books
+### Favorite Books
 
 ![alt text](src/images/readmegifs/merklist.gif)
 
@@ -70,11 +70,10 @@ Since the backend has not been learned yet in this project, array has been used 
 
 - JavaScript
 - Npm
-- GitHub
-- Terminal-Kit (https://www.npmjs.com/package/terminal-kit)
-- Prompt-Sync (https://www.npmjs.com/package/prompt-sync)
+- React
+- UseContext
+- Alertify
+- React-slick
+- Nodemon
+- Github
 
-## Contact
-
-Created by Ahmet Yanik - feel free to contact me for any inquiries!
-ahmetyank4242@gmail.com
