@@ -36,9 +36,9 @@ Since the backend has not been learned yet in this project, array has been used 
 
 ## Some prominent features of the system
 
-### New Student Registration
+### Book's Cards in Carousel
 
-![alt text](src/image/registernewstudent.gif)
+![alt text](src/images/readmegifs/slider.gif)
 
 ### Adding a new class to the system
 ![alt text](src/image/addClass.gif)
