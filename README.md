@@ -5,7 +5,7 @@
 - [General info](#general-info)
 - [Preview](#preview)
 - [Book's Cards in Carousel](#book's-cards-in-carousel)
-- [Dynamic Dropdown Button](###dynamic Dropdown Button)
+- [Dynamic Dropdown Button](#dynamic-dropdown-button)
 - [Search Box](#search-box)
 - [Login and Register Page](#login-and-register-page) 
 - [Cart](#cart)
