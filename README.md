@@ -21,15 +21,10 @@ Since the backend has not been learned yet in this project, array has been used 
 
 ## Preview
 
-There are three main groups in the system. These:
+### Mobile
 
-     - Director
-     - Teachers
-     - Students.
+![alt text](src/images/readmegifs/mobile.gif)
 
-These people can do their own operations on their own pages. For example, while the director can create a new class, this is not possible for the student.
-
-There are also common operations such as changing passwords, sending messages and accessing personal information.
 
 ## Some prominent features of the system
 
