@@ -14,6 +14,8 @@
 - [Comment](#comment)
 - [Favorite Books](#favorite-books)
 - [Technologies](#technologies)
+- [Contact](#contact)
+
 
 ## General Info
 
@@ -82,4 +84,8 @@ Since the backend has not been learned yet in this project, array has been used 
 - React-slick
 - Nodemon
 - Github
+
+## Contact
+
+Created by (Felix, Ahmet, Caroline, Kutay and Siddik) - feel free to contact us for any inquiries!
 
