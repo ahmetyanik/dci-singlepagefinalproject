@@ -1,6 +1,6 @@
 ## SINGLE PAGE FINAL PROJECT - BOOK STORE
 
-<a href="https://facksbooks.netlify.app/" target="_blank"><h3 align="left">Click here for demo</h3></a>
+<a href="https://facksbooks.netlify.app/" target="_blank"><h3 align="left">Click here for demo</h3></a> https://facksbooks.netlify.app/
 
 ## Table of Contents
 
